@@ -1,7 +1,10 @@
+/// First and Last Position of an Element In Sorted Array
+// https://www.codingninjas.com/codestudio/problems/first-and-last-position-of-an-element-in-sorted-array_1082549?leftPanelTab=0
+
 #include <bits/stdc++.h>
 using namespace std;
 
-//& Finding the first occurrence among the sorted array
+//& Finding the first occurrence amon   g the sorted array
 int firstOccurrenceOfK(vector<int> &arr, int n, int k)
 {
     //* return the first occurrence position if matches, otherwise return -1
