@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/**
+ * @brief Hashing basic
+ * @author Subodh Chandra Shil
+ */
+
 int main()
 {
     int n;
