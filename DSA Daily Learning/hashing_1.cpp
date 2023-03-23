@@ -2,8 +2,9 @@
 using namespace std;
 
 /**
- * @brief Hashing basic
+ * @brief Hashing technique
  * @author Subodh Chandra Shil
+ * @topic Number hashing
  */
 
 int main()
