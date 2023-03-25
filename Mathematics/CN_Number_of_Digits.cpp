@@ -10,6 +10,9 @@ using namespace std;
 
 int countDigit(long long x)
 {
+    if (x == 0)
+        return 1;
+
     int count = 0;
     while (x)
     {
@@ -28,6 +31,14 @@ int countDigit(long long x)
 
 int countDigit2(long long x)
 {
+    // error handling for input 0
+    if (x == 0)
+        return 1;
+
+    // error handling for negative number
+    if (x < 0)
+        return (int)log10(abs(x)) + 1;
+
     return (int)log10(x) + 1;
 }
 
@@ -37,7 +48,7 @@ int main()
     cout << "Enter number: ";
     cin >> number;
 
-    cout << "Digits in the number is: " << countDigit2(number) << endl;
+    cout << "Digits in the number is: " << countDigit(number) << endl;
 
     return 0;
 }
