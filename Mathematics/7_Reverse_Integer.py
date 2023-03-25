@@ -23,7 +23,21 @@ class Solution:
     def oneLinerNumberReverse(self, x: int):
         print(int(x[::-1]))
 
+    def reverseSolution2(self, x: int) -> int:
+        reverseNumber = 0
+
+        # absolute if user inputs a negative value
+        temp = abs(x)
+
+        while temp:
+            lastDigit = temp % 10
+            temp = int(temp/10)
+            reverseNumber = (reverseNumber * 10) + lastDigit
+
+        return (-reverseNumber) if x < 0 else reverseNumber
+
 
 yourNumber = Solution()
 # print(yourNumber.reverse(int(input())))
-yourNumber.oneLinerNumberReverse(input())
+# yourNumber.oneLinerNumberReverse(input())
+print(yourNumber.reverseSolution2(int(input())))
