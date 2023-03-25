@@ -1,8 +1,9 @@
 /**
  * @brief
- * @author Subodh Chandra Shil
- * @source https://practice.geeksforgeeks.org/problems/array-subset-of-another-array2317/1
- * @date 3/24/2023
+ * @author      Subodh Chandra Shil
+ * @source      https://practice.geeksforgeeks.org/problems/array-subset-of-another-array2317/1
+ * @date        3/24/2023
+ * @algorithm   hashing
  */
 
 #include <bits/stdc++.h>
