@@ -2,7 +2,7 @@
 using namespace std;
 
 /**
- * @Time_Complexity: O(N)
+ * @Time_Complexity: O(log10(N))
  * Average solution
  * @param x
  * @return int
@@ -25,7 +25,7 @@ int countDigit(long long x)
 
 /**
  * @brief
- * @Time_Complexity: O(1)
+ * @Time_Complexity:
  * Best time complexity
  */
 
