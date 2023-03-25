@@ -17,7 +17,7 @@ public:
   {
 
     /// A map for storing frequencies
-    map<int, int> hashmap;
+    unordered_map<int, int> hashmap;
 
     /// Storing values into the map
     for (auto i : nums)
