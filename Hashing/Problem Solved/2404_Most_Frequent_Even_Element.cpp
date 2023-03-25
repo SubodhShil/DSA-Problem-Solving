@@ -53,3 +53,7 @@ int main()
 
     return 0;
 }
+
+/**
+ * @Other-solutions: https://leetcode.com/problems/most-frequent-even-element/solutions/2560040/c-using-map-very-simple-and-easy-to-understand/?orderBy=most_votes
+ */
