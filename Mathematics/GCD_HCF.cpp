@@ -43,7 +43,7 @@ int GCD_euclidean(int n1, int n2)
     return result;
 }
 
-int GCD_HCF_Optimized(int n1, int n2)
+int GCD_euclidean_Optimized(int n1, int n2)
 {
     /// gcd(a, b) -> gcd(a - b, b) -> ... -> gcd(0, b) or gcd(a, 0)
     /// since gcd(0, b) => b or gcd(a, 0) => a
@@ -54,9 +54,16 @@ int GCD_HCF_Optimized(int n1, int n2)
 
     while (max_num and min_num)
     {
+        max_num %= min_num;
+
+        /// @explanation: in the above mentioned line min_num is quotient
+        /// after the division, the remainder is always lesser than divisor
+        /// so, after the operation has done max_num is no more max
+        /// that is why we have to swap both numbers
+        swap(max_num, min_num);
     }
 
-    return;
+    return max_num;
 }
 
 int GCD_library_builtin(int n1, int n2)
@@ -71,6 +78,7 @@ int main()
     cin >> n1 >> n2;
     // cout << GCD(n1, n2) << endl;
     cout << GCD_euclidean(n1, n2) << endl;
+    cout << GCD_euclidean_Optimized(n1, n2) << endl;
 
     return 0;
 }
