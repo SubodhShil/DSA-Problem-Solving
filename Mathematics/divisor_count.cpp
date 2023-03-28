@@ -65,6 +65,10 @@ int countsDivisor(int n)
     return count;
 }
 
+int countDivisorOptimized(int n)
+{
+}
+
 int main()
 {
 
