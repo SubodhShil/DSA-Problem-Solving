@@ -12,7 +12,6 @@ vector<int> findAllPrimes(int n)
 {
     vector<int> result;
     vector<bool> primes(n + 1, true);
-    int prime_number_count = 0;
 
     /// 0 and 1 are not prime numbers, so mark them as false
     primes[0] = primes[1] = false;
@@ -28,7 +27,6 @@ vector<int> findAllPrimes(int n)
         /// the current prime is square of that number
         if (primes[i])
         {
-            prime_number_count++;
             result.push_back(i);
 
             for (int j = i * i; j <= n; j += i)
