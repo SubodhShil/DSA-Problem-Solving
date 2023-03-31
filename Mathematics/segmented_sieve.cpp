@@ -67,11 +67,21 @@ int main()
         ///         it's multiple as false
         for (auto i : sqrt_n_primes)
         {
-            int firstMultiple = ;
+            int firstMultiple = (int(l / i) * i) < l;
+            if (firstMultiple < l)
+                firstMultiple += l;
 
             for (int j = (firstMultiple, i * i); j <= r; j += i)
             {
+                dummyArr[j - l] = false;
             }
+        }
+
+        /// step 4: get all the primes
+        for (int i = l; i <= r; i++)
+        {
+            if (dummyArr[i])
+                cout << i << " ";
         }
 
         return 0;
