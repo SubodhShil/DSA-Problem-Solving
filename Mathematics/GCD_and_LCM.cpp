@@ -54,11 +54,17 @@ int GCD2(int n1, int n2)
     return n2;
 }
 
+int LCM(int n1, int n2)
+{
+    return (n1 * n2) / __gcd(n1, n2);
+}
+
 int main()
 {
     int a, b;
     cin >> a >> b;
     cout << GCD2(a, b) << endl;
+    cout << LCM(a, b) << endl;
 
     return 0;
 }
