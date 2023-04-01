@@ -1,5 +1,5 @@
-/*
-Link: https://www.codingninjas.com/codestudio/problems/duplicate-in-array_893397?leftPanelTab=0
+/**
+ * Link : https://www.codingninjas.com/codestudio/problems/duplicate-in-array_893397?leftPanelTab=0
  */
 
 #include <bits/stdc++.h>
