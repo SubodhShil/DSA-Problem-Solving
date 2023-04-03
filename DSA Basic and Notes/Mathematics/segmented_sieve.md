@@ -12,8 +12,8 @@ In addition to this, the difference of the range is ```R - L``` is a valid size 
 
     1. Create an array of size (R - L + 1), let's say 'rangeArraySieve[]'. Our prime numbers will be derived from this array.
 
-    2. Find the primes in the range of '2 to R and store them in an array, let's say 'secondaryArray[]'.
-            - Why we have taken '2 to √R'? R doesn't overflow the range, so creating this size of array would be safe.
+    2. Find the primes in the range of '2 to √R' and store them in an array, let's say 'secondaryArray[]'.
+            - Why we have taken '2 to √R'? R doesn't overflow the range, so creating this size of array would be safe. Value of √R is atmost 10^6
 
     3. Now start traversing 'secondaryArray and marking it in 'rangeArraySieve according to the following steps:
 
