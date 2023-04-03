@@ -1,6 +1,6 @@
 /// Simple recursion
 /// Recursive call should be stopped after printing
-/// "Hello world" for 5 time
+/// "Hello world" for 5 times
 
 #include <bits/stdc++.h>
 using namespace std;
