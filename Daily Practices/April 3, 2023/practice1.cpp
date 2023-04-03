@@ -1,3 +1,8 @@
+/**
+ * @file practice1.cpp
+ * @date 2023-04-03
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 #define MAX 1e6 + 1
