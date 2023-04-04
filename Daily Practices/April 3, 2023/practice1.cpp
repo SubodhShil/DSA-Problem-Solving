@@ -1,6 +1,7 @@
 /**
  * @file practice1.cpp
  * @date 2023-04-03
+ * Topic: Segmented sieve
  */
 
 #include <bits/stdc++.h>
