@@ -94,7 +94,13 @@ class Solution
 public:
     void solve()
     {
-        
+        int n;
+        cin >> n;
+        string s;
+        cin >> s;
+
+        if (s.size() == 0 || (s.size() == 2 && s[0] != s[1]))
+            cout << "YES\n";
     }
 };
 // ~ ** ======================================================================== ** //
