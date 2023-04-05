@@ -20,4 +20,25 @@ Time complexity is a mathematical approach to compute how an algorithm will beha
 **Consideration**:
 
 1. Always look forward to worst test complexity.
-2. 
+
+&nbsp;
+
+## <p align="center"><b>Complexity analysis of some code snippets </b></p>
+
+**Snippet #1**
+
+```
+    for(i = 0; i < n; i++)
+    {
+        // codes here;
+
+        statement1;
+        statement2;
+    }
+```
+
+---
+
+Time Complexity: O(N)
+
+---
