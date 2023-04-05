@@ -1,18 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//* TODO for later do
-
-void mergeSortIterative(vector<int> &arr, int start, int end)
-{
-    //* corner case
-    //^ The algorithm should work only and only the array itself or any of it's subarray contains atleast 2 or more elements
-    if (start < end)
-    {
-        int mid = start + (end - start) / 2;
-    }
-}
-
 void mergeArrays(vector<int> &arr, vector<int> &merged, int start, int mid, int end)
 {
     int i = start;
@@ -26,7 +14,7 @@ void mergeArrays(vector<int> &arr, vector<int> &merged, int start, int mid, int 
             merged.push_back(arr[j++]);
     }
 
-    //* check and fill up any remaining element not added to the new array
+    /// check and fill up any remaining element not added to the new array
     if (i >= mid)
         while (j <= end)
             merged.push_back(arr[j]);

@@ -36,9 +36,3 @@ Time complexity is a mathematical approach to compute how an algorithm will beha
         statement2;
     }
 ```
-
----
-
-Time Complexity: O(N)
-
----

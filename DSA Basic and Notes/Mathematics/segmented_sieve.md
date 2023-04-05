@@ -8,6 +8,12 @@ In addition to this, the difference of the range is ```R - L``` is a valid size 
 
 &nbsp;
 
+## <p align="center"><b>Observations </b></p>
+
+1. Task to find all the prime numbers between L and U, where L and U are less than or equal to 10^12 and U-L <= 10^6
+    * f
+&nbsp;
+
 > ## **Algorithm steps**
 
     1. Create an array of size (R - L + 1), let's say 'rangeArraySieve[]'. Our prime numbers will be derived from this array.
