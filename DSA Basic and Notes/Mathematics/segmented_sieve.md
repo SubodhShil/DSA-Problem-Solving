@@ -2,7 +2,7 @@
 
 A typical sieve method can only identify prime numbers in the integer range (10^9). A segmented sieve, on the other hand, is used to compute all prime numbers for a range that exceeds the acceptable range of integers.
 
-You will be given a range where it includes to points such as L and R. R is an number that is greater than 10^8 (for a boolean global array) which oveflows the valid range of that size of array.  
+You will be given a range where it includes to points such as L and R. R is an number that is greater than 10^8 (for a boolean global array) which oveflows the valid range of that size of array.
 
 In addition to this, the difference of the range is ```R - L``` is a valid size (R - L < 10^8) for creating an array.
 
@@ -10,8 +10,17 @@ In addition to this, the difference of the range is ```R - L``` is a valid size 
 
 ## <p align="center"><b>Observations </b></p>
 
-1. Task to find all the prime numbers between L and U, where L and U are less than or equal to 10^12 and U-L <= 10^6
-    * f
+The task is to find all the prime numbers between L and U, where L and U are less than or equal to 10^12 and U-L <= 10^6.
+**The steps are as follow**:
+
+Simply we have to use the simple sieve algorithm twice in a way, that no range overflows.
+
+1. Find all the prime number from 1 to √U using simple sieve algorithm and store the answers into an array let's say firstSieve[].
+
+2. Now, cross or mark 'false' all the numbers from L to U if it is multiple of firstSieve[] array element.
+
+3. Create an array of size U - L + 1
+
 &nbsp;
 
 > ## **Algorithm steps**
