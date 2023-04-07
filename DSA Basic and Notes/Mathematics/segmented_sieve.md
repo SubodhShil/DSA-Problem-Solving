@@ -15,11 +15,15 @@ The task is to find all the prime numbers between L and U, where L and U are les
 
 Simply we have to use the simple sieve algorithm twice in a way, that no range overflows.
 
-1. Find all the prime number from 1 to √U using simple sieve algorithm and store the answers into an array let's say firstSieve[].
+1. Find all the prime number from 1 to √U (it should be atmost 10^6 or 10^7) using simple sieve algorithm and store the answers into an array let's say firstSieve[].
 
 2. Now, cross or mark 'false' all the numbers from L to U if it is multiple of firstSieve[] array element.
 
 3. Create an array of size U - L + 1
+
+4. **Mapping the array**: there will be given range consist of two numbers, L and U. To map these number from 0, ```currentNumber - lowerbound``` in this case, lowerbound is L. For example, L = 51, and U = 10^10,
+    - For L = 51, mapping is: currentNumber - lowerbound = 51 - 51  = 0
+    - For L = 52, mapping is; 52 - 51 = 1
 
 &nbsp;
 
