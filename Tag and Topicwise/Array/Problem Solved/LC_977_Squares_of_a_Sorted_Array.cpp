@@ -1,3 +1,10 @@
+/**
+ * @file LC_977_Squares_of_a_Sorted_Array.cpp
+ * @author Subodh Chandra Shil
+ * @date 2023-04-07
+ * @problem_source: https://leetcode.com/problems/squares-of-a-sorted-array/description/
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 
