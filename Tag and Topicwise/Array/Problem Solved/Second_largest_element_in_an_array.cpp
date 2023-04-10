@@ -29,11 +29,37 @@ int findSecondLargestBrute(vector<int> &arr)
     return -1;
 }
 
-/// Better -> 
-int findSecondLargest(vector<int> &arr)
+/// Better -> O(2N)
+int findSecondLargestBetter1(vector<int> &arr)
 {
+    int largestElement = *max_element(arr.begin(), arr.end());
+    int secondLargestElement = -1;
+
     for (int i = 0; i < arr.size(); i++)
+        if (secondLargestElement < arr[i] && secondLargestElement != largestElement)
+            secondLargestElement = arr[i];
+
+    return secondLargestElement;
+}
+
+/// Optimal -> O(N)
+int findSecondLargestOptimal(vector<int> &arr)
+{
+    int largest = arr[0];
+    int secondLargest = -1;
+
+    for (int i = 1; i < arr.size(); i++)
     {
+        if (arr[i] > largest)
+        {
+            secondLargest = largest;
+            largest = arr[i];
+        }
+
+        else if (largest > arr[i] && secondLargest < arr[i])
+            secondLargest = arr[i];
+
+        return secondLargest;
     }
 }
 

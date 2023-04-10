@@ -1,26 +1,37 @@
-/// TODO
+/**
+ * @file HE_Pair_Sums_TODO.cpp
+ * @author Subodh Chandra Shil
+ * @date 2023-04-10
+ * @problem_source: https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/practice-problems/algorithm/pair-sums/
+ */
 
 #include <bits/stdc++.h>
 using namespace std;
+
+void ans(vector<int> &v, int sum)
+{
+    unordered_map<int, int> mp;
+
+    for(int i = 0; i < v.size(); i++)
+    {
+        
+    }
+}
 
 int main()
 {
     int n, k;
     cin >> n >> k;
 
-    unordered_map<int, int> mp;
-
+    vector<int> v;
     for (int i = 0; i < n; i++)
     {
         int x;
         cin >> x;
-        mp[x]++;
+        v.push_back(x);
     }
 
-    for (int i = 0; i < n; i++)
-    {
-        if (mp[k - arr[i]])
-    }
+    ans(v, k);
 
     return 0;
 }
