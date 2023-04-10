@@ -12,10 +12,21 @@ void ans(vector<int> &v, int sum)
 {
     unordered_map<int, int> mp;
 
-    for(int i = 0; i < v.size(); i++)
+    for (int i = 0; i < v.size(); i++)
     {
-        
+        int a = v[i];
+        int b = sum - a;
+
+        if (mp[b])
+        {
+            cout << "YES\n";
+            return;
+        }
+        else
+            mp[a]++;
     }
+
+    cout << "NO\n";
 }
 
 int main()
