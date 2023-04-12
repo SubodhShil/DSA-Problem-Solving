@@ -12,24 +12,6 @@ class Solution
 public:
     long maximumSumSubarray(int K, vector<int> &Arr, int N)
     {
-        map<long long, long, greater<long>> hash;
-        int result = 0;
-
-        for (int i = 0; i < N; i++)
-        {
-            hash[Arr[i]]++;
-        }
-
-        for (auto &i : hash)
-        {
-            if (K == 0)
-                break;
-
-            result = result + (i.first * i.second);
-            K = (K - i.second >= 0) ? K - i.second : 0;
-        }
-
-        return result;
     }
 };
 

@@ -1,17 +1,12 @@
 /**
  * @file slidingWindow.cpp
- * @author your name (you@domain.com)
- * @brief
- * @version 0.1
+ * @author Subodh Chandra Shil
  * @date 2023-04-11
- *
- * @copyright Copyright (c) 2023
- * @learning_source: https://youtu.be/y-ua1zS9wU0
+ * @learning_source:    https://www.geeksforgeeks.org/window-sliding-technique/
  */
 
 /*
-    You are given an array with 'n' elements, calculate the minimum sum of
-    k, consecutive elements
+    You are given an array with 'n' elements, calculate the minimum sum of k, consecutive elements
 
     Sliding window algorithm:
         1. Compute sum of first k elements (index 0 till k)

@@ -1,9 +1,9 @@
 /**
  * @brief
  * @author      Subodh Chandra Shil
- * @source      https://leetcode.com/problems/most-frequent-even-element/
- * @date        3/25/2023
- * @algorithm   hashing
+ * @source:     https://leetcode.com/problems/most-frequent-even-element/
+ * @date:       3/25/2023
+ * @algorithm:  hashing
  */
 
 #include <bits/stdc++.h>
