@@ -17,8 +17,36 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int minimumSumOfK(vector<int> arr, int n, int k)
+{
+    /// handle edge case of size
+    if (k > n || n == 0)
+    {
+        cout << "Invalid\n";
+        exit(0);
+    }
+
+    /// pre-computation phase
+    /// compute sum of first 'k' elements
+    /// as per question, assume sum of first 'k' elements is minimum
+    int min_k_sum = accumulate(arr.begin(), arr.begin() + k, 0);
+    int window_k_sum = min_k_sum;
+
+    for (int i = k; i < n; i++)
+    {
+        window_k_sum = window_k_sum + arr[i] - arr[i - k];
+        /// required statement as per question to get
+        /// minimum sum of the 'k' consecutive elements
+        min_k_sum = min(min_k_sum, window_k_sum);
+    }
+
+    return min_k_sum;
+}
+
 int main()
 {
+    vector<int> v{10, 4, 2, 5, 6, 3, 8, 1};
+    cout << minimumSumOfK(v, 8, 3) << endl;
 
     return 0;
 }

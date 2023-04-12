@@ -18,7 +18,7 @@ Sliding window is yet another pre-computation technique. The sliding window tech
 
 **Sliding window algorithm**:  
 
-    1. Compute sum of first k elements (index 0 till k)
+    1. Compute the sum of first k elements (index 0 till k)
     2. While increasing i,  sum = sum - a[i - 1] and
                             sum = sum + a[i + k - 1]
 
