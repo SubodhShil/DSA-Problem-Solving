@@ -235,3 +235,11 @@
 * **Optimal Solution 1**: if a number, 'n' is divisible by i (can be any positive number) then 'n' can also divisible by $\frac{n}{i}$.
 
 * Any number can divided by 1 and that specific number. So, if a number is prime number then it must have no factor between 2 to n - 1. To optimize we can fix the range. Assume a number 18, 18 can divisible by 1, 2, 3, 6, 9 and 18. The last number that divides 18 is 9 which is also $\frac{18}{2}$. So, we can construct a thought n / 2.
+
+> # ```Modulo (%)```
+
+* n % m = [0 - (m - 1)]
+  * Modulo (m) of any number (n) would be result 0 to m - 1, that means, **(n % m) < m**
+  * This trick could be use to avoid overflow of array size. Suppose you've an array of size 'n', the 'i' th element should be place at 'k'th index. Then, the formula would be, **n % n + k** to replace this in position 'k'. **This trick mostly used in cyclic rotation questions to reposition an element**.  
+  **arr[(i + k) % n] = arr[i]**
+  * 
