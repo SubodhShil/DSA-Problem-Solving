@@ -3,6 +3,7 @@
  * @author Subodh Chandra Shil
  * @date 2023-04-13
  * @question_link: https://leetcode.com/problems/rotate-array/
+ * @study_link: https://youtu.be/Z7_nMTHROZo
  */
 
 #include <bits/stdc++.h>
@@ -20,8 +21,15 @@ public:
         /// in the array, then we will mod it with 'n' (size of array). This will start
         /// positioning from 0-th index.
         /// The formula to do the task, arr[(i + k) % n]
-        for (auto i : nums)
-            cout << i << " ";
+        int size = nums.size();
+        vector<int> extraArr(size);
+
+        for (int i = 0; i < size; i++)
+        {
+            extraArr[(i + k) % size] = nums[i];
+        }
+
+        nums = extraArr;
     }
 };
 
