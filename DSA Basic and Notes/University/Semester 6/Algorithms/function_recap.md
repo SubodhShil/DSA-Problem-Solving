@@ -18,10 +18,12 @@ Two types of function are seen in C and C++, these are:
 
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+    A[I/O] --> B[Formatted I/O];
+    A[I/O] --> C[Unformatted I/O];
+    B --> D[printf()];
+    B --> E[scanf()];
+    C --> F[getchar()];
+    C --> G[putchar()];
 ```
 
 ## <p align="center"><b>Time complexity</b></p>
