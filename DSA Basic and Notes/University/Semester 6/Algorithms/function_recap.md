@@ -14,4 +14,14 @@ Two types of function are seen in C and C++, these are:
     - Function call
     - Function definition
 
-3.
+## <p align="center"><b>Time complexity</b></p>
+
+1. A program that has a lower time complexity will run faster compared to a program with a higher complexity.
+2. Algorithm that requires less execution (lower in terms of time complexity) time expenditure more space. On the contrary, an algorithm with a higher space complexity will have a lower time complexity( require less execution time.)
+
+    The greater the time complexity, the less space it would require.
+    The greater the space complexity, the less its time complexity would be.
+
+3. An application with lower space complexity will typically have a shorter startup time
+
+4.  
