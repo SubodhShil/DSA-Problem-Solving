@@ -25,9 +25,9 @@ stateDiagram-v2
     Formatted --> scanf()
     Unformatted --> putchar()
     Unformatted --> getchar()
-
-
 ```
+
+&nbsp;
 
 ## <p align="center"><b>Time complexity</b></p>
 
