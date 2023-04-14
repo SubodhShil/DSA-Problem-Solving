@@ -14,6 +14,16 @@ Two types of function are seen in C and C++, these are:
     - Function call
     - Function definition
 
+## <p align="center"><b>I/O classification</b></p>
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 ## <p align="center"><b>Time complexity</b></p>
 
 Algorithm analysis requirements:
@@ -50,4 +60,4 @@ Algorithm analysis requirements:
 
 4. Computer can compute 10^3 operations at a second.
 
-5. 
+5.
