@@ -17,13 +17,9 @@ Two types of function are seen in C and C++, these are:
 ## <p align="center"><b>I/O classification</b></p>
 
 ```mermaid
-graph TD;
-    A[I/O] --> B[Formatted I/O];
-    A[I/O] --> C[Unformatted I/O];
-    B --> D[printf()];
-    B --> E[scanf()];
-    C --> F[getchar()];
-    C --> G[putchar()];
+graph TD
+    A[I/O] --> B[Formatted I/O]
+    A[I/O] --> C[Unformatted I/O]
 ```
 
 ## <p align="center"><b>Time complexity</b></p>
