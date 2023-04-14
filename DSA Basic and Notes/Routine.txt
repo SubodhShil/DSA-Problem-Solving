@@ -7,16 +7,18 @@
     ! Go for solutions
 
 ~ Approach for inteview:
-    * Explain the bruteforce even very high complexity
+    * Explain the bruteforce (complexity doesn't matter at all)
     * Opt optimization using algorithms, or any other way to solve
     * Always explain what you thought
     * Your solution should have proper comments
+    * Explain time and space complexity
+    * Implement formating guidelines
 
 ^ How to practice:
     * Try to solve 4-6 problems a day
     * Always participates in the contest
     * Make a blog, or any other online way to express your solutinos, that can add up to your resume
-    * Every 2 day wise you should revise at least 3-5 previous problems
+    * Every 3 day wise you should revise at least 3-5 previous problems
         * First of all, try yourself without taking help from any hints
         * Optimize previous solution or make important changes to your previous codebase
  */
