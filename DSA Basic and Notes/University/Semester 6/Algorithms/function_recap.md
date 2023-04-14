@@ -65,6 +65,6 @@ Algorithm analysis requirements:
 
 3. An application with lower space complexity will typically have a shorter startup time
 
-4. Computer can compute 10^3 operations at a second.
+4. Computer can compute $10^3$ operations in a second.
 
 5.
