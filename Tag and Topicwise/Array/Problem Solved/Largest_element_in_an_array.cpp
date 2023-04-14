@@ -33,15 +33,9 @@ int findLargestBetter(vector<int> &arr)
     return largestElement;
 }
 
-/// Optimal -> Best
-int findLargestBest(vector<int> &arr)
-{
-}
-
 int main()
 {
     vector<int> arr{3, 2, 1, 5, 2};
-    cout << findLargest(arr) << endl;
 
     return 0;
 }
