@@ -31,7 +31,6 @@ stateDiagram-v2
 
 ## <p align="center"><b>Time complexity</b></p>
 
-<p align="center>
 Algorithm analysis requirements:
 |  ```Terminology``` |
 |:----:|
@@ -39,7 +38,6 @@ Algorithm analysis requirements:
 | Space complexity |
 | Network consumption |
 | Power consumption |
-</p>
 
 1. A program that has a lower time complexity will run faster compared to a program with a higher complexity.
 2. Algorithm that requires less execution (lower in terms of time complexity) time expenditure more space. On the contrary, an algorithm with a higher space complexity will have a lower time complexity( require less execution time.)
