@@ -14,6 +14,15 @@ Two types of function are seen in C and C++, these are:
     - Function call
     - Function definition
 
+3. **Five rules of variable naming**:
+Variable names are also said to be **identifiers**. An idetifier is an unique name to identify various entity of a programming language, such as  variable, function, class, structure or a constant, etc. Here are the five rules that one should follow while declaring a variable:
+
+    - An identifier can only contain letters (a-z, A-Z), digits (0-9) and underscores(_). Special keywords are not allowed.
+    - The first letter of an identifier has to be either a letter (a-z, A-Z) or underscore(_). So, declaring an identifier that begins with a number is invalid.
+    - Can't contain any whitespace or any special characters (!, #, %, @, etc.).
+    - Can't use a reserved keyword as a variable name.
+    - Identifiers are case-sensitive. So, the same name in uppercase and lowercase differs as two variables. For instance, ```int age``` and ```int age are not the same and are identified as two different variables.
+
 ## <p align="center"><b>I/O classification</b></p>
 
 ```mermaid
@@ -67,4 +76,13 @@ Algorithm analysis requirements:
 
 4. Computer can compute $10^3$ operations in a second.
 
-5.
+&nbsp;
+
+## <p align="center"><b>STL (Standard Template Library)</b></p>
+
+STL utilizes class based **Object Oriented Programming (OOP)** paradigm to endorse 4 kind of components to let programmer use complex parts vividly. These components includes:
+
+1. **Algorithms**: Various algorithms that widely used in programmers life.
+2. **Containers**:
+3. **Functions or methods**:
+4. **Iterators**:
