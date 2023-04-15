@@ -23,6 +23,27 @@ Variable names are also said to be **identifiers**. An idetifier is an unique na
     - Can't use a reserved keyword as a variable name.
     - Identifiers are case-sensitive. So, the same name in uppercase and lowercase differs as two variables. For instance, ```int age``` and ```int age are not the same and are identified as two different variables.
 
+4. **Parameter**: A function can be passed with data input while it invokes. The data described as parameter or arguments. Here are two types of parametes briefly discussed:
+
+    - Formal parameter: Formal parameters are declared in a function as a variable of a specific data type yet to receive.
+
+    ```
+    int sum(int a, int b)
+    {
+        return a + b;
+    }
+    ```
+
+    Here, 'a' and 'b' are two variable defined as integer variable.
+
+    - Actual parameter: The actual value that passed into the function by a caller.
+
+    ```
+    sum(10, 20); /// result: 30
+    ```
+
+    We've passed 10 as value of variable 'a' and 20 as value of variable 'b'.
+
 ## <p align="center"><b>I/O classification</b></p>
 
 ```mermaid
