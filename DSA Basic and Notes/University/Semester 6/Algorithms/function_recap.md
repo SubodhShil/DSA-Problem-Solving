@@ -42,7 +42,36 @@ Variable names are also said to be **identifiers**. An idetifier is an unique na
     sum(10, 20); /// result: 30
     ```
 
-    We've passed 10 as value of variable 'a' and 20 as value of variable 'b'.
+    We've passed 10 as value of variable 'a' and 20 in place of variable 'b'.
+
+5. **Six sections of C++ a program**:
+    - Link section: header files or imports of various library.
+    - Documentation section: Stay above link section as manual of the program file.
+    - Definition section
+
+        ```
+        #define MAX 1e6
+        ```
+
+    - **Global declaration section**: The global scope refers to the area within a program that is outside and above the scope of the main function or any other function. The lifetime of global instance like variable, or declarations are validate until the program terminates.
+
+    ```
+    # include <bits/stdc++.h>
+    using namespace std;
+
+    /*Global section*/
+
+    /// declaration of boolean array
+    bool arr[1e7];
+
+    /// declaration of global variable
+    const int MAX = 1e6;
+
+    int main()
+    {
+        return 0;
+    }
+    ```
 
 ## <p align="center"><b>I/O classification</b></p>
 
