@@ -3,6 +3,7 @@
  * @author Subodh Chandra Shil
  * @date 2023-04-16
  * @resource: https://youtu.be/wvcQg43_V8U
+ * @problem_source: https://www.codingninjas.com/codestudio/problems/rotate-array_1230543?leftPanelTab=0
  */
 
 #include <bits/stdc++.h>
@@ -121,6 +122,8 @@ void ans4(vector<int> &arr, int k)
     for (auto i : arr)
         cout << i << " ";
 }
+
+
 
 int main()
 {
