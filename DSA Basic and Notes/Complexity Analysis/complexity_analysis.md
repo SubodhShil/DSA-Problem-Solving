@@ -36,3 +36,13 @@ Time complexity is a mathematical approach to compute how an algorithm will beha
         statement2;
     }
 ```
+
+&nbsp;
+
+# ```Space Complexity```
+
+Space complexity say in two ways:
+
+1. **Space complexity of extra resources you've opted.** How much extra space you're using apart from the given space. 
+2. **Space compelxity of given resources** such as array, vector, linked list or other data structure.
+3.

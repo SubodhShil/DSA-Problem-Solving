@@ -36,7 +36,7 @@ Variable names are also said to be **identifiers**. An idetifier is an unique na
 
     Here, 'a' and 'b' are two variable defined as integer variable.
 
-    - Actual parameter: The actual value that passed into the function by a caller.
+    - Actual parameter: The actual value that passed into the function by a caller. Actual parameters are also known as **'arguments'**.
 
     ```
     sum(10, 20); /// result: 30
@@ -59,7 +59,7 @@ Variable names are also said to be **identifiers**. An idetifier is an unique na
     # include <bits/stdc++.h>
     using namespace std;
 
-    /*Global section*/
+    /* Global section */
 
     /// declaration of boolean array
     bool arr[1e7];
@@ -72,6 +72,19 @@ Variable names are also said to be **identifiers**. An idetifier is an unique na
         return 0;
     }
     ```
+
+<details>
+<summary>Quiz</summary>
+
+1. What feature 'const' keyword provide in C++?  
+    👉 **Can't redefine** a variable once declared.  
+
+2. What void function can't do?  
+    👉 **Can't return** any specific type of value.
+
+3.
+
+</details>
 
 ## <p align="center"><b>I/O classification</b></p>
 
