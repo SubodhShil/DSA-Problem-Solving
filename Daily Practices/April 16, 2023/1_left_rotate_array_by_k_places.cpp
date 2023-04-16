@@ -100,15 +100,38 @@ void ans3(vector<int> &arr, int k)
         cout << i << " ";
 }
 
+void ans4(vector<int> &arr, int k)
+{
+    int n = arr.size();
+    k = k % n;
+
+    vector<int> extraArray(k);
+    for (int i = 0; i < k; i++)
+        extraArray[i] = arr[i];
+
+    /// placing element from 'k' elements
+    for (int i = k; i < n; i++)
+        arr[i - k] = arr[i];
+
+    /// not taking any extra index pointer like 'j'
+    for (int i = n - k; i < n; i++)
+        arr[i] = extraArray[i - (n - k)];
+
+    /// displaying
+    for (auto i : arr)
+        cout << i << " ";
+}
+
 int main()
 {
     // vector<int> v{1, 2, 3, 4, 5, 6, 7};
     vector<int> v{51, 77, 2, -5, 110, 33, 3, 5, 7, 10};
     // ans1(v, 3);
     // ans2(v, 4);
-    cout << endl;
-    ans3(v, 4);
+    // ans3(v, 4);
     // ans3(v, 3);
+
+    ans4(v, 4);
 
     return 0;
 }
