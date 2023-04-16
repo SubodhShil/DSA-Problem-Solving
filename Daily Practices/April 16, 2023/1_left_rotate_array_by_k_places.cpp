@@ -73,12 +73,42 @@ void ans2(vector<int> &arr, int k)
         cout << i << " ";
 }
 
+/// Bruteforce 3
+void ans3(vector<int> &arr, int k)
+{
+    int n = arr.size();
+    k = k % n;
+    int track = k;
+
+    vector<int> extraArray(k);
+    for (int i = 0; i < k; i++)
+        extraArray[i] = arr[i];
+
+    for (int i = 0, j = 0; i < n; i++)
+    {
+        if (track < n)
+            arr[i] = arr[track++];
+
+        else if (track >= n)
+        {
+            arr[n - k + j] = extraArray[j];
+            j++;
+        }
+    }
+
+    for (auto i : arr)
+        cout << i << " ";
+}
+
 int main()
 {
     // vector<int> v{1, 2, 3, 4, 5, 6, 7};
     vector<int> v{51, 77, 2, -5, 110, 33, 3, 5, 7, 10};
     // ans1(v, 3);
-    ans2(v, 4);
+    // ans2(v, 4);
+    cout << endl;
+    ans3(v, 4);
+    // ans3(v, 3);
 
     return 0;
 }
