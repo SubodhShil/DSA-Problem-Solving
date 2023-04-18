@@ -41,7 +41,7 @@ public:
 class Solution2
 {
 public:
-    void rotateKTimes(vector<int> v, int k)
+    void rotateKTimes(vector<int> &v, int k)
     {
         int size = v.size();
 
@@ -69,21 +69,46 @@ public:
             extraArray[i] = v[i - k];
         }
 
-        for (int i = 0; i < extraArray.size(); i++)
-            cout << extraArray[i] << " ";
+        v = extraArray;
     }
 };
 
 class Solution3
 {
 public:
+    void rotateKTimes(vector<int> &v, int k)
+    {
+        int size = v.size();
+        vector<int> extraArray(size);
+
+        k = k % size;
+
+        for (int i = 0; i < size; i++)
+        {
+            extraArray[(i + k) % size] = v[i];
+        }
+
+        v = extraArray;
+    }
 };
+
+void display(vector<int> &v)
+{
+    for (auto i : v)
+        cout << i << ' ';
+}
 
 int main()
 {
     vector<int> v{1, 2, 3, 7, 13, 20};
+
     Solution2 sol2;
     sol2.rotateKTimes(v, 2);
+    display(v);
+
+    // Solution3 sol3;
+    // sol3.rotateKTimes(v, 2);
+    // display(v);
 
     return 0;
 }
