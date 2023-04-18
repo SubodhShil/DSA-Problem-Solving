@@ -123,7 +123,18 @@ void ans4(vector<int> &arr, int k)
         cout << i << " ";
 }
 
+/// Optimal solution
+void leftRotateArrayByK(vector<int> &arr, int k)
+{
+    /// following three reverse can do the same task
 
+    /// reverse first 'k' elements
+    reverse(arr.begin(), arr.begin() + k);
+    /// reverse remaining element after 'k'
+    reverse(arr.begin() + k, arr.end());
+    /// reverse the entire array
+    reverse(arr.begin(), arr.end());
+}
 
 int main()
 {
