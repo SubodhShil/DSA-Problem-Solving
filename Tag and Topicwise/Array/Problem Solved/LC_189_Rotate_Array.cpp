@@ -1,9 +1,9 @@
 /**
- * @file LC_189_Rotate_Array.cpp
- * @author Subodh Chandra Shil
- * @date 2023-04-13
- * @question_link: https://leetcode.com/problems/rotate-array/
- * @study_link: https://youtu.be/Z7_nMTHROZo
+ * @file            LC_189_Rotate_Array.cpp
+ * @author          Subodh Chandra Shil
+ * @date            2023-04-13
+ * @resources:      https://leetcode.com/problems/rotate-array/
+                    https://youtu.be/Z7_nMTHROZo
  */
 
 #include <bits/stdc++.h>
@@ -17,12 +17,15 @@ public:
         /// we need to move an element 'k' step right
         /// so, arr[i] would be positioned at arr[i + k]
         /// but, if the array size overflows then we have to cyclic rotate the array.
-        /// To do this, we have to restore from 0-th index. So, if (i + k) doesn't exist
+        /// To do this, we have to restore back to 0-th index. So, if (i + k) doesn't exist
         /// in the array, then we will mod it with 'n' (size of array). This will start
         /// positioning from 0-th index.
         /// The formula to do the task, arr[(i + k) % n]
         int size = nums.size();
         vector<int> extraArr(size);
+
+        /// decrease rotation if k > size
+        k = k % size;
 
         for (int i = 0; i < size; i++)
         {
