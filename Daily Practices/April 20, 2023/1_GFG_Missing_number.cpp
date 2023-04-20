@@ -1,3 +1,10 @@
+/**
+ * @file        GFG_Missing_number.cpp
+ * @author      Subodh Chandra Shil
+ * @date        2023-04-20
+ * @resource:   https://practice.geeksforgeeks.org/problems/missing-number4257/1?page=2&difficulty[]=-1&category[]=Arrays&sortBy=submissions
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 
