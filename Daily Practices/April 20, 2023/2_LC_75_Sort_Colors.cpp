@@ -1,3 +1,9 @@
+/**
+ * @file        2_LC_75_Sort_Colors.cpp
+ * @author      Subodh Chandra Shil
+ * @date        2023-04-20
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -29,19 +35,48 @@ public:
 
         for (auto i : blue)
             nums.push_back(i);
-
-        /// display
-        for (auto i : nums)
-            cout << i << " ";
     }
+};
+
+/// pre-computation and couting
+class Solution2
+{
+public:
+    void sortColors(vector<int> &nums)
+    {
+        /// counting the frequency using pre-computing hashing
+        unordered_map<int, int> mp;
+        for (auto i : nums)
+            mp[i]++;
+
+        int i = 0;
+        /// replace elements with their count
+        while (mp[0]--)
+            nums[i++] = 0;
+
+        while (mp[1]--)
+            nums[i++] = 1;
+
+        while (mp[2]--)
+            nums[i++] = 2;
+    }
+};
+
+class Solution3
+{
+public:
 };
 
 int main()
 {
     // vector<int> nums{2, 0, 2, 1, 1, 0};
-    vector<int> nums{2, 0, 1};
-    Solution1 sol1;
-    sol1.sortColors(nums);
+    // vector<int> nums{0, 2, 1, 2, 0};
+    // vector<int> nums{2, 0, 1};
+    vector<int> nums{1, 0, 1};
+    // vector<int> nums{0, 1, 0};
+
+    // Solution1 sol1;
+    // sol1.sortColors(nums);
 
     return 0;
 }
