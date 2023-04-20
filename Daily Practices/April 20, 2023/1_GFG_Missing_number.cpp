@@ -10,6 +10,7 @@
 using namespace std;
 
 /// bruteforce solution
+/// time Complexity: O(N * N)
 int missingNumber_bruteforce(int a[], int N)
 {
     for (int i = 1; i <= N; i++)
@@ -34,6 +35,23 @@ int missingNumber_bruteforce(int a[], int N)
     return -1;
 }
 
+/// using hashing algorithm
+int missingNumber(int A[], int N)
+{
+    vector<int> hash(N + 1, 0);
+    for (int i = 0; i < N - 1; i++)
+    {
+        hash[A[i]]++;
+    }
+
+    for (int i = 1; i <= N; ++i)
+    {
+        if (hash[i] == 0)
+            return i;
+    }
+
+    return -1;
+}
 int missingNumber(int A[], int N)
 {
     int sum = N * (N + 1) / 2;
