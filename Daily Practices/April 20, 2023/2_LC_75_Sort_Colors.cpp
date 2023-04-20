@@ -2,6 +2,8 @@
  * @file        2_LC_75_Sort_Colors.cpp
  * @author      Subodh Chandra Shil
  * @date        2023-04-20
+ * @resource:   https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1?page=1&difficulty[]=0&category[]=Arrays&sortBy=submissions
+ *              https://leetcode.com/problems/sort-colors/description/
  */
 
 #include <bits/stdc++.h>
@@ -62,21 +64,64 @@ public:
     }
 };
 
+/// @resource: https://youtu.be/R6HoR6NyMOA
+/// @algorithm: Dutch flag algorithm
 class Solution3
 {
 public:
+    void sortColors(vector<int> &nums)
+    {
+        int size = nums.size();
+
+        /// taking 3 index pointers
+        int low = 0;
+        int mid = 0;
+        int high = size - 1;
+
+        /*
+
+                                We can have three conditions
+
+        1. Encounters 0: swap(low, mid), increments low and mid pointers
+        2. Encounters 1: just increments mid pointer
+        3. Encounters 2: swap(mid, high), decrement high pointer
+
+        */
+
+        while (mid <= high)
+        {
+            if (nums[mid] == 0)
+                swap(nums[mid++], nums[low++]);
+            else if (nums[mid] == 1)
+                mid++;
+            else
+                swap(nums[mid], nums[high--]);
+        }
+    }
 };
+
+void display(vector<int> &v)
+{
+    for (auto i : v)
+        cout << i << ' ';
+
+    cout << endl;
+}
 
 int main()
 {
     // vector<int> nums{2, 0, 2, 1, 1, 0};
     // vector<int> nums{0, 2, 1, 2, 0};
-    // vector<int> nums{2, 0, 1};
-    vector<int> nums{1, 0, 1};
+    vector<int> nums{2, 0, 1};
+    // vector<int> nums{1, 0, 1};
     // vector<int> nums{0, 1, 0};
 
     // Solution1 sol1;
     // sol1.sortColors(nums);
+
+    Solution3 sol3;
+    sol3.sortColors(nums);
+    display(nums);
 
     return 0;
 }
