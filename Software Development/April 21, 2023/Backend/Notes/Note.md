@@ -64,4 +64,16 @@ app.listen(PORT, () => {
 });
 ```
 
-To run the aforemention application follow the **Create Express.js Project** step 4.
+To execute the aforementioned application, carry out step 4 of **Create Express.js Project**.
+
+> ## **Error**
+
+<ins>Error message:</ins> **..\nodemon.ps1 cannot be loaded because running scripts is disabled on this system.**  
+
+Operating system: Windows 11
+
+**Fix: <https://stackoverflow.com/questions/63423584/how-to-fix-error-nodemon-ps1-cannot-be-loaded-because-running-scripts-is-disabl>**
+
+Other Notes:
+
+1. How to update a package: ```npm update <your_package_name>```
