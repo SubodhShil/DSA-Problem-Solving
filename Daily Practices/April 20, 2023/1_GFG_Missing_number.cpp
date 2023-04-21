@@ -52,6 +52,7 @@ int missingNumber(int A[], int N)
 
     return -1;
 }
+
 int missingNumber(int A[], int N)
 {
     int sum = N * (N + 1) / 2;
