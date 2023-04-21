@@ -24,7 +24,7 @@ To create an Express.js project, follow these steps:
     **(3.2)** In the .gitignore file write the directory you want to exclude, in the case we have to exclude node_modules folder. So, we will write ```node_modules/```  
 4. The basic command to run an express project using nodemon package is: ```nodemon index.js```  
 But, you can change the long command by do the following:  
-    **(4.1)** Go to package.json file
+    **(4.1)** Go to package.json file  
     **(4.2)** You'll see this object:  
 
     ```
@@ -77,3 +77,4 @@ Operating system: Windows 11
 Other Notes:
 
 1. How to update a package: ```npm update <your_package_name>```
+2. The **index.js** file should be simple and clean, it should mainly contain server listen methods.
