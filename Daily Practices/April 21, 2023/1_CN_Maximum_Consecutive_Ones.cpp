@@ -3,6 +3,7 @@
  * @author          Subodh Chandra Shil
  * @date            2023-04-21
  * @resource:       https://www.codingninjas.com/codestudio/problems/maximum-consecutive-ones_3843993
+ *                  https://leetcode.com/problems/max-consecutive-ones/description/
  */
 
 #include <bits/stdc++.h>
