@@ -56,6 +56,10 @@ public:
 };
 
 /// Optimal solution 1: using pre-computation: hashing
+/// Drawbacks of hashing array: for very big number of elements
+/// it will store unnecessary elements
+/// additionally, the hashing array can't store negative numbers
+///
 class Solution3
 {
 public:
@@ -63,12 +67,20 @@ public:
     {
         int result = 0;
 
-        map<int, int> countDigitOccurances;
+        /// complexity of an ordered map: O(N Log N)
+        // map<int, int> countDigitOccurances;
+
+        /// best case of unordered map is O(N)
+        unordered_map<int, int> countDigitOccurances;
+
         for (int i : nums)
             countDigitOccurances[i]++;
+
         for (auto i : countDigitOccurances)
+        {
             if (i.second == 1)
                 result = i.first;
+        }
 
         return result;
     }
@@ -106,6 +118,11 @@ int main()
 
     Solution3 result3;
     cout << result3.singleNumber(nums);
+
+    cout << endl;
+
+    Solution4 result4;
+    cout << result4.singleNumber(nums);
 
     return 0;
 }
