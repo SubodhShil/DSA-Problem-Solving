@@ -144,6 +144,37 @@ public:
     }
 };
 
+class Solution5
+{
+public:
+    string reverseWords(string str)
+    {
+
+        str += " ";
+        int size = str.size();
+
+        string word = "", finalReverseString = "";
+        for (int i = 0; i < size; i++)
+        {
+            if (str[i] == ' ' && str[i + 1] != ' ')
+            {
+                if (finalReverseString.length() == 0)
+                    finalReverseString = word;
+                else
+                    finalReverseString = word + " " + finalReverseString;
+
+                word = "";
+            }
+            else if (str[i] != ' ')
+            {
+                word += str[i];
+            }
+        }
+
+        return finalReverseString;
+    }
+};
+
 int main()
 {
 
