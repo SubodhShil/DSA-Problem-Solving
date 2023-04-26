@@ -1,3 +1,10 @@
+/**
+ * @file            GFG_Maximum_Occuring_Character.cpp
+ * @author          Subodh Chandra Shil
+ * @date            2023-04-26
+ * @resource:       https://practice.geeksforgeeks.org/problems/maximum-occuring-character-1587115620/1
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 
