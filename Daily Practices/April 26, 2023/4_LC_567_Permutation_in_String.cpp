@@ -1,7 +1,7 @@
 /**
- * @file LC_567_Permutation_in_String.cpp
- * @author Subodh Chandra Shil
- * @date 2023-04-26
+ * @file        LC_567_Permutation_in_String.cpp
+ * @author      Subodh Chandra Shil
+ * @date        2023-04-26
  */
 
 #include <bits/stdc++.h>
