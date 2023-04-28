@@ -2,6 +2,8 @@
 
 The two-pointer technique is a common algorithm design technique that uses two pointers to scan through an array or other data structure. The pointers can move in either the same direction or in opposite directions.
 
+## ```Opposite direction two pointers```
+
 In the case of opposite direction two pointers, the pointers start at opposite ends of the array and move towards each other. This technique is often used to solve problems such as finding the minimum or maximum value in an array, or finding the first occurrence of a given value in an array.
 
 Here is an example of how to use the two-pointer technique to find the minimum value in an array:
