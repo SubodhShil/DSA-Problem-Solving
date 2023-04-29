@@ -33,3 +33,17 @@ contract firstContract {
 Root  
   **⇢** **Frontend** (📁 client) [React js]  
   **⇢** **Smart contract/backend** (📁 smart_contract) [Solidity]  
+
+Tools:
+
+1. **IPFS (InterPlanetary File System)**: A network for decentralized data sharing and storing.
+2. **Pinata**: Pinata is a service for easily store, manage and distribute files on IPFS network.
+
+<p align="center" style="font-size: 20px"> <b>Algorithm</b> </p>
+
+User will upload data or files in the IPFS network through our frontend application
+
+Receiver can receive that data or files if user gives permission (access) to him.
+
+
+
