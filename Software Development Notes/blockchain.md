@@ -119,3 +119,7 @@ bool isOwner = ownership[0x123][0x456];
 ```
 
 This will return true because the owner at address 0x123 has granted ownership of a token to address 0x456.
+
+### Functions
+
+function add(address_user, string memory url)
