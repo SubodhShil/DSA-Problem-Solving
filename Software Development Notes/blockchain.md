@@ -26,3 +26,10 @@ contract firstContract {
   * Reference type
 
 **There is no concept of null in solidity. So, it must filled up with some values in any variable**
+
+> # ```Project: Decentralized Drive```
+
+**File system**  
+Root  
+  **⇢** **Frontend** (📁 client) [React js]  
+  **⇢** **Smart contract/backend** (📁 smart_contract) [Solidity]  

@@ -79,7 +79,7 @@ public:
             /// to handle zeros: if the sum already available in the hash
             /// the condition checks if sum is not found in the hash, then
             /// execute the codes in the if conditional block
-            if (preSumMap.find(sum) != preSumMap.end())
+            if (preSumMap.find(sum) == preSumMap.end())
             {
                 preSumMap[sum] = i;
             }
