@@ -75,7 +75,9 @@ int multiply(int a, int b)
 
 There is two ways to pass value or data to the function.
 
-1. **Call by value**: Call by value means that the function receives a copy of the value passed as an argument, and any changes made to the value within the function do not affect the original value. That means, no original value get spoiled, becuase the value passed to the function is locally stored by the function parameter in stack memory.
+1. **Call by value**
+
+Call by value means that the function receives a copy of the value passed as an argument, and any changes made to the value within the function do not affect the original value. That means, no original value get spoiled, becuase the value passed to the function is locally stored by the function parameter in stack memory.
 
 ```
 void add(int a, int b) {
@@ -113,4 +115,48 @@ int main() {
 
 > ## ```Iterator```
 
-Iterator points to a particular memory location or address of a STL containers. Iterator used to iterate over sequence of elements, characters to perform various operation such as access individual elements, to modify elements, or to remove elements. 
+Iterator points to a particular memory location or address of a STL containers. Iterator used to iterate over sequence of elements, characters to perform various operation such as access individual elements, to modify elements, or to remove elements with much efficiency.
+
+Here I have created an iterator to traverse a vector array in C++
+
+```
+vector<int> v{10, 202, 3, 77, 93};
+
+/// declare an iterator
+/// iterator points to first element of the array
+vector<int>::iterator it = v.begin();
+
+for (; it != v.end(); ++it)
+    /// accessing elements by dereferencing
+    cout << *it << " ";
+```
+
+### **❓If p is a pointer to a float type variable and p = 201, what does (p + 3) yeild?**
+
+If p is a pointer to a float type variable and p = 201, then p + 3 will yield the address of the float variable that is 3 bytes ahead of the variable pointed to by p.
+When you add an integer to a pointer, the pointer is incremented by the number of bytes in the integer. In this case, the integer is 3, so the pointer is incremented by 3 bytes.
+
+Now, the pointer is storing a float variable of size 4 bytes, and we incremented the variable 3 bytes ahead of it's address, so it is now pointing to an unknown position and dereferencing that position will also show garbage value.
+
+```
+float x = 201;
+float *p = &x;
+
+/// moving pointer location 3 bytes ahead of variable x
+p += 3;
+
+/// shows garbage value
+cout << p << endl;
+```
+
+### **❓What type of pointer can't be dereferenced and why?**
+
+A pointer of type void or null pointer can't be dereferenced because it does not have a type associated with it. Dereferencing a pointer means accessing the value stored in the memory location pointed to by the pointer. Since void pointers do not have a type associated with them, the compiler does not know how many bytes to read from memory when dereferencing a void pointer.
+Another reason is A null pointer is a pointer that points to an invalid address. It is often represented by the value 0. So, it is not possible to dereference null pointer.
+
+```
+int* p = nullptr;
+
+// This will result in undefined behavior
+int value = *p;
+```
