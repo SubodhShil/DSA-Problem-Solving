@@ -16,8 +16,15 @@ Formula: (Column count) x i + j
 ### **❓How to find row and column size of a 2d array?**  
 
 ```
-findRow = sizeof(array2D)/sizeof(array2D[0])
-findColumn = sizeof(array2D[0])/sizeof(int)
+rowSize = array2D.size()
+columnSize = array2D[0].size()
+```
+
+alternatively,
+
+```
+rowSize = sizeof(array2D)/sizeof(array2D[0])
+columnSize = sizeof(array2D[0])/sizeof(int)
 ```
 
 **Explain 2D array:** Assume there is a 2D array namely demoArray[3][5]. So, row = 3 and column = 5. Total element size = 3 * 5 = 15. We can rephrase it like this, demoArray[3][5] is a 2D array that is multiplied by its 1D form(demoArray[3] by the column count. Here, the first subscript refers to the 1D array of demoArray[3][5].
