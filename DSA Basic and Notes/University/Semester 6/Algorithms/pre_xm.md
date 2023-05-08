@@ -133,21 +133,10 @@ for (; it != v.end(); ++it)
 
 ### **❓If p is a pointer to a float type variable and p = 201, what does (p + 3) yeild?**
 
-If p is a pointer to a float type variable and p = 201, then p + 3 will yield the address of the float variable that is 3 bytes ahead of the variable pointed to by p.
-When you add an integer to a pointer, the pointer is incremented by the number of bytes in the integer. In this case, the integer is 3, so the pointer is incremented by 3 bytes.
-
-Now, the pointer is storing a float variable of size 4 bytes, and we incremented the variable 3 bytes ahead of it's address, so it is now pointing to an unknown position and dereferencing that position will also show garbage value.
-
-```
-float x = 201;
-float *p = &x;
-
-/// moving pointer location 3 bytes ahead of variable x
-p += 3;
-
-/// shows garbage value
-cout << p << endl;
-```
+Here, p is a pointer to a float variable.
+p = 201, which is representing an address.
+p + 3 here denoting an address 4 byte right to current address 201, since pointer is pointing to a float variable and each float variable allocates 4 byte memory space. So,
+p + 3 = 201 + (3 x 4) = 201 + 12 = 213
 
 ### **❓What type of pointer can't be dereferenced and why?**
 
