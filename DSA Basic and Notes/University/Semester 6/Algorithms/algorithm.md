@@ -29,5 +29,5 @@ Wrong!! The loop has initialized with value 1 and last until 10. So, counting fr
 
 Formula:
 
-1. If condition is <= (less than equals to zero) then, ```n + 1 - i + 1```
-2. If condition is < (less than) then, ```n - i + 1```
+1. If condition is <= n (less than or equals to n) then, ```n + 1 - i + 1```
+2. If condition is < n (less than n) then, ```n - i + 1```
