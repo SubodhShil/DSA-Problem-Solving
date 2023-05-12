@@ -32,7 +32,7 @@ public:
     }
 };
 
-/// Moor's voting algorithmj
+/// Moor's voting algorithm
 class Solution2
 {
 public:
@@ -45,10 +45,10 @@ public:
         {
             if (cnt == 0)
             {
-                resultElement = v[i];
+                resultElement = i;
                 cnt = 1;
             }
-            else if (v[i] == resultElement)
+            else if (i == resultElement)
                 ++cnt;
             else
                 --cnt;
