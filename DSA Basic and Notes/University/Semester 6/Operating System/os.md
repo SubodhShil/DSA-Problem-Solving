@@ -25,6 +25,16 @@ An operating is an interface between computer hardware and the end user. It is a
 7. User interface
 8. Resource management
 
+<ins>**Types of OS**</ins>:
+
+1. Batch OS
+2. Multi-programming OS
+3. Multi-processing OS
+4. Multi-tasking OS
+5. Distributed OS
+6. Embedded OS
+7. Real time OS
+
 ### **What is job**?
 
 Job refers to complete unit of work or instructions that a computer receives and execute accordingly.
@@ -39,29 +49,32 @@ From a complete instruction to end of execution.
 
 This algorithm obeys **FIFO (First in First Out)** manner where any <ins>process that arrives first, will eventually get execute first.</ins>
 
+<ins>**Priority**</ins>: Arrival Time (AT)
+
 FCFS is a non-preemptive algorithm which halt all other processes until current priority process is not entirely finished.
 
 ### **Terms**
 
-<ins>**Arrival time:**</ins>  At which time a process enters to the ready queue.  
+<ins>**Arrival time (AT):**</ins>  At which time a process enters to the ready queue.  
 
-<ins>**Brust time:**</ins> The amount of time it consumed by a process to accomplish.
+<ins>**Brust time (BT):**</ins> The amount of time it consumed by a process to accomplish.
 
 <ins>**Gantt chart:**</ins> It is a visual representation of the execution schedule that displays the start and end time of each process.  
 
-<ins>**Completion time:**</ins> Completion Time is the moment when the process in the Gantt chart was terminated.  
+<ins>**Completion time (CT):**</ins> Completion Time is the moment when the process (in the gantt chart) was terminated.  
 
-<ins>**Average waiting time (WT):**</ins>
+<ins>**Turn Around Time (TT):**</ins> Completion time - Arrival Time = **CT - AT**
 
-<ins>**Trun around time:**</ins> Completion time - arrival time
-
+<ins>**Waiting time (WT):**</ins> Turn Around Time - Burst Time = **TT - BT**
 
 How the algorithm works:
 
 1. It picks up the process which is arrived first, (arrival time will lesser). **If the arrival time is similar then pick the process which appears first in the table or ready queue**.
-2.
+2. Create a gantt chart
 
 ### <p align="center"><b>2. Shortest Job First (SJF)</b></p>
+
+<ins>**Priority**</ins>: Burst Time
 
 ### <p align="center"><b>3. Priority Scheduling</b></p>
 
