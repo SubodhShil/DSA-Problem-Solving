@@ -7,14 +7,14 @@ An operating is an interface between computer hardware and the end user. It is a
 <ins>**Operating system manages:**</ins>
 
 1. Hardware resources of a computer.
-2. Provides a place or platform to run various application.
+2. Provides a place or platform to run various applications.
 
 <ins>**Goals of an operating system:**</ins>
 
 1. User friendly
 2. Efficiency
 
-<ins>**Characteristics:**</ins>
+<ins>**Characteristics of an OS:**</ins>
 
 1. Process management
 2. Memory management
@@ -49,7 +49,7 @@ From a complete instruction to end of execution.
 
 This algorithm obeys **FIFO (First in First Out)** manner where any <ins>process that arrives first, will eventually get execute first.</ins>
 
-<ins>**Priority**</ins>: Arrival Time (AT)
+<ins>**Priority**</ins>: Smallest arrival time (AT)
 
 FCFS is a non-preemptive algorithm which halt all other processes until current priority process is not entirely finished.
 
@@ -74,8 +74,13 @@ How the algorithm works:
 
 ### <p align="center"><b>2. Shortest Job First (SJF)</b></p>
 
-<ins>**Priority**</ins>: Burst Time
+<ins>**Priority**</ins>: Smallest burst time
 
 ### <p align="center"><b>3. Priority Scheduling</b></p>
 
 ### <p align="center"><b>4. Round Robing Scheduling</b></p>
+
+## **Other Questions**
+
+1. What is API?
+    - API stands for Application Programming Interface. It creates a bridge between two different aspects of an application by sharing data.
