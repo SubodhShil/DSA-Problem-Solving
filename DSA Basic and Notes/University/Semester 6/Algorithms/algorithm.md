@@ -8,6 +8,10 @@
 4. Power cosumption
 5. CPU register
 
+Auxiliary space complexity is the amount of additional space that an algorithm uses, in addition to the space required to store the input data. This additional space is typically used to store temporary data structures or variables that are needed during the execution of the algorithm.
+
+The auxiliary space complexity of an algorithm is typically expressed using big O notation. For example, an algorithm with O(1) auxiliary space complexity uses a constant amount of additional space, regardless of the size of the input data. An algorithm with O(n) auxiliary space complexity uses a linear amount of additional space, which is proportional to the size of the input data. Algorithms with lower auxiliary space complexity are more efficient and require less memory.
+
 ## <p align="center"><b>Frequency count method</b></p>
 
 Counting the number of time an operation or instruction or statement has executed under an algorithm is frequency count method.
@@ -61,12 +65,14 @@ for(i = 0; i < 5; ++i)                  -----➤ n
     for(j = 0; j < 3; ++j)              -----➤ n * n
         for(k = 0; k < 3; ++k)          -----➤ n * n * n
             for(l = 0; l < 3; ++l)      -----➤ n * n * n * n
-
                                         ______________________________________
                                         f(t) = O(n) + O(n^2) + O(n^3) + O(n^4)
                                         Degree of a polynomial = 4
                                         Time complexity = O(n^4)
 ```
+
+**Square matrix**
+A matrix having equal number of rows and columns is said to be a square matrix.
 
 ## <p align="center"><b>Loop and complexity analysis</b></p>
 

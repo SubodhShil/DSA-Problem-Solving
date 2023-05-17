@@ -5,15 +5,20 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+/*
+    If multiple processes having same AT (arrival time) then, we need to pick
+    the process which appears first.
+    In the case, we already been sorted process array. So, we have track to this by
+    the process ID.
+ */
+struct FCFS
+{
+    int processID;
+    float arrivalTime, burstTime;
+};
 
 int main()
 {
-    struct FCFS
-    {
-        int processID;
-        float arrivalTime, burstTime;
-    };
-
     int processCnt = 0;
     cout << "Enter process counter: ";
     cin >> processCnt;
