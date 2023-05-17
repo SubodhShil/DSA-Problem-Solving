@@ -1,62 +1,44 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class SJF
+struct SJF
 {
-public:
-    int id, at, st, bt, wt, ct, tt;
+    int processID;
+    float arrivalTime, burstTime, turnaroundTime, waitingTime;
 };
-
-bool comparefn(SJF a, SJF b)
-{
-    return a.bt < b.bt;
-}
 
 int main()
 {
+    int processCnt = 0;
+    cout << "Enter process count: ";
+    cin >> processCnt;
 
-    cout << "\nShortest job first algorithm\n----------********----------\n";
+    /// declaring process array
+    SJF processArray[processCnt];
 
-    cout << "Enter SJF count: ";
-    int jobCount;
-    cin >> jobCount;
+    /// tracking minimum arrival time
+    float minArrivalTime = INT32_MAX;
+    int minProcessID = -1;
 
-    /// creating array of allTasks class
-    SJF allTasks[jobCount];
-    SJF tempTasks[jobCount];
-
-    /// Entering AT and BT
-    cout << "Enter Arrival Time and Burst Time for the process\n";
-    for (int i = 0; i < jobCount; ++i)
+    for (int i = 0; i < processCnt; ++i)
     {
-        cin >> allTasks[i].at >> allTasks[i].bt;
+        processArray[i].processID = i + 1;
+        cout << "Process " << i + 1 << "--------------------\n";
+        cout << "Arrival Time (AT): ";
+        cin >> processArray[i].arrivalTime;
+        cin >> processArray[i].burstTime;
 
-        /// entering the id
-        allTasks[i].id = i + 1;
+        /// storing data of minimum arrivalTime
+        if (processArray[i].arrivalTime < minArrivalTime)
+        {
+            minArrivalTime = processArray[i].arrivalTime;
+            minProcessID = processArray[i].processID;
+        }
     }
 
-    /// sorting the SJF job 'bt' wise
-    sort(allTasks, allTasks + jobCount, comparefn);
+    vector<int> ganttChart;
 
-    /// SJF algorithm
-    /// to create gantt chart
-
-    /// process calculation
-    /// prefix sum algorithm
-    allTasks[0].st = 0;
-    for (int i = 1; i < jobCount; ++i)
-    {
-        allTasks[i].st = allTasks[i - 1].bt + allTasks[i].bt;
-    }
-
-    /// printing the result with st;
-    cout << "\n\nShowing AT & BT of the SJF\n---------*******---------\n";
-    cout << "\nAT\tBT\tST\n";
-
-    for (int i = 0; i < jobCount; ++i)
-    {
-        cout << allTasks[i].at << "\t" << allTasks[i].bt << "\t" << allTasks[i].st << endl;
-    }
+    /// pre calculation
 
     return 0;
 }

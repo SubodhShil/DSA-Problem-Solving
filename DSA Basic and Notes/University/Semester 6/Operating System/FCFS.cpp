@@ -1,88 +1,65 @@
 /**
- * @file FCFS.cpp
- * @author Subodh Chandra Shil
+ * @file        FCFS2.cpp
+ * @author      Subodh Chandra Shil
+ * @date        2023-05-17
+
  */
 
 #include <bits/stdc++.h>
 using namespace std;
-/*
-    If multiple processes having same AT (arrival time) then, we need to pick
-    the process which appears first.
-    In the case, we already been sorted process array. So, we have track to this by
-    the process ID.
- */
+
 struct FCFS
 {
     int processID;
-    float arrivalTime, burstTime;
+    float burstTime, turnaroundTime, waitingTime;
 };
 
 int main()
 {
     int processCnt = 0;
-    cout << "Enter process counter: ";
+    cout << "Enter process count: ";
     cin >> processCnt;
+    float totalWT = 0;
+    float totalTT = 0;
 
     /// declaring process array
     FCFS processArray[processCnt];
 
     for (int i = 0; i < processCnt; ++i)
     {
-        cout << "Enter details for process: " << i + 1 << "\n------------------------------\n";
-        float arrivalTimeInput, burstTimeInput;
         processArray[i].processID = i + 1;
 
-        cout << "Enter arrival time: ";
-        cin >> arrivalTimeInput;
-        processArray[i].arrivalTime = arrivalTimeInput;
+        cout << "Process " << processArray[i].processID << " ------> Burst time = ";
+        cin >> processArray[i].burstTime;
 
-        cout << "Enter burst time: ";
-        cin >> burstTimeInput;
-        processArray[i].burstTime = burstTimeInput;
-        cout << endl;
-    }
-
-    vector<int> ganttProcess;
-
-    /// hashing
-    map<float, float> processHash;
-
-    for (int i = 0; i < processCnt; i++)
-    {
-        processHash[processArray[i].arrivalTime] = processArray[i].burstTime;
-    }
-
-    /// iterating the map
-    int cnt = 1;
-    for (auto i : processHash)
-    {
-        if (cnt == 1)
+        /// calculating the TT and WT
+        if (i == 0)
         {
-            ganttProcess.push_back(i.first);
-            ganttProcess.push_back(i.second);
+            processArray[i].turnaroundTime = processArray[i].burstTime;
+            processArray[i].waitingTime = 0;
         }
         else
         {
-            ganttProcess.push_back(i.second);
+            processArray[i].turnaroundTime = processArray[i - 1].turnaroundTime + processArray[i].burstTime;
+            processArray[i].waitingTime = processArray[i].turnaroundTime - processArray[i].burstTime;
         }
 
-        ++cnt;
+        totalTT += processArray[i].turnaroundTime;
+        totalWT += processArray[i].waitingTime;
     }
 
-    /// prefix sum algorithm to increment after 2nd elements
-    /// count has to be started from index 2
-    /// 0th and 1st index is pre-computed
-    int preComputeValue = ganttProcess[0] + ganttProcess[1];
-
-    for (int i = 2; i < ganttProcess.size(); i++)
+    /// Displaying the result
+    cout << "\nDisplaying process data\n\n";
+    cout << "Process ID\tBurst Time\tTurnaround Time \tWaiting Time\n-----------\t-----------\t-----------------\t-----------------\n";
+    for (int i = 0; i < processCnt; ++i)
     {
-        ganttProcess[i] = ganttProcess[i] + preComputeValue;
-        preComputeValue = ganttProcess[i];
+        cout << processArray[i].processID << "\t\t" << processArray[i].burstTime << "\t\t" << processArray[i].turnaroundTime << "\t\t\t" << processArray[i].waitingTime << endl;
     }
 
-    /// displaying
-    for (auto i : ganttProcess)
-        cout << i << " ";
+    /// Average WT and TT
+    cout << "=================================\n";
+    cout << "Average Waiting Time: " << totalTT / processCnt << endl;
+    cout << "Average Turn Around Time: " << totalWT / processCnt << endl;
 
     return 0;
 }
