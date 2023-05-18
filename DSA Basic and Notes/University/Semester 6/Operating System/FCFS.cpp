@@ -2,7 +2,8 @@
  * @file        FCFS2.cpp
  * @author      Subodh Chandra Shil
  * @date        2023-05-17
-
+ * @brief       Program demonstrates FCFS scheduling algorithm
+ *              arrival time is considered 0 here
  */
 
 #include <bits/stdc++.h>
@@ -38,6 +39,7 @@ int main()
             processArray[i].turnaroundTime = processArray[i].burstTime;
             processArray[i].waitingTime = 0;
         }
+
         else
         {
             processArray[i].turnaroundTime = processArray[i - 1].turnaroundTime + processArray[i].burstTime;
