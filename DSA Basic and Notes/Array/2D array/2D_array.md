@@ -2,12 +2,22 @@
 
 Each array element will be contain an array. Another way to say multi-dimensional array is **array of arrays**.
 
+In memory level every multi-dimensional array is a single dimensional array but it is represented in a tabular way to give easier implementation to the programmer.
+
 <p align="center" style="font-size: 18px"> <b>2D Array</b> </p>  
 
 2D array also said to be **'Matrix array'**. A 2D array is directly called a matrix of i x j size. Where ‘i’ is row count and ‘j’ is column size.  
 
 **Syntax:** data_type [row][column]  
 **Total elements in a 2D array:** row count * column count  
+
+**Input and output in 2D array**
+
+```
+int arr[2][2];
+cin >> arr[0][0] >> arr[0][0];
+cout << arr[0][0] << arr[0][0];
+```
 
 **Usecase**: A practical use case of 2D or any multidimensional array is huge data storage within minimal complexity or declaring an immense amount of variables. Like, a data warehouse uses multidimensional arrays.  
 
