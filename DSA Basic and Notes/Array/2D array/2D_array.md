@@ -45,6 +45,16 @@ Internally, there is no multi-dimensional array is created in the memory. Rather
 
 ```column * i + j```
 
+### **How to create a 2D vector**
+
+```cpp
+vector<vector<int>> array2D(row, vector<int>(col));
+```
+
+1. How many rows in a 2D matrix = ```arr.size()```  
+2. How many columns in a 2D matrix = ```arr[0].size()```  
+3. Size of 2D matrix = ```arr.size() * arr[0].size()```
+
 > # Problem 1
 
 ```
