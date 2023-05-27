@@ -105,3 +105,105 @@ Formula:
 
 1. If condition is <= n (less than or equals to n) then, ```n - i + 2```
 2. If condition is < n (less than n) then, ```n - i + 1```
+
+&nbsp;
+
+## <p align="center"><b>Sorting algorithms</b></p>
+
+A good sorting algorithm has the following characteristics:
+
+1. Time complexity
+2. Space complexity
+3. Stability
+
+### **Stability of an algorithm**
+
+Stability of an algorithm is a measurement that ensures how an algorithm will preserve the order of duplicate elements even after it's execution.
+
+Suppose, we have an unsorted array:  
+**[5, 2, 3, 4, 7, 4]**  
+Order of first 4 occurred at index 3  
+Order of second 4 occurred at index 5  
+
+<ins>After the sorting</ins>  
+**[2, 3, 4, 4, 5, 7]**  
+Order of first 4 currently at index 2 previously 3  
+Order of second 4 currently at index 3 previously 5  
+
+So, the order is consistent after sorting, so the algorithm is a stable algorithm.  
+![stable_algorithm](./Media/algo4.png)
+
+&nbsp;
+
+**Upper bound and lower bound:**
+
+An algorithm can run on different complexity based on different input size, input type or any other input scenario. So, there is no constant complexity or predefined behaviour of an algorithm's time complexity. That is why time complexity of an algorithm divides into three segments:
+
+1. Upper bound: Also known as wrost case complexity. Better way to say Big oh.
+2. Lower bound: Also known as best case complexity. Better way to Big omega.
+3. Average bound: Better way to say Big theta. <ins> We can represent an algorithm with an average bound if and only if the algorithm's upper bound and lower bound are asymptotically equal.</ins>
+
+Here are some examples of upper and lower bounds of common algorithms:
+
+1. Bubble sort: Upper bound: O(n^2), Lower bound: O(n)
+2. Quicksort: Upper bound: O(n log n), Lower bound: Ω(n log n)
+3. Merge sort: Upper bound: O(n log n), Lower bound: Ω(n log n)
+4. Heap sort: Upper bound: O(n log n), Lower bound: Ω(n log n)
+
+**Why we need to know upper bound and lower bound?**  
+Understanding the upper bound and lower bound of an algorithm's time complexity is important for several reasons.
+
+The bubble sort algorithm takes O(n^2) in wrost case, whereas the best-case scenario for bubble sort is O(n), where the input list is already sorted, requiring only a single pass to confirm the sorted order. If we have input that end up giving us O(n) complexity then we can go for bubble sort because all other sorting algorithm has O(n log n) for both upper and lower bound.
+
+&nbsp;
+
+## <p align="center"><b>Recurrence Relation</b></p>
+
+A function that calls itself for a certain amount of time
+is a recurrence relation.
+
+**What is the recursive tree?**
+
+Question 1: calculate the time complexity of the following algorithm
+
+```cpp
+void printNum(int a)
+{
+    if(a > 0)
+    {
+        printNum(a - 1);
+        cout << a << endl;
+    }
+}
+```
+
+**In every step of the function calling itself by decreasing the input size by 1.**
+
+Put n = n - 1,  
+T(n - 1)    = T((n - 1) - 1) + 1
+            = T(n - 2) + 1
+
+Put n = n - 2,  
+T (n - 2)   = T ((n - 2) - 1) + 1
+            = T (n - 3) + 1
+
+&nbsp;
+
+## <p align="center"><b>Divide and conquer</b></p>
+
+The divide and conquer is an algorithm design paradigm to solve complex problems. It consists of three steps get the solution:
+
+**Divide:** Dividing a problem recursively into multiple small portions (sub-problems), until the smallest possible portion become so simple to solved directly.
+
+**Conquer:** The conquer process is responsible for dividing sub-problems furthermore simplier versions.
+
+**Combine:** This step of the algorithm will decompose all results generated from each sub-problems.
+
+### <ins><p align="center"><b>Binary Search</b></p></ins>
+
+Requirement: The array needs to be in sorted order.
+
+**Complexity analysis:**
+
+1. In every iteration, the array breaks into two parts and decide in which part it should continue the target element. So, here we're dividing our array size by 2.
+2. The loop terminates when there a single element remain similar to the target element we're looking for.
