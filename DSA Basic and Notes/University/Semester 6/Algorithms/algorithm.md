@@ -12,6 +12,8 @@ Auxiliary space complexity is the amount of additional space that an algorithm u
 
 The auxiliary space complexity of an algorithm is typically expressed using big O notation. For example, an algorithm with O(1) auxiliary space complexity uses a constant amount of additional space, regardless of the size of the input data. An algorithm with O(n) auxiliary space complexity uses a linear amount of additional space, which is proportional to the size of the input data. Algorithms with lower auxiliary space complexity are more efficient and require less memory.
 
+**Pseudocode**: Pseudocode is a programming language-agnostic way to write algorithms. It does not abide by any specific syntax, and instead implicate human-readable language to write algorithmic steps.
+
 ## <p align="center"><b>Frequency count method</b></p>
 
 Counting the number of time an operation or instruction or statement has executed under an algorithm is frequency count method.
@@ -191,7 +193,7 @@ T (n - 2)   = T ((n - 2) - 1) + 1
 
 ## <p align="center"><b>Divide and conquer</b></p>
 
-The divide and conquer is an algorithm design paradigm to solve complex problems. It consists of three steps get the solution:
+The divide and conquer is an algorithm design paradigm to solve complex problems. It consists of three steps to get the solution:
 
 **Divide:** Dividing a problem recursively into multiple small portions (sub-problems), until the smallest possible portion become so simple to solved directly.
 
