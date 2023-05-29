@@ -2,7 +2,7 @@
 
 ## **What is an operating system**?
 
-An operating is an interface between computer hardware and the end user. It is a medium to communicate with the computer and instruct the computer hardawares without knowing complex computer language.
+An operating system is an interface between computer hardware and the end user. It is a medium to communicate with the computer and instruct the computer hardawares without knowing complex computer language.
 
 <ins>**Operating system manages:**</ins>
 
@@ -35,15 +35,48 @@ An operating is an interface between computer hardware and the end user. It is a
 6. Embedded OS
 7. Real time OS
 
+&nbsp;
+
 ### **What is job**?
 
 Job refers to complete unit of work or instructions that a computer receives and execute accordingly.
 
 From a complete instruction to end of execution.
 
+- A job consist of one or multiple processes, and it is managed by operating system's job scheduler. There are multiple job scheduler algorithms such as, FCFS, SJF, Round robin etc.
+
+### **What is a process**?
+
+- Single unit of work.
+- Actively running software or computer code.
+- Process consistently change over time.
+
+A process can be in one of several states, including:
+
+<ins>New</ins>: A new process is created when a user or another process requests it.  
+<ins>Ready</ins>: A ready process is waiting to be scheduled for execution. Yet to execute and currently in the ready queue.  
+<ins>Running</ins>: A running process is currently being executed by the CPU.  
+<ins>Waiting</ins>: A waiting process is blocked waiting for some event to occur, such as an I/O operation to complete.  
+<ins>Terminated</ins>: A terminated process has finished executing and its resources are released.  
+
+At any given time, there is only one process that is running on the CPU. A process scheduler removes one process from the running state in the CPU and selects another process to run based on some scheduling algorithms in OS.
+
 &nbsp;
 
-## **CPU Scheduling Algorithms**
+## <ins>**CPU Scheduling Algorithms**</ins>
+
+Operating system uses CPU scheduling algorithms to predict the sequence of processes to be executed. It decides which process will use CPU for execution and which processes to hold or remove from execution.
+
+The best CPU scheduling algorithm for a particular system will depend on the specific needs of that system. For example, a system that needs to minimize the average wait time for all processes might use SJF scheduling, while a system that needs to give important processes more CPU time might use priority scheduling.
+
+There are two types of CPU scheduling algorithms:
+
+1. **Preemptive:** CPU can preempt the process after a certain time and run other processes. Some algorithms are: SRTF, Round Robin.
+2. **Non-preemptive:** New process can't begin until the previous process fully finished. In non-preemptive scheduling, once the CPU cycle is allocated to process, the process holds it till it reaches a waiting state or terminated. Some algorithms are: FCFS, SJF, Priority, Multilevel queue.
+
+<ins>**Context Switching:**</ins> Context switching is the process of temporarily suspending one process and resuming another.
+
+&nbsp;
 
 ### <p align="center"><b>1. First Come First Serve (FCFS)</b></p>
 
