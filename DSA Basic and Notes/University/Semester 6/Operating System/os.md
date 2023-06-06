@@ -63,7 +63,7 @@ At any given time, there is only one process that is running on the CPU. A proce
 
 &nbsp;
 
-## <ins>**CPU Scheduling Algorithms**</ins>
+## **CPU Scheduling Algorithms**
 
 Operating system uses CPU scheduling algorithms to predict the sequence of processes to be executed. It decides which process will use CPU for execution and which processes to hold or remove from execution.
 

@@ -1,4 +1,3 @@
-/*
  * Easy Questions: Think 30-45 minutes (may vary)
     ^ Go for hints
     ! Go for solutions
@@ -7,7 +6,7 @@
     ! Go for solutions
 
 ~ Approach for inteview:
-    * Explain the bruteforce (complexity doesn't matter at all)
+    * Explain the bruteforce (complexity doesn't matter at all), just explain your thoughts and intuition, don't code in bruteforce not until interview say so.
     * Opt optimization using algorithms, or any other way to solve
     * Always explain what you thought
     * Your solution should have proper comments
@@ -21,4 +20,3 @@
     * Every 3 day wise you should revise at least 3-5 previous problems
         * First of all, try yourself without taking help from any hints
         * Optimize previous solution or make important changes to your previous codebase
- */

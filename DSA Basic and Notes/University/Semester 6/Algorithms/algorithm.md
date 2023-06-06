@@ -209,3 +209,5 @@ Requirement: The array needs to be in sorted order.
 
 1. In every iteration, the array breaks into two parts and decide in which part it should continue the target element. So, here we're dividing our array size by 2.
 2. The loop terminates when there a single element remain similar to the target element we're looking for.
+
+## <p align="center"><b>Greedy Algorithm</b></p>
