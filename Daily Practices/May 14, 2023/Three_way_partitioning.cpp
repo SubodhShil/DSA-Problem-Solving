@@ -6,7 +6,6 @@ class Solution
 public:
     void threeWayPartition(vector<int> &array, int a, int b)
     {
-        
     }
 };
 
