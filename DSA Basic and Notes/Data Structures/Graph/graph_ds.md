@@ -57,7 +57,7 @@ Graph can be divided into two types depending on the direction of its edges:
 
 > ## **```Graph connectivity```**
 
-1. **Connected Graph:** A graph is said to be connected if there is a path between every pair of vertex. You can reach any vertex from any other vertex in a connected graph by following a series of edges.
+1. <ins>**Connected Graph</ins>**: A graph is said to be connected if there is a path between every pair of vertex. You can reach any vertex from any other vertex in a connected graph by following a series of edges.
 
 &nbsp;
 
@@ -92,3 +92,12 @@ The number of edges attached to it.
 
 **Indegree:** Number of incoming edges to a node.  
 **Outdegree:** Number of outgoing edges to a node.
+
+&nbsp;
+
+> ## **```Edge weight```**
+
+An edge weight in a weighted graph is a numerical value associated with an edge that expressed as the cost of traversing from one node to other as distance or any other relevant attribute.
+
+If in a graph the weight of edges are not explictly mentioned then take up unit weight as value 1.
+
