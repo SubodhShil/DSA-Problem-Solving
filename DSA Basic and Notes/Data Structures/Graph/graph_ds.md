@@ -113,11 +113,11 @@ Can be represented in two ways:
 
 &nbsp;
 
-> ## **```Minimum Cost Spanning Tree (MST)```**
+> ## **```Spanning Tree```**
 
 A spanning tree is a sub-graph of a graph having all vertices but only n - 1 edges connecting all the vertices.
 
-* Take all vertices
+* Take all vertices, |V|
 * Calculate edges: |V| = vertices - 1
 
 ![mst](./spanningtree1.png)
@@ -126,3 +126,9 @@ Two greedy algorithms are available implement MST algorithm:
 
 1. Prime's algorithm
 2. Kruskal's algorithm
+
+### **How many different spanning tree can be generated from a graph?**
+
+**Formula:**
+
+![formula](./spanningtree2.png)
