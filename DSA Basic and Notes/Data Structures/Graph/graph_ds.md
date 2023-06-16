@@ -76,7 +76,7 @@ A path is a direction of continuous and unrepeated sequence of nodes.
 
 Rules:
 
-1. Node can't appear twice.
+1. Node can't appear twice or repeated.
 2. Two nodes need to be squential and connect by edges.
 
 &nbsp;
@@ -101,3 +101,28 @@ An edge weight in a weighted graph is a numerical value associated with an edge 
 
 If in a graph the weight of edges are not explictly mentioned then take up unit weight as value 1.
 
+&nbsp;
+
+> ## **```Graph representation```**
+
+Can be represented in two ways:
+
+1. **Adjancency matrix:** representing graph in a matrix of boolean values where 0 means path doesn't exist and 1 mean path exist.
+
+2. Ajnacency list
+
+&nbsp;
+
+> ## **```Minimum Cost Spanning Tree (MST)```**
+
+A spanning tree is a sub-graph of a graph having all vertices but only n - 1 edges connecting all the vertices.
+
+* Take all vertices
+* Calculate edges: |V| = vertices - 1
+
+![mst](./spanningtree1.png)
+
+Two greedy algorithms are available implement MST algorithm:
+
+1. Prime's algorithm
+2. Kruskal's algorithm
