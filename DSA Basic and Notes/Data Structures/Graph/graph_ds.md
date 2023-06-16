@@ -1,6 +1,6 @@
 > # **```Graph```**
 
-Graph is a non-linear data structure that consist of finite objects called <ins>nodes or vertices</ins> **(V)** and a set of connection between nodes called <ins>edges</ins> **(E)**. A graph denoted as G(E, V).
+Graph is a non-linear data structure that consist of finite number of objects called <ins>nodes or vertices</ins> **(V)** and a set of connection between nodes called <ins>edges</ins> **(E)**. A graph denoted as G(E, V).
 
 &nbsp;
 
@@ -37,13 +37,27 @@ Here is a table that summarizes the key differences between trees and graphs:
 
 In general, trees are used to represent hierarchical data, while graphs are used to represent a wider variety of data.
 
+&nbsp;
+
+> ## <p align="center">**```Terminologies```**</p>
+
 **Nodes or vertex**:
+
+&nbsp;
+
+> ## **```Graph Direction```**
 
 Graph can be divided into two types depending on the direction of its edges:
 
 1. <ins>**Undirected graph**</ins>: No specific direction is associated with nodes. Since undirected graphs don't have a specific direction, they can roam around independently in any direction. **Bidirectional**.
 
 2. <ins>**Directed graph**</ins>: Has a strict direction for nodes to move in a certain path. All the edges are directed.
+
+&nbsp;
+
+> ## **```Graph connectivity```**
+
+1. **Connected Graph:** A graph is said to be connected if there is a path between every pair of vertex. You can reach any vertex from any other vertex in a connected graph by following a series of edges.
 
 &nbsp;
 
