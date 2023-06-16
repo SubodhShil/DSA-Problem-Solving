@@ -120,9 +120,7 @@ A spanning tree is a sub-graph of a graph having all vertices but only n - 1 edg
 * Take all vertices
 * Calculate edges: |V| = vertices - 1
 
-<div style="text-align: center;">
-  <img src="./spanningtree1.png" alt="mst">
-</div>
+![mst](./spanningtree1.png)
 
 Two greedy algorithms are available implement MST algorithm:
 
