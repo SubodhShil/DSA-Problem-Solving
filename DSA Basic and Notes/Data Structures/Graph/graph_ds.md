@@ -113,22 +113,44 @@ Can be represented in two ways:
 
 &nbsp;
 
-> ## **```Spanning Tree```**
+> ## <p align="center">**```Spanning Tree```**</p>
 
-A spanning tree is a sub-graph of a graph having all vertices but only n - 1 edges connecting all the vertices.
+A spanning tree is a sub-graph of a graph that has no cycle or loop and covers all the nodes.
+
+Criteria of a spanning tree:
+
+1. It is a sub-graph.
+2. All nodes or vertices need to be covered.
+3. It must be a tree, no cycle should be occurred.
+4. Must have n - 1 edges connecting all the vertices.
 
 * Take all vertices, |V|
 * Calculate edges: |V| = vertices - 1
 
 ![mst](./spanningtree1.png)
 
-Two greedy algorithms are available implement MST algorithm:
-
-1. Prime's algorithm
-2. Kruskal's algorithm
-
 ### **How many different spanning tree can be generated from a graph?**
 
 **Formula:**
 
 ![formula](./spanningtree2.png)
+
+&nbsp;
+
+> ## **```Minimum cost spanning tree (MST)```**
+
+In minimum cost spanning tree you will be given a weighted graph.
+Take |V| - 1 number of edges.
+
+Two greedy algorithms are available to find MST:
+
+1. Prime's algorithm
+2. Kruskal's algorithm
+
+## <p align="center">**(1) Prime's algorithm**</p>
+
+1. Delete the loop form the graph.
+2. Delete the low cost edge between parallel edges.
+3. Delete the cycle from the graph.
+
+* Find the minimum cost edge.

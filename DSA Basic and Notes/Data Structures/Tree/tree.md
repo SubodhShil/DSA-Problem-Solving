@@ -2,6 +2,15 @@
 
 Tree is a non-linear hierarchical data structure **consist of nodes where each node having zero or more nodes connected by edges**.
 
+## **How linked list is different from tree?**
+
+Linked list is a single directional data structure. Unlike linked list, each node of a tree can have link or connection among one or more nodes.
+
+## **Benefits**
+
+1. Insertion and deletion operation are O(long N) complexity.
+2. Partial sorting.
+
 ## <p align="center">**Terminology**</p>
 
 ![](./tree1.png)
@@ -15,7 +24,7 @@ Tree is a non-linear hierarchical data structure **consist of nodes where each n
 <ins>**Height of a node**</ins>:Number of edges from the node to it's deepest leaf.  
 <ins>**Depth of a Node**</ins>:The depth of a node is the number of edges from the root to the node.  
 <ins>**Height of a Tree**</ins>:The height of a Tree is the height of the root node or the depth of the deepest node.  
-<ins>**Ancestors**</ins>: 
+<ins>**Ancestors**</ins>:
 
 &nbsp;
 
