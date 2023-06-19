@@ -1,7 +1,7 @@
 /**
- * @file LC_1752_Check_if_Array_Is_Sorted_and_Rotated.cpp
- * @author Subodh Chandra Shil
- * @date 2023-04-14
+ * @file        LC_1752_Check_if_Array_Is_Sorted_and_Rotated.cpp
+ * @author      Subodh Chandra Shil
+ * @date        2023-04-14
  */
 
 #include <bits/stdc++.h>

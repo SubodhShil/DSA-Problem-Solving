@@ -1,7 +1,7 @@
 /**
- * @file GFG_Union_of_Two_Sorted_Arrays.cpp
- * @author Subodh Chandra Shil
- * @date 2023-04-18
+ * @file        GFG_Union_of_Two_Sorted_Arrays.cpp
+ * @author      Subodh Chandra Shil
+ * @date        2023-04-18
  */
 
 #include <bits/stdc++.h>

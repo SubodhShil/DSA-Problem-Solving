@@ -1,9 +1,9 @@
 /**
- * @file left_rotate_array_by_k_places.cpp
- * @author Subodh Chandra Shil
- * @date 2023-04-16
- * @resource: https://youtu.be/wvcQg43_V8U
- * @problem_source: https://www.codingninjas.com/codestudio/problems/rotate-array_1230543?leftPanelTab=0
+ * @file            left_rotate_array_by_k_places.cpp
+ * @author          Subodh Chandra Shil
+ * @date            2023-04-16
+ * @resources:      https://youtu.be/wvcQg43_V8U
+ *                  https://www.codingninjas.com/codestudio/problems/rotate-array_1230543?leftPanelTab=0
  */
 
 #include <bits/stdc++.h>

@@ -1,9 +1,9 @@
 /**
  * @file        2_Right_rotate_an_array_k_times.cpp
  * @author      Subodh Chandra Shil
+ * @date        2023-04-18
  * @resources:  https://www.techiedelight.com/right-rotate-an-array-k-times/
  *              https://leetcode.com/problems/rotate-array/description/
- * @date        2023-04-18
  */
 
 #include <bits/stdc++.h>

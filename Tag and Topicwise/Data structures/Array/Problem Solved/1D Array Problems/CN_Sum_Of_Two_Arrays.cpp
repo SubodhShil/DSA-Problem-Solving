@@ -1,9 +1,9 @@
 /**
- * @file CN_Sum_Of_Two_Arrays.cpp
- * @author Subodh Chandra Shil
- * @date 2023-04-14
- * @problem_source: https://www.codingninjas.com/codestudio/problems/sum-of-two-arrays_893186?leftPanelTab=0
- * @tutorial: https://youtu.be/Z7_nMTHROZo?t=1796
+ * @file            CN_Sum_Of_Two_Arrays.cpp
+ * @author          Subodh Chandra Shil
+ * @date            2023-04-14
+ * @resource:       https://www.codingninjas.com/codestudio/problems/sum-of-two-arrays_893186?leftPanelTab=0
+ *                  https://youtu.be/Z7_nMTHROZo?t=1796
  */
 
 #include <bits/stdc++.h>
