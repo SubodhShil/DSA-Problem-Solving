@@ -19,6 +19,7 @@ struct ListNode
 };
 
 /// Iterative and two pointer approach
+/// TC: O(N), SC: O(1)
 class Solution
 {
 public:
