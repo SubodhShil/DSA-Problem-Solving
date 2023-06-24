@@ -1,3 +1,20 @@
+> # Tricks
+
+- The following line in taking unlimited input of 'n' and 'm' variable along with a condition separated by comma(,)
+
+## <p align="center">**Taking user input with conditions**</p>
+
+```cpp
+int n, m;
+while (cin >> n >> m, n > 0 && m > 0)
+{
+    /// statements here
+}
+```
+
+&nbsp;
+
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -36,3 +53,4 @@ int main()
 
     return 0;
 }
+```
