@@ -4,12 +4,29 @@
 
 ## <p align="center">**Taking user input with conditions**</p>
 
+## <p align="center">**(1)**</p>
+
 ```cpp
 int n, m;
 while (cin >> n >> m, n > 0 && m > 0)
 {
     /// statements here
 }
+```
+
+## <p align="center">**(2)**</p>
+
+```cpp
+list<string> url;
+
+string s;
+while ((cin >> s), s != "end")
+{
+    url.push_back(s);
+}
+
+for (auto i : url)
+    cout << i << " ";
 ```
 
 &nbsp;
