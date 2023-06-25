@@ -10,7 +10,6 @@ int binarySearchRecursive(vector<int> &arr, int start, int end, int search_key)
             return mid;
         else if (search_key > arr[mid])
             return binarySearchRecursive(arr, mid + 1, end, search_key);
-
         else
             return binarySearchRecursive(arr, start, mid - 1, search_key);
     }

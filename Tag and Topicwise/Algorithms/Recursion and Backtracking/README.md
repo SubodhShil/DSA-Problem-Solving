@@ -31,6 +31,8 @@ Every recursive problem can be solved using iterations or loops.
 
     (2) Stack overflow causes segmentation fault.
 
+&nbsp;
+
 ## **Base Condition**
 
  The condition that checks for whether the recursive call should be stopped. A base condition is a special case in a recursive function that tells the function to stop calling itself. This prevents the function from calling itself infinitely, which can use up all of the available stack space and cause the program to crash. &nbsp;
@@ -41,11 +43,18 @@ Every recursive problem can be solved using iterations or loops.
 
 Visual representation of recursive calls in a tree like diagram.
 
+Recursive algorithm can lead to performance problems because it can create multiple copies of the same sub-trees. These redundant sub-trees can result in increased computational overhead. However, this issue can be mitigate by using the optimization algorithm **dynamic programming**, which caches the result by storing the results of sub-tree problem so that they do not need to be recalculated.
+
 &nbsp;
 
 ## **Recurrence relation**
 
 When a recursion problem can defined in a formulae, described the sequence of sub-problems in the recursive tree.
+
+**Types of recurrence relation:**
+
+1. **<ins>Linear recurrence relation</ins>**: A linear recurrence relation is a type of recurrence relation where the number of recursive calls in a recursive function increases linearly with the input size. Linear recurrence relations can lead to multiple redundant sub-trees.
+2. **<ins>Divide and conquer recurrence relation</ins>**: A divide-and-conquer recurrence relation is a mathematical equation that describes the recursive steps of a divide-and-conquer algorithm. On a basis of condition the search space is divided, thus computation also decreased.
 
 &nbsp;
 
