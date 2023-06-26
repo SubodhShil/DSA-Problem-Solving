@@ -1,8 +1,9 @@
 # **```Recursion```**
 
-<ins>**Definition**</ins>: When a function calls itself until a specific condition is met to terminate the function call process. The way recursion accomplish it's task is 'synchoronous'. If a recursive function encounters a multiple recursive calls within the function body, recursion will done this on top to bottom approach. That means it will take recursive function calls from very top, complete that particular recursive call and proceeds to the following recursive calls
+<ins>**Definition**</ins>: When a function calls itself until a specific condition is met to terminate the function call process, is called recursion. The way recursion accomplish it's task is 'synchoronous'. If a recursive function encounters a multiple recursive calls within the function body, recursion will done this on top to bottom approach. That means it will take recursive function calls from very top, complete that particular recursive call and proceeds to the following recursive call later on.
 
-Every recursive problem can be solved using iterations or loops.
+1. Recursion is like imposing your next task to the simplier or smaller version of yourself, and beleive it will do your task and return you value of the work after the accomplishment. During the work imposed by the current function, the current function got stuck or freezed in the stack memory and waits till the next function done his work.
+2. Every recursive problem can be solved using iterations or loops.
 
 &nbsp;
 
@@ -35,7 +36,38 @@ Every recursive problem can be solved using iterations or loops.
 
 ## **Base Condition**
 
- The condition that checks for whether the recursive call should be stopped. A base condition is a special case in a recursive function that tells the function to stop calling itself. This prevents the function from calling itself infinitely, which can use up all of the available stack space and cause the program to crash. &nbsp;
+ The condition that checks for whether the recursive call should be stopped. A base condition is a special case in a recursive function that tells the function to stop calling itself. This prevents the function from calling itself infinitely, which can use up all of the available stack space and cause the program to crash.
+
+### **Types of base cases**
+
+1. **Implicit base case**: Base condition doesn't impose to specificly handle recursive call termination.
+
+```cpp
+int summationOfN(int n)
+{
+    /// implicit base case
+    if (n >= 1)
+    {
+        return n + summationOfN(n - 1);
+    }
+
+    return 0;
+}
+```
+
+2. **Explicit base case**: A base condition is clearly mentioned to handle continuous recursive calls to stop.
+
+```cpp
+int summationOfN(int n)
+{
+    /// explicit base case
+    if (n <= 1)
+        return n;
+
+    else
+        return n + summationOfN(n - 1);
+}
+```
 
 &nbsp;
 
@@ -99,3 +131,19 @@ def fibonacci(n):
 ```
 
 The base cases of this function are n == 0 and n == 1. In these cases, the function simply returns n. The recursive step of the function is to call itself twice, with n - 1 and n - 2 as the arguments. The function then returns the sum of the results of these two recursive calls.
+
+&nbsp;
+
+## **How to construct a recursive function**
+
+Variables:
+
+1. **Argument list of the function:** The variables that are required for the next recursive function call should be included in the recursive function argument list.
+
+2. **Function body variables:** Variables declared in the body of a function are local to that function, meaning they cannot be accessed by other functions in the same call stack or upcoming function in the recursive tree. One should choose function body variables on the following basis:
+
+    - **Variables that can be calculated and only needed within the function.** These variables should be declared as local variables, because there is no need to keep them around after the function has finished executing.
+
+    - **Variables that will have no significance for the producing upcoming function calls or does not require to be in the argument list.** These variables can also be declared as local variables, because they do not need to be shared with other functions.
+
+3. **Return type:**

@@ -13,14 +13,7 @@ using namespace std;
 class Solution1
 {
 public:
-    /// explicit base case
-    int summationOfN(int n)
-    {
-        if (n <= 1)
-            return n;
 
-        return n + summationOfN(n - 1);
-    }
 };
 
 class Solution2
@@ -58,13 +51,13 @@ public:
 int main()
 {
     Solution1 sol1;
-    cout << sol1.summationOfN(5) << endl;
+    cout << sol1.summationOfN(6) << endl;
 
     Solution2 sol2;
-    cout << sol2.summationOfN(5) << endl;
+    cout << sol2.summationOfN(6) << endl;
 
     Solution3 sol3;
-    sol3.summationOfN(5, 0);
+    sol3.summationOfN(6, 0);
 
     return 0;
 }
