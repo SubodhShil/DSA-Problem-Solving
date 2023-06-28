@@ -1,5 +1,8 @@
 > # **```Subarray```**
 
+<details>
+<summary>Read</summary>
+
 - Subarray is said to be a contiguous portion of an array.
 
 - A subarray includes
@@ -24,6 +27,8 @@ The subarrays are:
 ```
 {1}, {2}, {3}, {1,2}, {2,3}, {1,2,3}
 ```
+
+</details>
 
 &nbsp;
 
