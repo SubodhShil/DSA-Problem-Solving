@@ -34,12 +34,17 @@ The subarrays are:
 
 > # **```Subsequence```**
 
+<details>
+<summary>Read</summary>
+
 The subsequence of an array is obtained by deleting one or more or no element without changing the actual order of the remaining elements.
 
 ### **Observations**
 
 1. May or may not be a contiguous part of an array.
 2. For a sequence of size n, we can have 2^n-1 non-empty sub-sequences in total.
+
+</details>
 
 &nbsp;
 
