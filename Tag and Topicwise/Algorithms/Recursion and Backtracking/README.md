@@ -7,6 +7,15 @@
 
 &nbsp;
 
+## ***Steps to solve any problem in recursive way***
+
+1. Do a simple task and let the recursion do the rest of the work.
+2. Construct the base condition.
+3. Build the recurrence relation.
+4. 
+
+&nbsp;
+
 ## **Why Recursion?**
 
 1. It help solving bigger and complex problems into smaller and simpler way.

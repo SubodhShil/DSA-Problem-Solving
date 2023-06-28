@@ -8,22 +8,50 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int getMax(vector<int> &arr, int index)
+class Solution1
 {
-    if (index == arr.size() - 1)
+public:
+    int getMax(vector<int> &arr, int index = 0)
     {
-        return arr[index];
-    }
+        if (index == arr.size() - 1)
+        {
+            return arr[index];
+        }
 
-    int maxElement = getMax(arr, index + 1);
-    if (maxElement > arr[index])
+        int maxElement = getMax(arr, index + 1);
+        if (maxElement > arr[index])
+            return maxElement;
+        else
+            arr[index];
+    }
+};
+
+class Solution2
+{
+public:
+    int getMax(vector<int> &arr, int maxElement = INT32_MIN, int index = 0)
+    {
+        /// base case
+        if (index == arr.size())
+            return maxElement;
+
+        /// doing the single work
+        int current_max = max(maxElement, arr[index]);
+
+        maxElement = getMax(arr, current_max, index + 1);
+
         return maxElement;
-    else
-        arr[index];
-}
+    }
+};
 
 int main()
 {
+    vector<int> v{5, 20, 15, 7, 33};
+    Solution1 sol1;
+    Solution2 sol2;
+    cout << sol1.getMax(v);
+    cout << endl;
+    cout << sol2.getMax(v);
 
     return 0;
 }
