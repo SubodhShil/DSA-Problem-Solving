@@ -4,7 +4,6 @@
  * @description:    You're given an unsorted array find
  *                  the second largest element in the array
  * @problem_source: https://practice.geeksforgeeks.org/problems/second-largest3735/1
- * @date 2023-04-10
  */
 
 #include <bits/stdc++.h>

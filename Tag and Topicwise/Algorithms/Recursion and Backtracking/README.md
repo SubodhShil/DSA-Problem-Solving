@@ -12,7 +12,7 @@
 1. Do a simple task and let the recursion do the rest of the work.
 2. Construct the base condition.
 3. Build the recurrence relation.
-4. 
+4. Depict the recursive tree.
 
 &nbsp;
 

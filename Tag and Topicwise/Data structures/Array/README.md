@@ -2,6 +2,7 @@
 
 <details>
 <summary>Read</summary>
+&nbsp;
 
 - Subarray is said to be a contiguous portion of an array.
 
@@ -36,8 +37,9 @@ The subarrays are:
 
 <details>
 <summary>Read</summary>
+&nbsp;
 
-The subsequence of an array is obtained by deleting one or more or no element without changing the actual order of the remaining elements.
+**The subsequence of an array is obtained by deleting one or more or no element without changing the actual order of the remaining elements.**
 
 ### **Observations**
 
