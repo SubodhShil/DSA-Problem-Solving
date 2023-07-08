@@ -12,8 +12,6 @@ vector<int> printMatrix(vector<vector<int>> &mat, int n)
     int col = mat[0].size();
     vector<int> result;
 
-    // vector<vector<int>> result(row, vector<int>(col, 0));
-
     for (int i = 0; i < row; ++i)
     {
         int j = 0;

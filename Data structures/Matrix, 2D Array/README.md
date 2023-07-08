@@ -4,7 +4,18 @@ Each array element will be contain an array. Another way to say multi-dimensiona
 
 In memory level every multi-dimensional array is a single dimensional array but it is represented in a tabular way to give easier implementation to the programmer.
 
-<p align="center" style="font-size: 18px"> <b>2D Array</b> </p>  
+&nbsp;
+
+># ```2D Array```
+
+### **Introduction:**
+
+* Any multidimensional array is nothing but a basic array, but it represent in a way that can be handled easily by the programmer. As for 2D array it's defined as array of arrays.
+* 2D array items are arranged in row major order.
+* 2D array is a multidimensional array, where items are stored in both row and column direction. This array implementation is visually a matrix representation.
+* Two-dimensional (2D) arrays are indexed by two subscripts, one for the row and one for the column.
+    ```arr[row][column]```
+* Size of 2D array is described as ```row x column```.
 
 2D array also said to be **'Matrix array'**. A 2D array is directly called a matrix of i x j size. Where ‘i’ is row count and ‘j’ is column size.  
 
@@ -55,6 +66,17 @@ vector<vector<int>> array2D(row, vector<int>(col));
 2. How many columns in a 2D matrix = ```arr[0].size()```  
 3. Size of 2D matrix = ```arr.size() * arr[0].size()```
 
+### **❓How to create a 2D array of a pre-defined size with all same value?**
+
+```cpp
+int predefinedValue;
+cin >> predefinedValue;
+
+vector<vector<int>> matrix(row, vector<int>(col, predefinedValue));
+```
+
+&nbsp;
+
 > # Problem 1
 
 ```
@@ -76,21 +98,6 @@ Output:
 
 Creator: Subodh Chandra Shil
 ```
-
-&nbsp;
-
-># ```2D Array```
-
-### **Introduction:**
-
-* Any multidimensional array is nothing but a basic array, but it represent in a way that can be handled easily by the programmer. As for 2D array it's defined as array of arrays.
-* 2D array items are arranged in row major order.
-* 2D array is a multidimensional array, where items are stored in both row and column direction. This array implementation is visually a matrix representation.
-* Two-dimensional (2D) arrays are indexed by two subscripts, one for the row and one for the column.
-    ```arr[row][column]```
-* Size of 2D array is described as ```row x column```.
-
----
 
 > ## ```🟨 Basic template for 2D array```
 
