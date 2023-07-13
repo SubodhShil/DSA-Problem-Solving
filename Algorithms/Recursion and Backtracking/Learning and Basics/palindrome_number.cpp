@@ -25,5 +25,6 @@ int main()
     // cout << sol1.checkPalindrome(1221);
     cout << sol1.checkPalindrome(37973);
     // cout << sol1.checkPalindrome(123);
+
     return 0;
 }
