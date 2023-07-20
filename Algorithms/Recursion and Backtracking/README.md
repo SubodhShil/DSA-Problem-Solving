@@ -18,7 +18,7 @@
 
 &nbsp;
 
-## **Why Recursion?**
+## **```Why Recursion?```**
 
 1. It help solving bigger and complex problems into smaller and simpler way.
 
@@ -26,7 +26,7 @@
 
 &nbsp;
 
-## **Function call stack**
+## **```Function call stack```**
 
 1. Until a function call finishes it's work it stays in the stack memory.
 
@@ -36,7 +36,7 @@
 
 &nbsp;
 
-## **Stack overflow or segmentation fault**
+## **```Stack overflow or segmentation fault```**
 
     (1) Due to conditional check fails it could cause infinite recursive call.
     In the process, the internal stack filled up with a large amount of function calls which will eventually exceeds the limit of internal stack space.
@@ -45,7 +45,7 @@
 
 &nbsp;
 
-## **Base Condition**
+## **```Base Condition```**
 
  The condition that checks for whether the recursive call should be stopped. A base condition is a special case in a recursive function that tells the function to stop calling itself. This prevents the function from calling itself infinitely, which can use up all of the available stack space and cause the program to crash.
 
@@ -82,7 +82,7 @@ int summationOfN(int n)
 
 &nbsp;
 
-## **Recursive Tree**
+## **```Recursive Tree```**
 
 Visual representation of recursive calls in a tree like diagram.
 
@@ -90,7 +90,7 @@ Recursive algorithm can lead to performance problems because it can create multi
 
 &nbsp;
 
-## **Recurrence relation**
+## **```Recurrence relation```**
 
 When a recursion problem can defined in a formulae, described the sequence of sub-problems in the recursive tree.
 
@@ -101,14 +101,14 @@ When a recursion problem can defined in a formulae, described the sequence of su
 
 &nbsp;
 
-## **Backtracking**
+## **```Backtracking```**
 
 The last function call executed first  
 Print line must execute after the function call  
 
 &nbsp;
 
-## **Types of recursion**
+## **```Types of recursion```**
 
 1. Direct recursion
 2. Indirect recursion
@@ -121,7 +121,7 @@ A recursive function is said to be tail recursive if the recursive call is the l
 
 &nbsp;
 
-## **Leap of faith**
+## **```Leap of faith```**
 
 The **leap of faith** in recursion is the act of assuming that a recursive function will work correctly, even though you haven't yet written the code for the recursive calls. This is because recursion works by breaking down a problem into smaller and smaller subproblems, until the subproblems are so small that they can be solved directly. The recursive function then uses the solutions to the subproblems to solve the original problem.
 
@@ -145,7 +145,7 @@ The base cases of this function are n == 0 and n == 1. In these cases, the funct
 
 &nbsp;
 
-## **How to construct a recursive function**
+## **```How to construct a recursive function```**
 
 Variables:
 
