@@ -7,7 +7,7 @@
 
 &nbsp;
 
-## ***Steps to solve any problem in recursive way***
+> ## <p align="center">**Steps to solve any problem in recursive way**</p>
 
 ### Always start off thinking a recursive solution from the perspective of smallest possible input or least sub-problem, which also has a known value.
 
