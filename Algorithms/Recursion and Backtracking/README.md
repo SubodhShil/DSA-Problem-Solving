@@ -9,8 +9,10 @@
 
 ## ***Steps to solve any problem in recursive way***
 
-1. Do a simple task and let the recursion do the rest of the work.
-2. Construct the base condition.
+### Always start off thinking a recursive solution from the perspective of smallest possible input or least sub-problem, which also has a known value.
+
+1. **Construct the base condition**: Figure out the smallest sub-problem with a known result. The known result will be returned when the least sub-problem appears. Hence, we have to define the case where it will return the known value and we can have multiple such cases. But, the case responsible to terminate the endless recursive loop is namely **base case**.
+2. Having **leap of faith**, trust the recursive process. Do a simple task and let the recursion do the rest of the work. 
 3. Build the recurrence relation.
 4. Depict the recursive tree.
 
