@@ -103,8 +103,13 @@ When a recursion problem can defined in a formulae, described the sequence of su
 
 ## **```Backtracking```**
 
-The last function call executed first  
-Print line must execute after the function call  
+It is an algorithm that tries to find a solution to a given parameter. It builds the subproblems recursively and abandons those which can't fulfill the condition.
+
+**Insights:**
+
+1. Try to build all possible solutions incrementally (one by one).
+2. Remove those solutions that fail to satisfy the constraints of the problem.
+
 
 &nbsp;
 
@@ -115,7 +120,7 @@ Print line must execute after the function call
 3. Tail recursion
 4. Non-tail recursion
 
-### <p align="center">**(4) Tail recursion**</p>
+### <p align="center">**Tail recursion**</p>
 
 A recursive function is said to be tail recursive if the recursive call is the last thing done by the function. There is no need to keep record of the previous state.
 

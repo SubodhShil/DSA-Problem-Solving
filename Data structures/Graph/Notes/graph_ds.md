@@ -4,7 +4,7 @@ Graph is a non-linear data structure that consist of finite number of objects ca
 
 &nbsp;
 
-> ## **```Difference between trees and graphs```**
+## **```Difference between trees and graphs```**
 
 Both trees and graphs are non-linear data structures that can be used to represent a variety of data. However, there are some key differences between the two data structures.
 
@@ -25,15 +25,15 @@ Both trees and graphs are non-linear data structures that can be used to represe
 
 Here is a table that summarizes the key differences between trees and graphs:
 
-| Feature | Tree | Graph |
-|---|---|---|
-| Connectedness | Connected | May or may not be connected |
-| Cycles | No cycles | May have cycles |
-| Root node | One | None |
-| Children | Exactly one | Zero or more |
-| Leaf nodes | Have no children | May have children |
-| Hierarchical data | Yes | No |
-| Applications | File system, decision trees, search trees | Social networks, transportation networks, computer networks |
+| Feature           | Tree                                      | Graph                                                       |
+| ----------------- | ----------------------------------------- | ----------------------------------------------------------- |
+| Connectedness     | Connected                                 | May or may not be connected                                 |
+| Cycles            | No cycles                                 | May have cycles                                             |
+| Root node         | One                                       | None                                                        |
+| Children          | Exactly one                               | Zero or more                                                |
+| Leaf nodes        | Have no children                          | May have children                                           |
+| Hierarchical data | Yes                                       | No                                                          |
+| Applications      | File system, decision trees, search trees | Social networks, transportation networks, computer networks |
 
 In general, trees are used to represent hierarchical data, while graphs are used to represent a wider variety of data.
 
@@ -45,7 +45,7 @@ In general, trees are used to represent hierarchical data, while graphs are used
 
 &nbsp;
 
-> ## **```Graph Direction```**
+## **```Graph Direction```**
 
 Graph can be divided into two types depending on the direction of its edges:
 
@@ -55,19 +55,19 @@ Graph can be divided into two types depending on the direction of its edges:
 
 &nbsp;
 
-> ## **```Graph connectivity```**
+## **```Graph connectivity```**
 
 1. <ins>**Connected Graph</ins>**: A graph is said to be connected if there is a path between every pair of vertex. You can reach any vertex from any other vertex in a connected graph by following a series of edges.
 
 &nbsp;
 
-> ## **```Cycles in a graph```**
+## **```Cycles in a graph```**
 
 Start traversed from a node and end up come back to the nodes is said to be cycle.
 
 &nbsp;
 
-> ## **```Path```**
+## **```Path```**
 
 A path is a direction of continuous and unrepeated sequence of nodes.
 
@@ -81,7 +81,7 @@ Rules:
 
 &nbsp;
 
-> ## **```Degrees in graph```**
+## **```Degrees in graph```**
 
 ### <ins>**For an undirected graph**</ins>
 
@@ -95,7 +95,7 @@ The number of edges attached to it.
 
 &nbsp;
 
-> ## **```Edge weight```**
+## **```Edge weight```**
 
 An edge weight in a weighted graph is a numerical value associated with an edge that expressed as the cost of traversing from one node to other as distance or any other relevant attribute.
 
@@ -103,17 +103,58 @@ If in a graph the weight of edges are not explictly mentioned then take up unit 
 
 &nbsp;
 
-> ## **```Graph representation```**
+## **```Graph representation```**
 
-Can be represented in two ways:
+### **```1. Adjacency matrix (using 2D array or matrix)```**
 
-1. **Adjancency matrix:** representing graph in a matrix of boolean values where 0 means path doesn't exist and 1 mean path exist.
+Boolean matrix: Representing graph in a boolean matrix where 0 means path doesn't exist and 1 mean path exist.
 
-2. Ajnacency list
+To represent a value or weight on a directed graph, put the weight on the cell and if no value associated to a particular direction then mark it as -1. 
+
+Drawbacks:
+1. Inserting new nodes dynamically is complex. 
+2. Space complexity (for 'n' nodes): O(n^2).
+3. Adjacency matrix is more space consuming and there could be possibilities of spaces are not utilizing since nodes with no relationship or individual isolated nodes exists more. These type of graph isolated to any relation are known as **Sparse Graph**. So, we can say sparse graph cause waste of spaces.
+
+### **```2. Adjacency list```**
+
+This representation uses various other data structure apart from matrix or 2D arrays.   
+**Data Structures:** Array of linked list
+
+**Worst case:** Every vertex is connected to all other vertices. Space complexity: O(V^2)
+**Average case:** Space complexity: O(V + E)
+
+Worst case scenario => Sparse graph  
+Average case scenario => Dense graph
+
+### **```3. Adjacency hashmap```**
+**Data Structures:** Hashmap (for C++, unordered map) of a linked list
+
+### **```4. Edge list```**
+**Data Structures:** Array of pairs.   
+Kruskal algorithm is easier to implement with graph **edge list** implementation.
 
 &nbsp;
 
-> ## <p align="center">**```Spanning Tree```**</p>
+## **```Graph traversal```**
+### **```Some observations```**
+
+**```All trees are graphs but not all graphs are trees.```**
+Since graphs could have cycles traversing with recursive way can encounter infinite loop, which is why we need to mark the nodes visited.
+
+### **1. DFS (Depth First Search)**
+DFS is a traversal algorithm where we explore one path till the end.
+
+### **2. BFS (Breadth First Search)**
+BFS 
+
+&nbsp;
+## **```Connected components```**
+![Graph with three connected components](./graph_connected_components.png)
+
+&nbsp;
+
+## <p align="center">**```Spanning Tree```**</p>
 
 A spanning tree is a sub-graph of a graph that has no cycle or loop and covers all the nodes.
 
@@ -137,7 +178,7 @@ Criteria of a spanning tree:
 
 &nbsp;
 
-> ## **```Minimum cost spanning tree (MST)```**
+## **```Minimum cost spanning tree (MST)```**
 
 In minimum cost spanning tree you will be given a weighted graph.
 Take |V| - 1 number of edges.
