@@ -15,10 +15,12 @@ Where to apply DP?
 
 2. **Overlapping subproblems**: In a problem where subproblems occurs more than once is known as overlapping subproblems, these subproblems are quite inefficient to compute from scratch again.
 
+Two methods of DP:  
+1. **Memoization (Top Down)**: Tend to store the value of subproblems. 
+2. Tabulation (Bottom Up)
 
-Two methods of DP:
-1. Tabulation (Bottom Up)
-2. Memoization (Top Down)
-
-
+In order to convert a recursion into a DP solution: 
+1. Declare an array
+2. Check if the sub-problem previously computed in the array
+3. If the sub-problem not been solved then solve and store in the array.
 
