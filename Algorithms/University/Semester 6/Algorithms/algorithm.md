@@ -94,14 +94,14 @@ Wrong!! The loop has initialized with value 1 and last until 10. So, counting fr
 
 ### Count iteration
 
-| Iteration | Condition | Similar Condition | Total iterations | Explanation|
-| --- | --- | --- | --- | --- |
-| i = 0 | i <= 10 | i < 11 | 12 | Starts from 0 stops in when i become 11, and 0 to 11 is total 12 numbers. |
-| i = 0 | i < 10 | i <= 9 | 11 | Starts from 0 and condition says < 10 means stop at 9, 0 to 9 is total 10 numbers and one extra iteration to condition fail the loop |
-| i = 1 | i < 20  | i <= 19| 20 |
-| i = -1 | i <= 10 | i < 11 | 13 |
-| i = -1 | i < 11 | i <= 10|  13 |
-| i = 10 | i >= 1 | i > 0 |  11 |
+| Iteration | Condition | Similar Condition | Total iterations | Explanation                                                                                                                          |
+| --------- | --------- | ----------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| i = 0     | i <= 10   | i < 11            | 12               | Starts from 0 stops in when i become 11, and 0 to 11 is total 12 numbers.                                                            |
+| i = 0     | i < 10    | i <= 9            | 11               | Starts from 0 and condition says < 10 means stop at 9, 0 to 9 is total 10 numbers and one extra iteration to condition fail the loop |
+| i = 1     | i < 20    | i <= 19           | 20               |
+| i = -1    | i <= 10   | i < 11            | 13               |
+| i = -1    | i < 11    | i <= 10           | 13               |
+| i = 10    | i >= 1    | i > 0             | 11               |
 
 Formula:
 
@@ -210,4 +210,60 @@ Requirement: The array needs to be in sorted order.
 1. In every iteration, the array breaks into two parts and decide in which part it should continue the target element. So, here we're dividing our array size by 2.
 2. The loop terminates when there a single element remain similar to the target element we're looking for.
 
+## **```Optimization problem```**
+An optimization problem is a kind of problem that requires to have a best possible solution from a set of possible solutions. 
+Here are some popular algorithms that are used to solve optimization problems:
+
 ## <p align="center"><b>Greedy Algorithm</b></p>
+
+
+### **Drawbacks or problems with Greedy method:**
+1. Greedy algorithms make locally optimal choices at each step, hoping that these choices will lead to a globally optimal solution.
+2. They make the best possible decision at each step without considering the overall effect on the final solution.
+3. Greedy algorithms are generally simple, easy to implement, and have low time complexity.
+4. However, greedy algorithms do not guarantee an optimal solution in all cases and may lead to suboptimal results.
+5. Greedy takes decision in a single pass imedietly. 
+
+**Minimum Spanning Tree (MST):**
+- It is a subset of a graph or also said to be a subgraph.
+- It should contain all vertices of the graph, which it has derived. 
+- 
+- Should contain no cycle
+- All vertices are connected, while minimizing the total edge weight or cost.
+- No new edges can be added or removed.
+
+Suppose we have a graph as below:
+![](./graph1.png)  
+The graph properties are, **G(V, E) = (4, 4)**, where **V** is number of vertices and **E** refers to number of edges.  
+
+We have to form a MST, **S'** such that, 
+**S'(V', E') = S'(V, |V| - 1)** 
+
+**Popular algorithms**:
+1. Primes algorithm 
+2. Kruskal algorithm 
+3. Dijkstra algorithm
+
+
+## <p align="center"><b>Dynamic Programming</b></p>
+
+- Dynamic programming is all about solving a sub-problem once and remembering its result and reuse when they appears again.
+  
+- Dynamic programming works on **principle of optimality**. So, minimization or maximization problems can be solved using DP.
+
+- Dynamic programming sovles problem by taking **sequence of decisions**.
+
+Popular algorithms:
+1. Floyd-Warshall Algorithm
+2. Bellman-Ford Algorithm
+3. Travelling Salesman Problem (TSP)
+4. Longest Common Subsequence (LCS)
+
+### Multistage graph
+A multistage graph is a directed weighted graph with a special property of having stages (set of nodes or vertices), where no vertices from a similar stage has edge between them. 
+
+**Source node**: The very first node represented as **source node** or starting point or initial stage.
+
+**Destination node**: The last node known as destination node or end point or final stage. 
+
+<ins>**Our task is to reach to the destination node starting from the source node within minimum cost.**</ins>
