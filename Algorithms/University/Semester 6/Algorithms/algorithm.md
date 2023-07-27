@@ -210,6 +210,8 @@ Requirement: The array needs to be in sorted order.
 1. In every iteration, the array breaks into two parts and decide in which part it should continue the target element. So, here we're dividing our array size by 2.
 2. The loop terminates when there a single element remain similar to the target element we're looking for.
 
+&nbsp;
+
 ## **```Optimization problem```**
 An optimization problem is a kind of problem that requires to have a best possible solution from a set of possible solutions. 
 Here are some popular algorithms that are used to solve optimization problems:
@@ -224,26 +226,38 @@ Here are some popular algorithms that are used to solve optimization problems:
 4. However, greedy algorithms do not guarantee an optimal solution in all cases and may lead to suboptimal results.
 5. Greedy takes decision in a single pass imedietly. 
 
-**Minimum Spanning Tree (MST):**
-- It is a subset of a graph or also said to be a subgraph.
+### **Minimum Spanning Tree (MST):**
+A MST is a tree derived from a graph whose total cost is minimized by summing the weights of any arbitrary (vertices - 1) edges.
+
+Here are some coditions to be fulfilled to be a MST:  
+- It is a subset of a graph, also said to be a subgraph. Since MST is a tree, so the subgraph shouldn't have any cycle in it.
 - It should contain all vertices of the graph, which it has derived. 
-- 
-- Should contain no cycle
+- Should contain no cycle.
 - All vertices are connected, while minimizing the total edge weight or cost.
 - No new edges can be added or removed.
 
-Suppose we have a graph as below:
+Suppose we have a graph as below:  
 ![](./graph1.png)  
 The graph properties are, **G(V, E) = (4, 4)**, where **V** is number of vertices and **E** refers to number of edges.  
 
 We have to form a MST, **S'** such that, 
 **S'(V', E') = S'(V, |V| - 1)** 
 
-**Popular algorithms**:
-1. Primes algorithm 
-2. Kruskal algorithm 
-3. Dijkstra algorithm
+**Algorithms to find MST**: 
+## <p align="center">1. Prims algorithm</p>
+1. Delete self loop from the graph.
+2. Delete maximum parallel edges from the graph.
+3. Can't have any cycle.  
+4. Select any edge includes two vertex from the graph.
+5. The furtherest edges that to be selected, will also be minimum among the vertices includes in the selected edge for the MST.
 
+## <p align="center">2. Kruskal algorithm</p>
+1.  Always select the minimum cost edge in the graph, but if it is creating a cycle then don't select and proceed to the next minimum cost edge.
+
+
+Other algo's:
+1. Dijkstra algorithm
+2. Optimal merge pattern
 
 ## <p align="center"><b>Dynamic Programming</b></p>
 
@@ -267,3 +281,31 @@ A multistage graph is a directed weighted graph with a special property of havin
 **Destination node**: The last node known as destination node or end point or final stage. 
 
 <ins>**Our task is to reach to the destination node starting from the source node within minimum cost.**</ins>
+
+
+## **```Suitable DS for various algorithm```**
+### **Choosing DS for Prim's algrithm**
+
+Since Prim's is a greedy algorithm to find minimum cost spanning tree. In greedy it consider locally optimal result, so each step we have to find the minimum result. 
+
+After learning about how prim's algorithm works I insist choosing ***Min Heap*** as data structure. Here are my two reasons to use min heap:
+
+1. **Sorts value automatically**: **Min Heap** or C++ STL <ins>priority_queue</ins> as the main DS is a better option than other data structure since min heap automatically sorts in ascending order. While other data structure has the blunder of not auto sorting which may explicitly done by programmer and that eventualy increases the complexity.
+
+2. **Time complexity**:  
+Inserting a new value (worst case complexity): O(log n)  
+Inserting 'n' values (worst case complexity): O(n log n)  
+
+**Implementation:**
+
+```cpp
+class values
+{
+public:
+    int weight;
+    int to;
+    int from;
+};
+
+priority_queue<values, vector<values>, greater<values> pq;
+```

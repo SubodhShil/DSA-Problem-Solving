@@ -185,7 +185,7 @@ Take |V| - 1 number of edges.
 
 Two greedy algorithms are available to find MST:
 
-1. Prime's algorithm
+1. Prim's algorithm
 2. Kruskal's algorithm
 
 ## <p align="center">**(1) Prime's algorithm**</p>
