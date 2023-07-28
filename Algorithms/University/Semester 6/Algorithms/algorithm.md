@@ -226,7 +226,7 @@ Here are some popular algorithms that are used to solve optimization problems:
 4. However, greedy algorithms do not guarantee an optimal solution in all cases and may lead to suboptimal results.
 5. Greedy takes decision in a single pass imedietly. 
 
-### **Minimum Spanning Tree (MST):**
+> ## **```Minimum Spanning Tree (MST)```**
 A MST is a tree derived from a graph whose total cost is minimized by summing the weights of any arbitrary (vertices - 1) edges.
 
 Here are some coditions to be fulfilled to be a MST:  
@@ -252,7 +252,21 @@ We have to form a MST, **S'** such that,
 5. The furtherest edges that to be selected, will also be minimum among the vertices includes in the selected edge for the MST.
 
 ## <p align="center">2. Kruskal algorithm</p>
-1.  Always select the minimum cost edge in the graph, but if it is creating a cycle then don't select and proceed to the next minimum cost edge.
+
+**Algorithm**: Always select the minimum cost edge in the graph, but if it is creating a cycle or loop then don't select and proceed to the next minimum cost edge.
+
+While implementing the algorithm it seems very to the point, until and unless cycle comes into picture. To handle whether our selected edge is creating a cycle or not we've to utilize a different type of data structure namely **DSU**.
+
+### **Disjoint Set Union (DSU)**
+It is a data structure that primarily used with Kruskal's algorithm that help us to find cycle in undirected graph. 
+
+It has three functions:
+1. **make()**: Adds new independent node (that is not yet connected) to existing group. 
+2. **find()**:  Return the parent of the group.
+3. **union()**: Submerges two group into a single group.
+
+
+
 
 > ## **```Single Source Shortest Path Algorithm```**
 Single source shortest path algorithm suggests to find a path or way from a source node to destination node with a minimum possible distance.
@@ -301,7 +315,9 @@ Find all pair shortest path using greedy algorithms:
 Here, we already learned about **Dijkstra algorithm**, which has the complexity of **O(E log V)**. But, dijkstra algorithm works on a single node to destination node and if we implement this algorithm to all pair shotest path it will take,  
 **V * E log V = V * V^2 log V = V^3 log V** which is quite inefficient. 
 
-On the other hand, bellman ford reqiures **V^4** to solve 
+On the other hand, **Bellman-Ford** reqiures **V^4** to solve 
+
+To solve this particular problem we can utilize **Floyd-Warshall** algorithm.
 
 ## <p align="center">**Floyd-Warshall Algorithm**</p>
 
@@ -348,9 +364,10 @@ priority_queue<values, vector<values>, greater<values> pq;
 
 ### **Choosing DS for Kruskal's algrithm**
 
+
 ### **Choosing DS for Dijkastra's algrithm**
 
-We can choose between three data structures to implement Dijkastra's algorithm, 
+We can choose among three data structures to implement Dijkastra's algorithm, 
 1. Queue
 2. Priority queue
 3. Set
@@ -362,3 +379,4 @@ Here are my comparisons:
 | **Queue**           | O(1)      | O(1)     |
 | **Priority Queue**  | O(log N)  | O(log N) |
 | **Set**             | O(log N)  | O(log N) |
+
