@@ -254,8 +254,8 @@ We have to form a MST, **S'** such that,
 ## <p align="center">2. Kruskal algorithm</p>
 1.  Always select the minimum cost edge in the graph, but if it is creating a cycle then don't select and proceed to the next minimum cost edge.
 
-### **Shortest Path Algorithm**:
-Shortest path algorithm suggests to find a path or way from source node to destination node with a minimum possible distance.
+> ## **```Single Source Shortest Path Algorithm```**
+Single source shortest path algorithm suggests to find a path or way from a source node to destination node with a minimum possible distance.
 
 Since here we have to minimize value this problem can solved using greedy approach. 
 
@@ -289,10 +289,24 @@ Formula for relaxation,
 - Dynamic programming sovles problem by taking **sequence of decisions**.
 
 Popular algorithms:
-1. Floyd-Warshall Algorithm
-2. Bellman-Ford Algorithm
-3. Travelling Salesman Problem (TSP)
-4. Longest Common Subsequence (LCS)
+
+## <p align="center">**Bellman-Ford Algorithm**</p>
+
+> ## **```All pair shortest path```** 
+
+Previously we've learned about single source shortest path, where we start from a specific source node and find the shortest path till destination. But here all pair shortest path doesn't have a source node, we've to consider shortest path from every nodes.
+
+Find all pair shortest path using greedy algorithms: 
+
+Here, we already learned about **Dijkstra algorithm**, which has the complexity of **O(E log V)**. But, dijkstra algorithm works on a single node to destination node and if we implement this algorithm to all pair shotest path it will take,  
+**V * E log V = V * V^2 log V = V^3 log V** which is quite inefficient. 
+
+On the other hand, bellman ford reqiures **V^4** to solve 
+
+## <p align="center">**Floyd-Warshall Algorithm**</p>
+
+1. Travelling Salesman Problem (TSP)
+2. Longest Common Subsequence (LCS)
 
 ### Multistage graph
 A multistage graph is a directed weighted graph with a special property of having stages (set of nodes or vertices), where no vertices from a similar stage has edge between them. 
@@ -333,3 +347,18 @@ priority_queue<values, vector<values>, greater<values> pq;
 ```
 
 ### **Choosing DS for Kruskal's algrithm**
+
+### **Choosing DS for Dijkastra's algrithm**
+
+We can choose between three data structures to implement Dijkastra's algorithm, 
+1. Queue
+2. Priority queue
+3. Set
+
+Here are my comparisons:
+
+| **Data Structures** | Insertion | Deletion |
+| ------------------- | --------- | -------- |
+| **Queue**           | O(1)      | O(1)     |
+| **Priority Queue**  | O(log N)  | O(log N) |
+| **Set**             | O(log N)  | O(log N) |

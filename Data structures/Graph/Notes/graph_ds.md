@@ -45,6 +45,9 @@ In general, trees are used to represent hierarchical data, while graphs are used
 
 &nbsp;
 
+## **```Maximum Number edges in a graph```**
+### **For a graph with **'n'** vertices, it could have (n^2 - n)/2 edges.**
+
 ## **```Graph Direction```**
 
 Graph can be divided into two types depending on the direction of its edges:
