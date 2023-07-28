@@ -412,11 +412,9 @@ KMP algorithm effeciently searchs pattern or substring in a given text within O(
 
 The algorithm concludes two main components: 
 1. Text or given string: The given text may be a string or array of character as input. Where while designing the algorithm, we should take either **vector** or traditional **array of characters**.
-
 2. LPS array of pattern: We can go for either **array** or **vector**.
 
 ### <ins>**Choosing DS for Rabin-Karp string pattern matching algorithm**</ins>
 
-**Components**
 1. Text or input string: C++ string or array of characters. 
 2. Generating hashcode requires an integer variable. The hashcode could be huge in number, may also overflow the range.So, we must keep a mod value thus it is possible to decrease the actual hashcode size.
