@@ -254,10 +254,31 @@ We have to form a MST, **S'** such that,
 ## <p align="center">2. Kruskal algorithm</p>
 1.  Always select the minimum cost edge in the graph, but if it is creating a cycle then don't select and proceed to the next minimum cost edge.
 
+### **Shortest Path Algorithm**:
+Shortest path algorithm suggests to find a path or way from source node to destination node with a minimum possible distance.
 
-Other algo's:
-1. Dijkstra algorithm
-2. Optimal merge pattern
+Since here we have to minimize value this problem can solved using greedy approach. 
+
+## <p align="center">1. Dijkstra (shortest path) algorithm</p>
+
+**Source node**: The very first node represented as **source node** or starting point or initial stage.
+
+**Destination node**: The last node known as destination node or end point or final stage. 
+
+In the best case scenario, there might be one or multiple single source direct paths from source to destination. In this case, we have to select the minimum cost or shortest path, and that will be our result.
+
+On the contrary, there might no single source direct path between source to destination. In this case, we've to go to our destination by using other paths also known as "via nodes". 
+
+Formula for relaxation,
+```cpp
+    f(d(u) + c(u, v) < d(v))
+        d(v) = d(u) + c(u, v)
+```
+
+1. Dijkstra algorithm doesn't works with negative weights.
+
+
+## <p align="center">2. Optimal merge pattern</p>
 
 ## <p align="center"><b>Dynamic Programming</b></p>
 
@@ -284,6 +305,7 @@ A multistage graph is a directed weighted graph with a special property of havin
 
 
 ## **```Suitable DS for various algorithm```**
+
 ### **Choosing DS for Prim's algrithm**
 
 Since Prim's is a greedy algorithm to find minimum cost spanning tree. In greedy it consider locally optimal result, so each step we have to find the minimum result. 
@@ -309,3 +331,5 @@ public:
 
 priority_queue<values, vector<values>, greater<values> pq;
 ```
+
+### **Choosing DS for Kruskal's algrithm**
