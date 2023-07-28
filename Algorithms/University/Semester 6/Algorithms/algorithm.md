@@ -302,6 +302,7 @@ Formula for relaxation,
 
 Popular algorithms:
 
+> ## **```Single Source Shortest Path Algorithm```**
 ## <p align="center">**Bellman-Ford Algorithm**</p>
 
 > ## **```All pair shortest path```** 
@@ -388,7 +389,7 @@ Another alternative,
 vector<tuple<int, int, int>> edges;
 ```
 
-### **Choosing DS for Dijkastra's algrithm**
+### <ins>**Choosing DS for Dijkastra's algrithm**</ins>
 
 We can choose among three data structures to implement Dijkastra's algorithm, 
 1. Queue
@@ -403,3 +404,20 @@ Here are my comparisons:
 | **Priority Queue**  | O(log N)  | O(log N) |
 | **Set**             | O(log N)  | O(log N) |
 
+Choosing **set** as the data structure would be a better decision for it's readable implementation.
+
+
+### <ins>**Choosing DS for KMP string pattern matching algorithm**</ins>
+
+KMP algorithm effeciently searchs pattern or substring in a given text within O(N + M) complexity.
+
+The algorithm concludes two main components: 
+1. Text or given string: The given text may be a string or array of character as input. Where while designing the algorithm, we should take either **vector** or traditional **array of characters**.
+
+2. LPS array of pattern: We can go for either **array** or **vector**.
+
+### <ins>**Choosing DS for Rabin-Karp string pattern matching algorithm**</ins>
+
+**Components**
+1. Text or input string: C++ string or array of characters. 
+2. Generating hashcode requires an integer variable. The hashcode could be huge in number, may also overflow the range.So, we must keep a mod value thus it is possible to decrease the actual hashcode size.
