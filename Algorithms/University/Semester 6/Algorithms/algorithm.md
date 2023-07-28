@@ -391,21 +391,20 @@ vector<tuple<int, int, int>> edges;
 
 ### <ins>**Choosing DS for Dijkastra's algrithm**</ins>
 
-We can choose among three data structures to implement Dijkastra's algorithm, 
-1. Queue
-2. Priority queue
-3. Set
+Dijkastra is the single source shortest path finder algorithm. 
+
+We can choose between two data structures to implement Dijkastra's algorithm, such as:
+1. Priority queue (actual implementation "Heap")
+2. Set
 
 Here are my comparisons:
 
-| **Data Structures** | Insertion | Deletion |
-| ------------------- | --------- | -------- |
-| **Queue**           | O(1)      | O(1)     |
-| **Priority Queue**  | O(log N)  | O(log N) |
-| **Set**             | O(log N)  | O(log N) |
+| **Data Structures** | Time complexity |
+| ------------------- | --------------- |
+| **Priority Queue**  | O(E log V)      |
+| **Set**             | O(E log V)      |
 
-Choosing **set** as the data structure would be a better decision for it's readable implementation.
-
+Choosing **priority_queue** as the data structure would be a better decision 
 
 ### <ins>**Choosing DS for KMP string pattern matching algorithm**</ins>
 
