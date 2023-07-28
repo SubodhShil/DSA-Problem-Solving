@@ -261,11 +261,9 @@ While implementing the algorithm it seems very to the point, until and unless cy
 It is a data structure that primarily used with Kruskal's algorithm that help us to find cycle in undirected graph. 
 
 It has three functions:
-1. **make()**: Adds new independent node (that is not yet connected) to existing group. 
+1. **make()**: Adds new independent node (that is not yet connected) to existing group.
 2. **find()**:  Return the parent of the group.
 3. **union()**: Submerges two group into a single group.
-
-
 
 
 > ## **```Single Source Shortest Path Algorithm```**
@@ -336,7 +334,7 @@ A multistage graph is a directed weighted graph with a special property of havin
 
 ## **```Suitable DS for various algorithm```**
 
-### **Choosing DS for Prim's algrithm**
+### <ins>**Choosing DS for Prim's algrithm**</ins>
 
 Since Prim's is a greedy algorithm to find minimum cost spanning tree. In greedy it consider locally optimal result, so each step we have to find the minimum result. 
 
@@ -362,8 +360,33 @@ public:
 priority_queue<values, vector<values>, greater<values> pq;
 ```
 
-### **Choosing DS for Kruskal's algrithm**
+### <ins>**Choosing DS for Kruskal's algrithm**</ins>
+To implement Kruskal's algorithm we need an additional data structure namely **DSU (Disjoint Set union)**. This is used to find whether choosen edge is forming any cycles in the graph.
 
+Time complexity of DSU: O(4α) per iteration, which is nearly constant. 
+
+### **To store the edges we can use between:**
+
+1. **Priority queue**: With priority queue the grand total complexity becomes O(E log V). The benefit of priority queue is it doesn't require to sort explicitly.
+
+2. **Vector of pair of pair**: With vector of pairs we have to beforehand and so, grand total time complexity stands O(E log V).
+
+Although both data structure are providing us the same complexity, here are some of my key observations: 
+
+1. Implementing using priority queue is messy, vector of pair more off a cleaner approach as well as easy to implement.
+2. In some rare conditions like sparse graph using priority queue is slightly effecient.
+3. Space complexity of priority queue is more than vector of pair.
+4. Although both implementations are same time complexity but priority queue is more faster in real world scenario.
+
+In conclusion, I found vector of pair concise. Here are my implementation, 
+
+```cpp
+vector<pair<int, pair<int, int>>> edges;
+```
+Another alternative, 
+```cpp
+vector<tuple<int, int, int>> edges;
+```
 
 ### **Choosing DS for Dijkastra's algrithm**
 
