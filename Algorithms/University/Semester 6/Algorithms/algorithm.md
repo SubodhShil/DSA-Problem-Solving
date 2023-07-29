@@ -228,6 +228,7 @@ Requirement: The array needs to be in sorted order.
 9. Disjoint Set Union (Data Structure for Kruskal's Cycle/Loop Detection)
 10. Traveling Salesman Problem (TSP) - (DP)
 11. Longest Common Subsequence (LCS) - (DP)
+12. 0/1 Knapsack - (DP)
 
 &nbsp;
 
@@ -470,16 +471,16 @@ long long generateHashValue(string str, int modVal)
 ```
 
 ### <ins>**Choosing DS for Floyd-Warshall algorithm**</ins>
-Floyd-Warshall is an effecient algorithm to find all pair shortest path by using **Dynamic Programming**.
+Floyd-Warshall is an efficient algorithm to find all pair shortest path by using **Dynamic Programming**.
 
 Algorithm components: 
 
-**Distance table**: The distance table is used to store shortest distance between all pair of vertices. We can choose between 2D array (C++ vector container, traditional 2D array) or hashma(C++ map) to create the distance table.
+**Distance table**: The distance table is used to store shortest distance between all pair of vertices. We can choose between 2D array (C++ vector of vector or traditional 2D array) or hashmap(C++ map) to create the distance table.
 
-Here are observations to choose betweens two: 
+Here are observations to choose between two: 
 1. 2D array gives us O(1) or constant time access to elements.
 2. Since it is a DP algorithm, there is no better option than using 2D array.
-3. 2D requires more space.
+3. 2D array requires more space.
 4. Map is less space consuming.
 5. Map has a complex implementation downside. 
 
@@ -500,8 +501,9 @@ Data structures:
    ```cpp
    int distance[N][N]{INT32_MAX};
    ```
-2. Vector of edges: 
-   Implementation
+2. Vector of edges:  
+
+    Implementation
    ```cpp
    class Edges
    {
@@ -532,9 +534,9 @@ The backtracking is a technique rather than a generic algorithm. Choosing data s
 
 **Observations**
 1. Backtracking with DP referred to as "Backtracking with Memoization" requires array to storing subproblems.
-2. Other data structures use on need based.
+2. Other data structures should be use on need based.
 
-**Conclusion**: I would like to use data structure that requires for that specific usecase. 
+**Conclusion**: I would like to use the data structure that suits the specific usecase.
 
 ### <ins>**Choosing DS for Longest Common Subsequence (LCS)**</ins>
 
