@@ -438,7 +438,7 @@ Choosing **priority_queue** as the data structure would be a better decision.
 
 ### <ins>**Choosing DS for KMP string pattern matching algorithm**</ins>
 
-KMP algorithm effeciently searchs pattern or substring in a given text within O(N + M) complexity.
+KMP algorithm effeciently searches pattern or substring in a given text within O(N + M) complexity.
 
 The algorithm concludes two main components: 
 1. Text or given string: The given text may be a string or array of character as input. Where while designing the algorithm, we should take either **vector** or traditional **array of characters**.
@@ -447,7 +447,27 @@ The algorithm concludes two main components:
 ### <ins>**Choosing DS for Rabin-Karp string pattern matching algorithm**</ins>
 
 1. Text or input string: C++ string or array of characters. 
-2. Generating hashcode requires an integer variable. The hashcode could be huge in number, may also overflow the range.So, we must keep a mod value thus it is possible to decrease the actual hashcode size.
+2. Data strucuture: The suitable data structure is a hash function. A hash function generates unique value for the pattern, if the pattern matches it indicates that the generated hash value is exist in some substring of the text. To implement the hashcode it doesn't require anything else an integer variable.
+
+**Caution**: The hashcode could be huge in number, this may also overflow the range integer capability. So, we must keep a mod value thus it is possible to decrease the actual hashcode size.
+
+**Implementation**:
+```cpp
+long long generateHashValue(string str, int modVal)
+{
+    int size = str.size();
+    long long hashCode = 0;
+    int n = size - 1;
+
+    /// hash function: is generating hash value from a particular input
+    for (int i = 0; i < size; ++i)
+    {
+        hashCode += str[i] * pow(size, n--);
+    }
+
+    return hashCode % modVal;
+}
+```
 
 ### <ins>**Choosing DS for Floyd-Warshall algorithm**</ins>
 Floyd-Warshall is an effecient algorithm to find all pair shortest path by using **Dynamic Programming**.
