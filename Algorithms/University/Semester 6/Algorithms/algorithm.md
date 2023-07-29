@@ -428,7 +428,13 @@ Here are my comparisons:
 | **Priority Queue**  | O(E log V)      |
 | **Set**             | O(E log V)      |
 
-Choosing **priority_queue** as the data structure would be a better decision 
+**My observations**:
+1. Priority queue provides faster access to the minimum value.
+2. Priority queues are more efficient for updating elements.
+3. Priority queues are more efficient for working with large graphs. 
+4. Operations of priority queue are typically faster due to it's implementation using with Heap. 
+
+Choosing **priority_queue** as the data structure would be a better decision.
 
 ### <ins>**Choosing DS for KMP string pattern matching algorithm**</ins>
 
