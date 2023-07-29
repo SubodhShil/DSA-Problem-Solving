@@ -444,3 +444,78 @@ Since 2D array for the distance matrix in the Floyd-Warshall algorithm is the st
 ```cpp
 int distance[N][N]{INT32_MAX};
 ```
+
+### <ins>**Choosing DS for Bellman-Ford algorithm**</ins>
+Bellman ford is a dynamic programming based single source shortest path finder algorithm. The primary algorithmic component is the distance table which is required to track of distance between source node and other nodes.
+
+Data structures:
+1. Traditional 2D array
+
+   Implementation
+   ```cpp
+   int distance[N][N]{INT32_MAX};
+   ```
+2. Vector of edges: 
+   Implementation
+   ```cpp
+   class Edges
+   {
+    pubilc:
+    int source;
+    int distance;
+    int weight;
+   };
+
+   vector<Edges> distance;
+   ```
+
+**Observations**:
+1. 2D array is the widely used implmentation for this algorithm.
+2. 2D array is good for representing dense graph. In contrast, for a sparse graph 2D array is waste of spaces. 
+3. Implementation of vector of edges is a bit tricky. 
+4. Vector of edges is more memory efficient.
+
+**Conclusion:**  As a beginner to dynamic programming (DP), I would choose to use a 2D array to store the distance matrix. Additionally, I would prefer to use a vector of edges implementation for the code base that requires a precise codes.
+
+
+### <ins>**Choosing DS for Backtracking**</ins>
+
+The backtracking is a technique rather than a generic algorithm. Choosing data structures for backtracking is specific to usecases. Various data structures could be used: 
+1. Array
+2. Stack 
+3. Hashmap 
+
+**Observations**
+1. Backtracking with DP referred to as "Backtracking with Memoization" requires array to storing subproblems.
+2. Other data structures use on need based.
+
+**Conclusion**: I would like to use data structure that requires for that specific usecase. 
+
+### <ins>**Choosing DS for Longest Common Subsequence (LCS)**</ins>
+
+The problem says, for given two string you've to find the common subsequence that is longest as well. 
+
+**Subsequence**: The subsequence of a string is obtained by deleting one or more or no character without changing the actual order of the characters.
+
+For example, The Longest Common Subsequence (LCS) of "NXPCS" and "XYS" is "XS".
+
+**Data structure**: To solve this problem using DP, it requires a 2D array to store the length of the LCS between substrings of the two strings.
+
+Implementation:
+```cpp
+/// vector of vector implementation
+vector<vector<int>> store(str1.size(), vector<int>(str2.size()));
+
+/// 2D array implementation
+int store[str1.size()][str2.size()];
+```
+**Observation and conclusion**:
+In my openion 2D array is easy to implement.
+
+### <ins>**Choosing DS for Travelling Salesman Problem**</ins>
+
+The Traveling Salesman Problem (TSP) DP based optimization problem in which a salesman has to visit a given set of cities once, and come back to the starting city. 
+
+**Observation and conclusion**:
+
+Since the problem is DP based and we have to store path distance between various cities so using a 2D array or C++ vector of vector is a better option for both top-bottom(memoization) and bottom-up(tabulation) approach.
