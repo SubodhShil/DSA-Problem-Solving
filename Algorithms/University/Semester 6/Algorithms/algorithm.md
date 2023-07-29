@@ -305,7 +305,7 @@ Popular algorithms:
 > ## **```Single Source Shortest Path Algorithm```**
 ## <p align="center">**Bellman-Ford Algorithm**</p>
 
-> ## **```All pair shortest path```** 
+> ## <p align="center">**```All pair or multi source shortest path```** </p>
 
 Previously we've learned about single source shortest path, where we start from a specific source node and find the shortest path till destination. But here all pair shortest path doesn't have a source node, we've to consider shortest path from every nodes.
 
@@ -318,10 +318,15 @@ On the other hand, **Bellman-Ford** reqiures **V^4** to solve
 
 To solve this particular problem we can utilize **Floyd-Warshall** algorithm.
 
-## <p align="center">**Floyd-Warshall Algorithm**</p>
+## <p>**Floyd-Warshall Algorithm**</p>
 
-1. Travelling Salesman Problem (TSP)
-2. Longest Common Subsequence (LCS)
+Advantage: 
+1. Works with both negative and positive edges but with no negative cycles (sum of edges of a cycle or loop in the graph is negative).
+
+
+## <p align="center">**Travelling Salesman Problem (TSP)**</p>
+
+## <p align="center">Longest Common Subsequence (LCS)</p>
 
 ### Multistage graph
 A multistage graph is a directed weighted graph with a special property of having stages (set of nodes or vertices), where no vertices from a similar stage has edge between them. 
@@ -418,3 +423,24 @@ The algorithm concludes two main components:
 
 1. Text or input string: C++ string or array of characters. 
 2. Generating hashcode requires an integer variable. The hashcode could be huge in number, may also overflow the range.So, we must keep a mod value thus it is possible to decrease the actual hashcode size.
+
+### <ins>**Choosing DS for Floyd-Warshall algorithm**</ins>
+Floyd-Warshall is an effecient algorithm to find all pair shortest path by using **Dynamic Programming**.
+
+Algorithm components: 
+
+**Distance table**: The distance table is used to store shortest distance between all pair of vertices. We can choose between 2D array (C++ vector container, traditional 2D array) or hashma(C++ map) to create the distance table.
+
+Here are observations to choose betweens two: 
+1. 2D array gives us O(1) or constant time access to elements.
+2. Since it is a DP algorithm, there is no better option than using 2D array.
+3. 2D requires more space.
+4. Map is less space consuming.
+5. Map has a complex implementation downside. 
+
+Since 2D array for the distance matrix in the Floyd-Warshall algorithm is the standard and more straightforward approach I choose 2D array:
+
+**Implementation:**
+```cpp
+int distance[N][N]{INT32_MAX};
+```
