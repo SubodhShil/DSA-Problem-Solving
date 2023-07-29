@@ -212,6 +212,25 @@ Requirement: The array needs to be in sorted order.
 
 &nbsp;
 
+> # **```Algorithm: Final Term```**
+
+## **Syllabus**
+1. Greedy Method
+2. Dynamic Programming
+3. Minimum Spanning Tree (MST)
+   - Prim's Algorithm (Greedy - MST)
+   - Kruskal's Algorithm (Greedy - MST)
+4. Dijkstra's Algorithm (Greedy - Single Source Shortest Path)
+5. Bellman-Ford Algorithm (DP - Single Source Shortest Path)
+6. Floyd-Warshall Algorithm (DP - All Pair or Multi-Source Shortest Path)
+7. KMP (String Matching or Substring Finding Algorithm)
+8. Rabin-Karp (String Matching or Substring Finding Algorithm)
+9. Disjoint Set Union (Data Structure for Kruskal's Cycle/Loop Detection)
+10. Traveling Salesman Problem (TSP) - (DP)
+11. Longest Common Subsequence (LCS) - (DP)
+
+&nbsp;
+
 ## **```Optimization problem```**
 An optimization problem is a kind of problem that requires to have a best possible solution from a set of possible solutions. 
 Here are some popular algorithms that are used to solve optimization problems:
