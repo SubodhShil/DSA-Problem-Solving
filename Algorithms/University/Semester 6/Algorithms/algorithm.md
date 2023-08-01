@@ -238,6 +238,7 @@ Here are some popular algorithms that are used to solve optimization problems:
 
 ## <p align="center"><b>Greedy Algorithm</b></p>
 
+Greedy algorithms make decisions at each step that seem optimal at the moment, without considering the future consequences.
 
 ### **Drawbacks or problems with Greedy method:**
 1. Greedy algorithms make locally optimal choices at each step, hoping that these choices will lead to a globally optimal solution.
@@ -285,13 +286,20 @@ It has three functions:
 2. **find()**:  Return the parent of the group.
 3. **union()**: Submerges two group into a single group.
 
+## <p align="center">2. Optimal merge pattern</p>
 
-> ## **```Single Source Shortest Path Algorithm```**
+## <p align="center"><b>Dynamic Programming</b></p>
+
+- Dynamic programming is all about solving a sub-problem once and remembering its result and reuse when they appears again.
+  
+- Dynamic programming works on **principle of optimality**. So, minimization or maximization problems can be solved using DP.
+
+- Dynamic programming solves problem by taking **sequence of decisions**. More simply it means, you've to try out all possible solutions and pick up the best solution. 
+
+&nbsp;
+
+> ## **```Single Source Shortest Path Algorithms```** 
 Single source shortest path algorithm suggests to find a path or way from a source node to destination node with a minimum possible distance.
-
-Since here we have to minimize value this problem can solved using greedy approach. 
-
-## <p align="center">1. Dijkstra (shortest path) algorithm</p>
 
 **Source node**: The very first node represented as **source node** or starting point or initial stage.
 
@@ -301,29 +309,64 @@ In the best case scenario, there might be one or multiple single source direct p
 
 On the contrary, there might no single source direct path between source to destination. In this case, we've to go to our destination by using other paths also known as "via nodes". 
 
-Formula for relaxation,
+**Relaxation:** Relaxation is a process used to update the minimum distance between the source vertex and any other vertex in the graph. In the process we calculate the shorter path to reach from source to a specific vertex. If we find a shorter path than the current path, we replace the current value with the new shortest we just found.
+
 ```cpp
-    f(d(u) + c(u, v) < d(v))
-        d(v) = d(u) + c(u, v)
+if(d[u] + c(u, v) < d[v])
+    d[v] = d[u] + c[u][v];
 ```
 
+Since here we have to minimize value this problem can solved using greedy approach or dynamic programming.
+
+## Dijkstra (shortest path) algorithm - **Greedy Method**
+
+**Why Dijkstra and greedy method?**
+
+Determining shortest path is all about finding the minimum distance from source to destination where we're minimizing distance value which is also said to be an optimization problem. As we know, optimization problems can be solved using greedy approach.
+
+**Initial phase**: Value of source vertex or node will be set to 0, nodes that directly connected to the source node will also be calculated. All other vertices or nodes will be set as infinity.
+
+**Dijkstra's algorithm selects the vertex that has less value at the current time and relax the connected vertex to selected one.**
+
+**Time complexity**: O(n^2)
+
+**Disadvantages**:
 1. Dijkstra algorithm doesn't works with negative weights.
 
+## Bellman-Ford Algorithm - **Dynamic Programming**
 
-## <p align="center">2. Optimal merge pattern</p>
+**Task**: As definition, single source shortest path says, starting from a source node you've to reach till the destination within shortest distance possible. 
 
-## <p align="center"><b>Dynamic Programming</b></p>
+<ins>**The Bellman-Ford algorithm works by iteratively relaxing the distances to all vertices from the source vertex. The iteration is repeated |V|-1 times, where V is the number of vertices in the graph.**</ins>
 
-- Dynamic programming is all about solving a sub-problem once and remembering its result and reuse when they appears again.
-  
-- Dynamic programming works on **principle of optimality**. So, minimization or maximization problems can be solved using DP.
+Benefit using this algorithm over Dijkstra algorithm of shortest path that, Dijkstra doesn't work properly if edges are negative. 
 
-- Dynamic programming sovles problem by taking **sequence of decisions**.
+Initially distance of the source vertex is set to value 0 since going from source to source doesn't cost anything and all other vertices are set to value as infinity as we don't know how much it will cost to going from source that unknown node. 
 
-Popular algorithms:
+![](./bellman_ford_example1.png)
 
-> ## **```Single Source Shortest Path Algorithm```**
-## <p align="center">**Bellman-Ford Algorithm**</p>
+Here in the graph we have total number of vertices, |V| = 7  
+So, we have to run the code for |V| - 1 = 7 - 1 = 6 times
+
+
+**Optimization**: . If the distances to all vertices do not change after a certain number of iterations, then this means that the algorithm has converged and the shortest paths have been found. Therefore, we can stop the iterations once the results duplicate. In this way, we can skip iterations and optimize our algorithm.
+
+**Time complexity**: O(|E|.|V|) = O(n^2)  
+**Time complexity (complete graph)**: O(n^3)
+
+ ## 0/1 Knapsack Problem - **Dynamic Programming**
+**Problem statement**: You'll be given a set of product weight (w) and profit (p). Along with this, you're given bag with a weight limit (limit). The total weight of all product is definitely higher than the bag's weight capacity. Your task is to pick some product in such a way that get you maximum profit also doens't exceeds the given limit (less than equal to the limit).
+
+The algorithm we will be using here is a dynamic programming based tabulation method, since the problem says to get a maximum profit. 0/1 means either we pick a product, or left it. 
+
+**Caution**: You can't split items. In the greedy solution of **Kanpsack problem** we can work with fraction of items. 
+
+Formula, 
+```cpp
+
+```
+
+&nbsp;
 
 > ## <p align="center">**```All pair or multi source shortest path```** </p>
 
@@ -338,15 +381,15 @@ On the other hand, **Bellman-Ford** reqiures **V^4** to solve
 
 To solve this particular problem we can utilize **Floyd-Warshall** algorithm.
 
-## <p>**Floyd-Warshall Algorithm**</p>
+## Floyd-Warshall Algorithm
 
 Advantage: 
 1. Works with both negative and positive edges but with no negative cycles (sum of edges of a cycle or loop in the graph is negative).
 
 
-## <p align="center">**Travelling Salesman Problem (TSP)**</p>
+## Travelling Salesman Problem (TSP)
 
-## <p align="center">Longest Common Subsequence (LCS)</p>
+## Longest Common Subsequence (LCS)
 
 ### Multistage graph
 A multistage graph is a directed weighted graph with a special property of having stages (set of nodes or vertices), where no vertices from a similar stage has edge between them. 
@@ -561,8 +604,26 @@ In my openion 2D array is easy to implement.
 
 ### <ins>**Choosing DS for Travelling Salesman Problem**</ins>
 
-The Traveling Salesman Problem (TSP) DP based optimization problem in which a salesman has to visit a given set of cities once, and come back to the starting city. 
+The Traveling Salesman Problem (TSP) is a DP based optimization problem in which a salesman has to visit a given set of cities once, and come back to the starting city. 
 
-**Observation and conclusion**:
+**Data structures**: The problem can be solved by storing the distances between the cities. Two widely used data structures for storing this data are C++ maps (hashmap data structures) and 2D arrays (matrices).
 
-Since the problem is DP based and we have to store path distance between various cities so using a 2D array or C++ vector of vector is a better option for both top-bottom(memoization) and bottom-up(tabulation) approach.
+**My observations**:
+1. 2D array is easy to implement, whereas map implement is not used frequently.
+2. 2D array is more space consuming, but map can store multiple values at a single key that is why map is space efficient.
+
+**Implementation**:
+```cpp
+/// 2D array implementation
+vector<vector<int>> distance_matrix;
+
+/// map implementation
+map<pair<int, int>, int> distance;
+```
+
+**Conclusions**: 
+1. Map is a good choice when we have a large number of cities in the problem and the graph is sparse. 
+2. 2D matrix is good choice for easy implementation, when graph is dense or number of cities are not that much.
+
+### <ins>**Choosing DS for 0/1 Knapsack Problem**</ins>
+**Problem statement**: You'll be given a set of product weight (w) and profit (p). Along with this, you're given bag with a weight limit (limit). The total weight of all product is definitely higher than the bag's weight capacity. Your task is to pick some product in such a way that get you maximum profit also doens't exceeds the given limit (less than equal to the limit).
