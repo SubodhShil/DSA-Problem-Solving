@@ -1,5 +1,2 @@
-<center>
+# <p align="center">**```Topic Wise Prioritize Practice List```**</p>
 
-# **```I cultivates my problem solving here.```**
-
-</center>
