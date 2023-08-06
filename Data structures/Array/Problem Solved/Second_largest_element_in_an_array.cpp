@@ -62,6 +62,21 @@ int findSecondLargestOptimal(vector<int> &arr)
     }
 }
 
+/// Solution 3 -> Using extra C++ Set as space 
+int findSecondLargest(int n, vector<int> &arr)
+{
+    set<int, greater<int>> st;
+
+    for(auto i : arr)
+        st.insert(i);
+    if(st.size() == 1) 
+        return -1;
+        
+    st.erase(st.begin());
+
+    return *st.begin();
+}
+
 int main()
 {
     vector<int> arr{1, 2, 4, 5, 7, 7};
