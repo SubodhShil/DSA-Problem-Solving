@@ -156,26 +156,44 @@ Formula,
 
 > ## <p align="center">**```All pair or multi source shortest path```** </p>
 
-Previously we've learned about single source shortest path, where we start from a specific source node and find the shortest path till destination. But here all pair shortest path doesn't have a source node, we've to consider shortest path from every nodes.
+Previously we've learned about single source shortest path, where we start from a specific source node and find the shortest path till destination. But here all pair shortest path doesn't have a source node, we've to consider shortest path from every single node.
 
 Find all pair shortest path using greedy algorithms: 
 
 Here, we already learned about **Dijkstra algorithm**, which has the complexity of **O(E log V)**. But, dijkstra algorithm works on a single node to destination node and if we implement this algorithm to all pair shotest path it will take,  
 **V * E log V = V * V^2 log V = V^3 log V** which is quite inefficient. 
 
-On the other hand, **Bellman-Ford** reqiures **V^4** to solve 
+On the other hand, **Bellman-Ford** reqiures **V^4** to solve the problem.
 
-To solve this particular problem we can utilize **Floyd-Warshall** algorithm.
+To solve this particular problem with less time complexity the **Floyd-Warshall** algorithm could be utilized.
 
-## Floyd-Warshall Algorithm
+## Floyd-Warshall Algorithm - **Dynamic Programming**
+
+### **Process**
+- Create a distance matrix.
+- Self loop will taken as edge value 0
+  - In the actual implementation using matrix the diagonal cells creates self loop so mark the diagonal cell as value 0.
+- For any non existing edges the value considered here is ∞ (infinity)
+  - In case of actual implementation in any programming language, the value of that particular cell where there is no edge exist between two vertex  would be initialized with maximum value of that particular data type range. 
+
+### <p align="center">**Formula for solving this problem**</p>
+
+![](floyd_warshall_formula.png)
+
 
 Advantage: 
-1. Works with both negative and positive edges but with no negative cycles (sum of edges of a cycle or loop in the graph is negative).
+1. Works with both negative and positive edges but with no negative cycles (when sum of edges of a cycle or loop in the graph is negative, additionally for an undirected graph there should no negative value edge exist).
+2. Time complexity is comparatively lower than other algorithms. 
 
 
-## Travelling Salesman Problem (TSP)
-1. 
+## Travelling Salesman Problem (TSP) - **Dynamic Programming**
+With greedy method the result is not guaranteed to be optimal (maybe efficient not optimal). In contrast, in the DP algorithm we will check all possibilites and then decide the minimum cost.
 
+1. Starting from a city (source vertex), visit all possible path or routes that covers all other cities and at the end return to the city where you started (come back to the source vertex).
+2. A traveller has to visit all the cities once but not more than it.
+
+### <p align="center">**Formula for solving this problem**</p>
+![](tsm_formula.png)
 
 ## Longest Common Subsequence (LCS)
 
