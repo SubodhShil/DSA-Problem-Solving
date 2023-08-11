@@ -9,12 +9,13 @@
 4. Dijkstra's Algorithm (Greedy - Single Source Shortest Path)
 5. Bellman-Ford Algorithm (DP - Single Source Shortest Path)
 6. Floyd-Warshall Algorithm (DP - All Pair or Multi-Source Shortest Path)
-7. KMP (String Matching or Substring Finding Algorithm)
-8. Rabin-Karp (String Matching or Substring Finding Algorithm)
-9. Disjoint Set Union (Data Structure for Kruskal's Cycle/Loop Detection)
-10. Traveling Salesman Problem (TSP) - (DP)
-11. Longest Common Subsequence (LCS) - (DP)
-12. 0/1 Knapsack - (DP)
+7. Multistage graph (DP)
+8. KMP (String Matching or Substring Finding Algorithm)
+9. Rabin-Karp (String Matching or Substring Finding Algorithm)
+10. Disjoint Set Union (Data Structure for Kruskal's Cycle/Loop Detection)
+11. Traveling Salesman Problem (TSP) - (DP)
+12. Longest Common Subsequence (LCS) - (DP)
+13. 0/1 Knapsack - (DP)
 
 &nbsp;
 
