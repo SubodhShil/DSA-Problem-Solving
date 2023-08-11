@@ -129,7 +129,7 @@ Benefit using this algorithm over Dijkstra algorithm of shortest path that, Dijk
 
 Initially distance of the source vertex is set to value 0 since going from source to source doesn't cost anything and all other vertices are set to value as infinity as we don't know how much it will cost to going from source that unknown node. 
 
-![](./bellman_ford_example1.png)
+![](bellman_ford_example1.jpg)
 
 Here in the graph we have total number of vertices, |V| = 7  
 So, we have to run the code for |V| - 1 = 7 - 1 = 6 times
