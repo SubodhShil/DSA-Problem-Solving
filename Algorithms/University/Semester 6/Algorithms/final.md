@@ -47,7 +47,17 @@ Greedy algorithms make decisions at each step that seem optimal at the moment, w
 ![](greedy_graph_1.png) 
 Here the greedy method choose, **A → B → D** as the optimal solution, but the optimal path is **A → C → D**.
 
+## Spanning Tree 
+The spanning tree is a connected sub-graph of a graph that satisfies **tree** properties. Such as, 
+1. Can't have any cycle
+2. 
+
 > ## **```Minimum Spanning Tree (MST)```**
+
+**Definition**: ```A minimum spanning tree (MST) is a spanning tree that formed as a subgraph of a graph (G), has the minimum weight among all possible spanning trees.```
+
+How to get MST: Choose (|V| - 1) minimum weight/minimum cost edges and connect. 
+
 A MST is a tree derived from a graph whose total cost is minimized by summing the weights of any arbitrary (vertices - 1) edges.
 
 Here are some coditions to be fulfilled to be a MST:  
