@@ -142,16 +142,19 @@ So, we have to run the code for |V| - 1 = 7 - 1 = 6 times
 **Time complexity (complete graph)**: O(n^3)
 
  ## 0/1 Knapsack Problem - **Dynamic Programming**
-**Problem statement**: You'll be given a set of product weight (w) and profit (p). Along with this, you're given bag with a weight limit (limit). The total weight of all product is definitely higher than the bag's weight capacity. Your task is to pick some product in such a way that get you maximum profit also doens't exceeds the given limit (less than equal to the limit).
+**Problem statement**: You'll be given a set of product weight (w) and profit (p). Along with this, you're given a bag with a weight limit (limit). The total weight of all product is definitely higher than the bag's weight capacity. Your task is to pick some product in such a way that get you maximum profit also doesn't exceeds the given limit (less than equal to the limit).
 
 The algorithm we will be using here is a dynamic programming based tabulation method, since the problem says to get a maximum profit. 0/1 means either we pick a product, or left it. 
 
+### **Process**
+- Create a matrix that has column size of max weight or capacity of the bag. 
+- 
+
+
 **Caution**: You can't split items. In the greedy solution of **Kanpsack problem** we can work with fraction of items. 
 
-Formula, 
-```cpp
-
-```
+### <p align="center">**Formula for solving this problem**</p>
+![](0_1_knapsack_formula.png)
 
 &nbsp;
 
@@ -181,6 +184,8 @@ To solve this particular problem with less time complexity the **Floyd-Warshall*
 
 ![](floyd_warshall_formula.png)
 
+- Create matrix for each vertex. 
+- If current matrix is V then mark it's row (V, x) and column (V, x) with previous matrix value.
 
 Advantage: 
 1. Works with both negative and positive edges but with no negative cycles (when sum of edges of a cycle or loop in the graph is negative, additionally for an undirected graph there should no negative value edge exist).
