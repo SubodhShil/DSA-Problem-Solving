@@ -1,8 +1,10 @@
 > # **```Algorithm: Final Term```**
 
 ## **Syllabus**
-1. Greedy Method
-2. Dynamic Programming
+1. Optimization problem 
+   - Greedy Method
+   - Dynamic Programming
+2. Job Sequencing with Deadlines - (Greedy)
 3. Minimum Spanning Tree (MST)
    - Prim's Algorithm (Greedy - MST)
    - Kruskal's Algorithm (Greedy - MST)
@@ -10,8 +12,8 @@
 5. Bellman-Ford Algorithm (DP - Single Source Shortest Path)
 6. Floyd-Warshall Algorithm (DP - All Pair or Multi-Source Shortest Path)
 7. Multistage graph (DP)
-8. KMP (String Matching or Substring Finding Algorithm)
-9. Rabin-Karp (String Matching or Substring Finding Algorithm)
+8.  KMP (String Matching or Substring Finding Algorithm)
+9.  Rabin-Karp (String Matching or Substring Finding Algorithm)
 10. Disjoint Set Union (Data Structure for Kruskal's Cycle/Loop Detection)
 11. Traveling Salesman Problem (TSP) - (DP)
 12. Longest Common Subsequence (LCS) - (DP)
@@ -20,7 +22,14 @@
 &nbsp;
 
 ## **```Optimization problem```**
-An optimization problem is a kind of problem that requires to have a best possible solution from a set of possible solutions. 
+An optimization problem is a kind of problem that requires to have a best possible solution from a set of possible solutions. We can define optimization is two kinds:
+1. **Minimization**: Minimize cost.
+2. **Maximization**: Maximize profit.
+
+Any optimization problem depends upon a particular goal that needs to acheive either by maximizing or minizing the **objective function**. Here, the objective function defines the goal or objective of the problem we're trying to acheive. In the knapsack problem, our task was to maximizing profit by picking up those items that can fit within the limited weight constraint.
+
+**Optimal solution**: The optimal solution is most suitable solution among all possible solutions that satifies the objective function. 
+
 Here are some popular algorithms that are used to solve optimization problems:
 
 ## <p align="center"><b>Greedy Algorithm</b></p>
@@ -33,6 +42,10 @@ Greedy algorithms make decisions at each step that seem optimal at the moment, w
 3. Greedy algorithms are generally simple, easy to implement, and have low time complexity.
 4. However, greedy algorithms do not guarantee an optimal solution in all cases and may lead to suboptimal results.
 5. Greedy takes decision in a single pass imedietly. 
+6. Greedy method doesn't gurantee the most optimal solution always.
+
+![](greedy_graph_1.png) 
+Here the greedy method choose, **A → B → D** as the optimal solution, but the optimal path is **A → C → D**.
 
 > ## **```Minimum Spanning Tree (MST)```**
 A MST is a tree derived from a graph whose total cost is minimized by summing the weights of any arbitrary (vertices - 1) edges.
@@ -77,11 +90,13 @@ It has three functions:
 
 ## <p align="center"><b>Dynamic Programming</b></p>
 
-- Dynamic programming is all about solving a sub-problem once and remembering its result and reuse when they appears again.
-  
-- Dynamic programming works on **principle of optimality**. So, minimization or maximization problems can be solved using DP.
+1. Dynamic programming is all about solving a sub-problem once and remembering its result and reuse when they appears again.
+2. Dynamic programming works on **principle of optimality**. So, minimization or maximization problems can be solved using DP.
+3. Dynamic programming solves problem by taking **sequence of decisions**. More simply it means, you've to try out all possible solutions and pick up the best solution. 
 
-- Dynamic programming solves problem by taking **sequence of decisions**. More simply it means, you've to try out all possible solutions and pick up the best solution. 
+Two methods of DP:
+1. Top-down approach: Recursion + Memoization 
+2. Bottom-up approach: Tabulation
 
 &nbsp;
 
@@ -99,8 +114,8 @@ On the contrary, there might no single source direct path between source to dest
 **Relaxation:** Relaxation is a process used to update the minimum distance between the source vertex and any other vertex in the graph. In the process we calculate the shorter path to reach from source to a specific vertex. If we find a shorter path than the current path, we replace the current value with the new shortest we just found.
 
 ```cpp
-if(d[u] + c(u, v) < d[v])
-    d[v] = d[u] + c[u][v];
+if(g[u] + e[u][v] < g[v])
+    g[v] = g[u] + e[u][v];
 ```
 
 Since here we have to minimize value this problem can solved using greedy approach or dynamic programming.
@@ -117,7 +132,10 @@ Determining shortest path is all about finding the minimum distance from source 
 
 **Time complexity**: O(n^2)
 
-**Disadvantages**:
+### **Advantages**
+1. Dijkstra algorithm works with both directed and undirected graph.
+
+### **Disadvantages**
 1. Dijkstra algorithm doesn't works with negative weights.
 
 ## Bellman-Ford Algorithm - **Dynamic Programming**
