@@ -110,7 +110,7 @@ Two methods of DP:
 
 &nbsp;
 
-> ## **```Single Source Shortest Path Algorithms```** 
+## **```Single Source Shortest Path Algorithms```** 
 Single source shortest path algorithm suggests to find a path or way from a source node to destination node with a minimum possible distance.
 
 **Source node**: The very first node represented as **source node** or starting point or initial stage.
