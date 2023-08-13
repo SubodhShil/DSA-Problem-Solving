@@ -44,7 +44,7 @@ Greedy algorithms make decisions at each step that seem optimal at the moment, w
 5. Greedy takes decision in a single pass imedietly. 
 6. Greedy method doesn't gurantee the most optimal solution always.
 
-![](greedy_graph_1.png) 
+![](greedy_graph_1.png)  
 Here the greedy method choose, **A → B → D** as the optimal solution, but the optimal path is **A → C → D**.
 
 ## Spanning Tree 
