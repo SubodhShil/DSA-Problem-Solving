@@ -186,7 +186,7 @@ The algorithm we will be using here is a dynamic programming based tabulation me
 
 &nbsp;
 
-> ## <p align="center">**```All pair or multi source shortest path```** </p>
+## <p align="center">**```All pair or multi source shortest path```** </p>
 
 Previously we've learned about single source shortest path, where we start from a specific source node and find the shortest path till destination. But here all pair shortest path doesn't have a source node, we've to consider shortest path from every single node.
 
