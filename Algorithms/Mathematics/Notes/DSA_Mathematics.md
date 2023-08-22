@@ -1,11 +1,18 @@
 
 ># ```Mathematics```
 
+> # ```Manhattan distance```
+
+The **Manhattan distance** is a formula that can used for distance between two points. For two points (x1, y1) and (x2, y2), the Manhattan distance is calculated as:
+
+Manhattan distance = ```|x2 - x1| + |y2 - y1|```
+
+
 ## GCD and LCM
 
 **GCD(Greatest Common Divisor) using LCM**  
 
-> ### **GCD(a, b) = $\cfrac {|a.b|}{LCM(a,b)}$**
+### **GCD(a, b) = $\cfrac {|a.b|}{LCM(a,b)}$**
 
 **LCM(Least Common Divisor) using GCM**  
 
@@ -13,14 +20,13 @@
 
 ---
 
-```
-//* GCD or HCF
-        /*
-            ^ GCD(a, b) = gcd(a - b, b) where a > b;
-         */
+```cpp
+// GCD or HCF
 
-        //! Bruteforce
+        /* GCD(a, b) = gcd(a - b, b) where a > b; */
+
         /*
+        Bruteforce
             1. determine the lowest value among two given number
             2. now start  reverse-iteration from the lowest value, and decrease by every unsuccessful iteration the lowest value has to decrease by 1
             3. at a point of the iteration when both of the number get divided you have to stop the loop and thus the divisor is the answer
@@ -58,8 +64,9 @@
 ```
 
 ---
+&nbsp;
 
-># **```Sieve of Eratosthenes```**
+> # **```Sieve of Eratosthenes```**
 
 <details>
 <summary><b>Study Links</b></summary>
