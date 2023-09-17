@@ -1,14 +1,9 @@
 > # **```Questions```**
 
-## Part 1 (3 hours)
+## Contest (3 hrs)
+1. https://leetcode.com/problems/group-anagrams/
+2. https://leetcode.com/problems/single-element-in-a-sorted-array/
+3. https://www.codingninjas.com/studio/problems/count-with-k-different-characters_1214627?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+4. https://practice.geeksforgeeks.org/problems/find-the-sum-of-last-n-nodes-of-the-linked-list/1?page=1&difficulty[]=-1&category[]=Linked%20List&sortBy=submissions
+5. https://leetcode.com/problems/same-tree/description/
 
-1. https://leetcode.com/problems/valid-palindrome-ii/
-2. https://leetcode.com/problems/longest-substring-without-repeating-characters/
-3. https://leetcode.com/problems/same-tree/
-4. https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
-5. https://leetcode.com/problems/next-greater-element-i/
-
-## Part 2 (1 hour and 10 minutes)
-
-6. https://practice.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1
-7. 
