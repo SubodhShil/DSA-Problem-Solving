@@ -43,3 +43,6 @@ A binary tree node contains these three fields:
 1. Data
 2. Pointer to left child
 3. Pointer to right child
+
+### Number of nodes in a full binary tree
+Formula: 2^h - 1
