@@ -46,3 +46,5 @@ A binary tree node contains these three fields:
 
 ### Number of nodes in a full binary tree
 Formula: 2^h - 1
+
+### Height of a tree is the maximum depth
