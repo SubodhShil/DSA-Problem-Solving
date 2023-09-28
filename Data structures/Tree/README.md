@@ -4,7 +4,7 @@ Tree is a non-linear hierarchical data structure **consist of nodes where each n
 
 ### **How linked list is different from tree?**
 
-> Linked list is a single directional and sequential data structure where one item or element or node references only one neighbor. Unlike linked list, each node of a tree can have link or connection among one or more nodes.
+> Linked list is a single directional and sequential data structure where one item or element or node references only one neighbor. Unlike linked list, each node of a tree can have link to multiple nodes connected to it.
 
 ## **Benefits**
 
