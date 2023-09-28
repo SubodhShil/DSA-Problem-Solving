@@ -21,8 +21,6 @@ void Node::createTree()
     int rootData;
     cout << "Enter data for root node";
     cin >> rootData;
-
-    
 }
 
 int main()

@@ -12,11 +12,10 @@ GCD(0, 0) is invalid
 Therefore, there is no GCD such 0.
 ```
 
-Steps:
+## Steps:
 1. We have to iterate over a series of number, the biggest number in the series which divides both inputs is the GCD. 
 
 2. However, the search range has not been specified. As we know, it is not possible to find a common divisor that is greater than the smallest number among them. Therefore, our search range spans from 1 to the minimum of the two input numbers.
-
 
 ```cpp
 /// Time Complexity: O(min(a, b))
@@ -50,3 +49,7 @@ Euclid's approach of finding GCD of two number is effecient yet simple. The algo
 
 Value of 'a' and 'b' will be given but you've to determine the value of 'x' and 'y'.
 
+> # **```Chinese Remainder Theorem```**
+
+### **```Linear Congruence```**
+Linear congruence is a notation that 

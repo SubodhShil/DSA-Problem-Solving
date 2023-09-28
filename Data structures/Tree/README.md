@@ -2,9 +2,9 @@
 
 Tree is a non-linear hierarchical data structure **consist of nodes where each node having zero or more nodes connected by edges**.
 
-## **How linked list is different from tree?**
+### **How linked list is different from tree?**
 
-Linked list is a single directional data structure. Unlike linked list, each node of a tree can have link or connection among one or more nodes.
+> Linked list is a single directional and sequential data structure where one item or element or node references only one neighbor. Unlike linked list, each node of a tree can have link or connection among one or more nodes.
 
 ## **Benefits**
 
@@ -21,10 +21,10 @@ Linked list is a single directional data structure. Unlike linked list, each nod
 <ins>**Parent node**</ins>: A node that that has at least one child associated with it is a parent node.  
 <ins>**Child node**</ins>: Nodes that are connected to a parent nodes are said to be each others child node.  
 <ins>**Leaf node**</ins>: The nodes with no children are called leaf node. Leaf nodes are not parent nodes.  
-<ins>**Height of a node**</ins>:Number of edges from the node to it's deepest leaf.  
-<ins>**Depth of a Node**</ins>:The depth of a node is the number of edges from the root to the node.  
-<ins>**Height of a Tree**</ins>:The height of a Tree is the height of the root node or the depth of the deepest node.  
-<ins>**Ancestors**</ins>:
+<ins>**Height of a node**</ins>: Number of edges from the node to it's deepest leaf.  
+<ins>**Depth of a Node**</ins>: The depth of a node is the number of edges from the root to the node.  
+<ins>**Height of a Tree**</ins>: The height of a Tree is the height of the root node or the depth of the deepest node.  
+<ins>**Ancestors**</ins>: 
 
 &nbsp;
 
