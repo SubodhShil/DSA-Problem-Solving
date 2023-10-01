@@ -9,7 +9,8 @@ Tree is a non-linear hierarchical data structure **consist of nodes where each n
 ## **Benefits**
 
 1. Insertion and deletion operation are O(long N) complexity.
-2. Partial sorting.
+2. Ordered insertion and deletion in binary search tree (variation of tree).
+3. Partial sorting.
 
 ## <p align="center">**Terminology**</p>
 
