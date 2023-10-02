@@ -1,5 +1,3 @@
-//* Binary search ==> iterative
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -25,7 +23,7 @@ int binarySearchIterative(vector<int> &testArray, int search_key)
 
 int binarySearchRecurisive(vector<int> &testArray, int start, int end, int key)
 {
-    //* auxiliary case or working case
+    /// auxiliary case or working case
     if (start <= end)
     {
         int mid = start + (end - start) / 2;
