@@ -49,6 +49,12 @@ Searching in an array can cost linear time with most naive full length array sea
 mid = start + (end - start) / 2
 ```
 
+## Lower bound and Upper bound
+
+
 ## Binary Search on Answer
 Given an array is not sorted but binary search algorithm is still be applicable but but it requires a suitable criteria or condition for conducting the binary search.
+
+## Interpolation Search
+
 
