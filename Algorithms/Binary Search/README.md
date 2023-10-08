@@ -2,6 +2,11 @@
 
 Searching in an array can cost linear time with most naive full length array searching. By utilizing binary search algorithm we could be cut down the time complexity of to a logarithmic complexity if the array is sorted.
 
+**Mid value overflow**: We determine mid vlaue by adding first and last index value, after that the result is divided by 2. But it could be possible that addition of those two index values overflows the range. So, mathematically we use another formula:
+```cpp
+mid = start + (end - start) / 2
+```
+
 ### Depend on array order binary search has three variations: 
 1. **Ascending order binary search**: On the left side of mid has the smaller values, and on the right of the mid it contains higher values.
    ```cpp
@@ -44,10 +49,12 @@ Searching in an array can cost linear time with most naive full length array sea
 2. If the target is not matched to the middle value, then it may be left or right side. Determine which side it should and discard the other side. 
    1. 
 
-**Mid value overflow**: We determine mid vlaue by adding first and last index value, after that the result is divided by 2. But it could be possible that addition of those two index values overflows the range. So, mathematically we use another formula:
-```cpp
-mid = start + (end - start) / 2
-```
+
+## Rotated sorted array 
+
+
+After rotating an array of size 'n' times, it will return to its original arrangement.
+
 
 ## Lower bound and Upper bound
 
@@ -57,4 +64,7 @@ Given an array is not sorted but binary search algorithm is still be applicable 
 
 ## Interpolation Search
 
+&nbsp;
+
+> # **```Complexity Analysis```**
 
