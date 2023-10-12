@@ -1,4 +1,5 @@
 /*
+
 You're given an integer n, you've print such pattern:
 
 Input:
