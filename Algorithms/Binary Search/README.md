@@ -43,8 +43,12 @@ mid = start + (end - start) / 2
    ....
    ```
 
-### **Question pattern**: Typically questions related to binary search mention the keyword "sorted" in their description.
+## ```How to figur out Binary Search questions```
+1. Typically questions related to binary search mention the keyword "sorted" in their description.
+2. Whenever there is a possible range (range is always sorted) of answers then we can apply binary search.
+3. 
 
+### Algorithm
 1. If the array is sorted, determine the mid value and compare it with the target value you're looking for. 
 2. If the target is not matched to the middle value, then it may be left or right side. Determine which side it should and discard the other side. 
    1. 
