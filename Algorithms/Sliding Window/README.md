@@ -12,3 +12,5 @@
 
 ## **Observation**: Sliding Window vs Kadane's Algorithm
 
+Sliding window technique is applicable only if we're give a fixed size window or can determine a variable size window or subarray size. In contrast, if the question doesn't mention any window size or subarray size then we must apply **Kadane's algorithm** to find maximum or minimum subarray sum.
+
