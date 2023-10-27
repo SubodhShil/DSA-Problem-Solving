@@ -1,7 +1,6 @@
 /**
  * @file LC_2461_Maximum_Sum_of_Distinct_Subarrays_With_Length_K.cpp
  * @author Subodh Chandra Shil
- * @date 2023-04-12
  * @problem_source: https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/description/
  * @tutorial: https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/solutions/2783127/c-solution-using-map-very-simple-and-easy-to-understand/?orderBy=most_votes
  */
