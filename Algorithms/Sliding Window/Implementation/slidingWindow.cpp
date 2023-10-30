@@ -94,7 +94,7 @@ public:
     }
 
     /// Solution 3
-    long maximumSumSubarray(int k, vector<int> &arr, int n)
+    long maximumSumSubarray3(int k, vector<int> &arr, int n)
     {
         if (k > n || n == 0)
             return -1;
@@ -115,6 +115,42 @@ public:
             }
 
             current_sum += arr[j] - arr[i];
+            result = max(result, current_sum);
+            ++i, ++j;
+        }
+
+        return result;
+    }
+
+    long maximumSumSubarray(int k, vector<int> &arr, int n)
+    {
+        int i = 0, j = 0;
+        long long result = -1;
+        long long current_sum = 0;
+
+        while (i < n && j < n)
+        {
+            /// Pre-work: The work that is any condition agnostic
+            current_sum += arr[j];
+
+            /// work until window size matches
+            if (j - i + 1 < k)
+            {
+                /// other work: if needed
+                ++j;
+                continue;
+            }
+
+            /// work exactly when window size matches for first time
+            if (j - i + 1 == k)
+            {
+                result = current_sum;
+                ++j;
+                continue;
+            }
+
+            /// all other work below
+            current_sum -= arr[i];
             result = max(result, current_sum);
             ++i, ++j;
         }
