@@ -122,7 +122,7 @@ public:
         return result;
     }
 
-    long maximumSumSubarray(int k, vector<int> &arr, int n)
+    long maximumSumSubarray4(int k, vector<int> &arr, int n)
     {
         int i = 0, j = 0;
         long long result = -1;
@@ -153,6 +153,36 @@ public:
             current_sum -= arr[i];
             result = max(result, current_sum);
             ++i, ++j;
+        }
+
+        return result;
+    }
+
+    /// MAIN TEMPLATE
+    long maximumSumSubarray(int k, vector<int> &arr, int n)
+    {
+        int i = 0, j = 0;
+        long long sum = 0;
+        long long result = -1;
+
+        while (i < n && j < n)
+        {
+            /// Condition agnostic work
+            sum += arr[j];
+
+            /// When window size matches
+            if (j - i + 1 == k)
+            {
+                /// Work
+                result = max(result, sum);
+
+                /// increase 'i' pointer and delete the previous window element
+                sum -= arr[i];
+                ++i;
+            }
+
+            /// fast index pointer
+            ++j;
         }
 
         return result;
