@@ -11,6 +11,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// [5, -5, 5]
+
 class Solution
 {
 public:
