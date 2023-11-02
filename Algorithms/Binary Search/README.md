@@ -61,7 +61,12 @@ After rotating an array of size 'n' times, it will return to its original arrang
 
 
 ## Lower bound and Upper bound
+Lower bound: Array এর মধ্যে কোন element **x** এর lower bound হলো
+- **x** যদি  array এর মধ্যে থাকে, তাহলে **x** নিজেই lower bound
+- **x** যদি না থাকে, তাহলে **x** এর পরবর্তী বড় যে সংখ্যাটি array তে থাকবে সেটা lower bound
 
+Upper bound:
+- কোন element **x** এর upper bound সবসময় তার থেকে পরবর্তী বড় যে সংখ্যাটি array তে পাওয়া যাবে সেটা 
 
 ## Binary Search on Answer
 Given an array is not sorted but binary search algorithm is still be applicable but but it requires a suitable criteria or condition for conducting the binary search.

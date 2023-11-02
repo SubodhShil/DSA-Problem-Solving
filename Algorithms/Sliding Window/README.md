@@ -5,19 +5,19 @@
 - Iterate until it matches to the window size.
 - After window size matches to slide the window, it will simply add a new element from back and remove the first element from the previous window. 
 
-## **Sliding Window Template**
-```cpp
-
-```
-
 ## Identify the pattern
 > The algorithm is applicable to contiguous data structures like **Array** and **String**. Since the algorithm works with continuous part of an array or string, so the question that has such keyword like **'subarray'**, **'substring'**, **'largest'**, **'minimum'** and an extra variable such as **'k'** refers the window size or target, indicates this pattern.
 
-### The refers to the subarray size.
+### The variable **k** refers to the subarray size.
 
 ## Variants of sliding window algorithm
 1. Fix sized window: The window size will be provided.
 2. Variable size window: We ourself have to determine the window size.
+
+## **Sliding Window Template**
+```cpp
+
+```
 
 ## **Observation**: Sliding Window vs Kadane's Algorithm
 

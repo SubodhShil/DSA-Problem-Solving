@@ -158,8 +158,7 @@ public:
         return result;
     }
 
-    /// MAIN TEMPLATE
-    long maximumSumSubarray(int k, vector<int> &arr, int n)
+    long maximumSumSubarray5(int k, vector<int> &arr, int n)
     {
         int i = 0, j = 0;
         long long sum = 0;
@@ -183,6 +182,25 @@ public:
 
             /// fast index pointer
             ++j;
+        }
+
+        return result;
+    }
+
+    /// MAIN TEMPLATE - Shrinkable
+    long maximumSumSubarray(int k, vector<int> &arr, int n)
+    {
+        long long sum = 0, result = -1;
+
+        for (int head = 0, tail = 0; head < n; ++head)
+        {
+            sum += arr[head];
+            for (; head - tail + 1 > k; ++tail)
+            {
+                sum -= arr[tail];
+            }
+
+            result = max(result, sum);
         }
 
         return result;
