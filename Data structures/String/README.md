@@ -27,3 +27,7 @@ For example, the sequence 1,2,3,4 has the following subsequences:
 3  
 4  
 ```
+
+## Tags
+1. LCP (Longest Common Prefix)
+2. 
