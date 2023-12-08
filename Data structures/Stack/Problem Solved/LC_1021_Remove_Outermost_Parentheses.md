@@ -39,6 +39,8 @@ Observation:
 <summary>C++</summary>
 
 ```cpp
+// Time Complexity:
+// Space Complexity: 
 class Solution
 {
 public:
@@ -71,5 +73,4 @@ public:
 
 <details>
   <summary>Python</summary>
-  
 </details>
