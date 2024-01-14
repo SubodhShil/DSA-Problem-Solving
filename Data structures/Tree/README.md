@@ -23,16 +23,31 @@
 
 ![](./tree1.png)
 
-<ins>**Node**</ins>: A node is an entity that contains value and edges to it's child nodes.  
-<ins>**Edge**</ins>: Edge is the link between two nodes. Edge implemented by pointer to next child nodes.  
-<ins>**Root node**</ins>: The topmost node of the tree is called root node or **key**.  
-<ins>**Parent node**</ins>: A node that that has at least one child associated with it is a parent node.  
-<ins>**Child node**</ins>: Nodes that are connected to a parent nodes are said to be each others child node.  
-<ins>**Leaf node**</ins>: The nodes with no children are called leaf node. Leaf nodes are not parent nodes.  
-<ins>**Height of a node**</ins>: Number of edges from the node to it's deepest leaf.  
-<ins>**Depth of a Node**</ins>: The depth of a node is the number of edges from the root to the node.  
-<ins>**Height of a Tree**</ins>: The height of a Tree is the height of the root node or the depth of the deepest node.  
-<ins>**Ancestors**</ins>: 
+1. <ins>**Node**</ins>: A node is an entity that contains value and edges to it's child nodes.  
+
+2. <ins>**Edge**</ins>: Edge is the link between two nodes. Edge implemented by pointer to next child nodes.  
+
+3. <ins>**Root node**</ins>: The topmost node of the tree is called root node or **key**.  
+
+4. <ins>**Parent node**</ins>: A node that that has at least one child associated with it is a parent node.  
+
+5. <ins>**Child node**</ins>: Nodes that are connected to a parent nodes are said to be each others child node.  
+
+6. <ins>**Sibling node**</ins>: If any two have the same parent node then they are said to be sibling nodes.   
+
+7. <ins>**Leaf node**</ins>: The nodes with no children are called leaf node. Leaf nodes can't be parent nodes.
+
+8. <ins>**Height of a tree**</ins>: The height of a tree is the height of the root node or the depth of the deepest node. In simple words, **maximum number of edges defines the height of a tree**.
+
+9. <ins>**Height of a node**</ins>: Maximum number of edges from the node till the deepest leaf. 
+
+10. <ins>**Depth of a Child Node**</ins>: The depth of a child node is the number of edges from the root to the child node.  
+
+11. <ins>**Ancestors**</ins>: Every node that contains a child node is said to be an ancestor of it's immediet and further child nodes. 
+
+12. <ins>**Tree Node Level**</ins>: **Height of the root node - Height of a target node**. Level of root is 0.
+
+13. <ins>**Degree of a Node**</ins>: How many child node a node has defines it degree. If a node has 2 child then it has degree 2 (maximum is degree 2), is node contains 1 child then it has degree 1 and if it doesn't contain any child nodes then it has degree of 0. Leaf nodes degree is 0. 
 
 &nbsp;
 
@@ -44,14 +59,22 @@
 
 > ## **```Binary tree```**
 
-A generic tree or **N-ary tree** can have as many nodes as children, but in binary tree a node restricted to have atmost 2 childrens.
+A generic tree or **N-ary tree** can have as many nodes as children, but in binary tree a node restricted to have atmost 2 children nodes.
 
 - Binary tree is used in machine learning algorithm as decision tree.
 - To visualize binary search
 - Compiler syntax tree implemented
 - Heap sort
 
-<ins>Traverse and print **Binary Tree**</ins>
+### Structure of a binary tree
+
+A binary tree node contains these three fields:
+
+1. Data
+2. Pointer to left child
+3. Pointer to right child
+
+### <ins>Traverse and print **Binary Tree**</ins>
 
 Unlike linear data structures, the non-linear data structures can't be print in linear order fashion since it has multiple path to be traversed.
 
@@ -69,21 +92,45 @@ Depth-->Pre-Order;
 Depth-->Post-Order;
 Depth-->In-Order;
 ```
-## **```Variants of binary tree```**
+## **```Variants or types of binary tree```**
 
-1. **Full Binary Tree**: Count of child nodes either 0 or 2.
-2. **Complete Binary Tree**: All levels are filled properly except for the last level filled from left to right sequentially. Complete binary tree isn't perfect but it tends to be perfect
-3. **Perfect Binary Tree**: All levels needs to be filled up.
+1. **Full or Strict Binary Tree (FBT)**: Each node has either 0 or 2 child nodes. We can form a complete binary of full binary tree. 
+```
+    Number of nodes in a full binary tree
+    Formula: 2^h - 1
+```
 
-Each node can have atmost 2 nodes attached to it.  
+2. **Complete Binary Tree (CBT)**: All levels are filled properly except for the last level filled from left to right sequentially. Complete binary tree isn't perfect binary tree but it tends to be perfect binary tree. 
 
-A binary tree node contains these three fields:
+3. **Perfect Binary Tree (PBT)**: All the internal nodes strictly has 2 child nodes and the leaf nodes has to be in the same level.
 
-1. Data
-2. Pointer to left child
-3. Pointer to right child
+4. **Height Balanced Binary Tree (HBBT)**: Height of tree must meet **log(number of tree nodes)**.
 
-### Number of nodes in a full binary tree
-Formula: 2^h - 1
+5. **Degenerate or Skewed Binary Tree (SBT)**: Every node has strictly one child node. Skewed binary looks like a linked list.
 
 ### Height of a tree is the maximum depth
+
+&nbsp;
+
+## **```Properties```**
+### Height of a perfect binary tree (PBT)
+Suppose, Height of a perfect binary tree = H  
+Total number nodes in PBT = (2^(H + 1)) - 1   
+Total number of leaf nodes in PBT = 2^H
+
+### Levels count
+If, N = number of leaves   
+```Levels = log(N + 1)```
+
+### Leaf nodes count in FBT
+```Number of leaf nodes = Number of internal nodes + 1```
+
+### Number of leaf nodes
+```1 + Number of internal nodes with 2 childrens```
+
+
+## **```Implementation```**
+
+1. Linked representation (Uses custom type and pointer/references)
+2. Sequential (Uses array): Usecases like heap and segment tree (FBT).
+
