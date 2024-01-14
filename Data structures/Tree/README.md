@@ -9,7 +9,6 @@
 - Apart from the leaf nodes, all other nodes in a tree can be addressed as parent node to it's next level nodes connected to it.
 - Nodes belongs to the last level of a tree is said to be **leaf** node. These leaf nodes can't have any child nodes, thus leaf nodes can't be parent.
 
-
 ### **How linked list is different from tree?**
 
 > Linked list is a single directional and sequential data structure where one item or element or node references only one neighbor. Unlike linked list, each node of a tree can have link to multiple nodes connected to it.

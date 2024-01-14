@@ -11,3 +11,7 @@
    ```cpp
     a x b = gcd(a, b) * lcm(a, b)
    ```
+
+
+### Be careful of keywords like 'at most' in the question description. You don't need to do exact 'n' tasks strictly if it is mentioned with keyword 'at most'. 
+
