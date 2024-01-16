@@ -3,30 +3,98 @@ using namespace std;
 
 class Node
 {
+public:
     int data = 0;
     Node *leftChild = nullptr;
     Node *rightChild = nullptr;
 
-public:
     Node(int data)
     {
         this->data = data;
     }
-
-    void createTree();
 };
 
-void Node::createTree()
+Node *depth_wise_input(Node *root)
 {
-    int rootData;
-    cout << "Enter data for root node";
-    cin >> rootData;
+    int data;
+    cout << "Enter data for node: ";
+    cin >> data;
+
+    if (data <= 0)
+        return nullptr;
+
+    Node *newNode = new Node(data);
+
+    cout << "Left node data: ";
+    root->leftChild = depth_wise_input(root->leftChild);
+
+    cout << "Right node data: ";
+    root->rightChild = depth_wise_input(root->rightChild);
+
+    return root;
+}
+
+Node *level_order_input(Node *root)
+{
+    int data;
+    cout << "Enter data for node: ";
+    cin >> data;
+
+    if (data <= 0)
+        return nullptr;
+
+    Node *root = new Node(data);
+
+    queue<Node *> treeNodes;
+    treeNodes.push(root);
+
+    while (!treeNodes.empty())
+    {
+        Node *currentNode = treeNodes.front();
+        treeNodes.pop();
+
+        int valLeft, valRight;
+        cin >> valLeft >> valRight;
+
+        Node *left = (valLeft > 0) ? new Node(valLeft) : nullptr;
+        Node *right = (valRight > 0) ? new Node(valRight) : nullptr;
+
+        currentNode->leftChild = left;
+        currentNode->rightChild = right;
+
+        if (left)
+            treeNodes.push(left);
+        if (right)
+            treeNodes.push(right);
+    }
+
+    return root;
+}
+
+void pre_order_traverse(Node *root)
+{
+    if (!root)
+        return;
+
+    cout << root->data << ' ';
+    pre_order_traverse(root->leftChild);
+    pre_order_traverse(root->rightChild);
+}
+
+void in_order_traverse(Node *root)
+{
+    if (!root)
+        return;
+
+    cout << root->data << ' ';
+    pre_order_traverse(root->leftChild);
+    pre_order_traverse(root->rightChild);
 }
 
 int main()
 {
     Node *root = nullptr;
-    root->createTree();
+    root = depth_wise_input(root);
 
     return 0;
 }

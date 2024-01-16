@@ -1,9 +1,9 @@
 /*
                             ॐ ॐ
 
-    * https://codeforces.com/contest/1907/problem/B
+    * https://codeforces.com/contest/1916/problem/B
     * Author: Subodh Chandra Shil
-    * Tag: String
+    * Tag: Math, GCD
     * ACCEPTED
 
                             ॐ ॐ
@@ -18,11 +18,18 @@ using namespace std;
 #define no {cout<<"NO"<<endl;}
 
 /// for loops
-#define fori(x) for( int i = 0; i < x; i++)
-#define forj(x) for( int j = 0; j < x; j++)
+#define fori(x) for( ll i = 0; i < x; i++)
+#define forj(x) for( ll j = 0; j < x; j++)
 
-void ans()
+void ans() 
 {
+    ll a, b;
+    cin >> a >> b;
+    
+    if(b % a == 0) 
+        cout << (b*b)/a << endl;
+    else 
+        cout << (a*b) / __gcd(a, b) << endl;
 }
 
 int main()
