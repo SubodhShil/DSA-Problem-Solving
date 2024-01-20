@@ -128,9 +128,95 @@ If, N = number of leaves
 ### Number of leaf nodes
 ```1 + Number of internal nodes with 2 childrens```
 
+&nbsp;
 
 ## **```Implementation```**
 
 1. Linked representation (Uses custom type and pointer/references)
 2. Sequential (Uses array): Usecases like heap and segment tree (FBT).
 
+&nbsp;
+## **```Tree input and traversal```**
+There are two ways we can input and traverse the tree:
+
+### 1. DFS (Depth-First-Search) or depth wise
+
+<!-- 1 -->
+<details>
+<summary>DFS or depth-wise Input</summary>
+
+```cpp
+Node *depth_wise_input(Node *root)
+{
+    int data;
+    cout << "Enter data for node: ";
+    cin >> data;
+
+    if (data <= 0)
+        return nullptr;
+
+    Node *newNode = new Node(data);
+
+    cout << "Left node data: ";
+    root->leftChild = depth_wise_input(root->leftChild);
+
+    cout << "Right node data: ";
+    root->rightChild = depth_wise_input(root->rightChild);
+
+    return root;
+}
+```
+</details>
+
+<!-- 2 -->
+<details>
+<summary>In Order Traverse</summary>
+
+```cpp
+void in_order_traverse(Node *root)
+{
+    if (!root)
+        return;
+
+    pre_order_traverse(root->leftChild);
+    cout << root->data << ' ';
+    pre_order_traverse(root->rightChild);
+}
+```
+</details>
+
+<!-- 3 -->
+<details>
+<summary>Post Order Traverse</summary>
+
+```cpp
+void post_order_traverse(Node *root)
+{
+    if (!root)
+        return;
+
+    pre_order_traverse(root->leftChild);
+    pre_order_traverse(root->rightChild);
+    cout << root->data << ' ';
+}
+```
+</details>
+
+<!-- 4 -->
+<details>
+<summary>Pre Order Traverse</summary>
+
+```cpp
+void pre_order_traverse(Node *root)
+{
+    if (!root)
+        return;
+
+    cout << root->data << ' ';
+    pre_order_traverse(root->leftChild);
+    pre_order_traverse(root->rightChild);
+}
+```
+</details>
+
+### 2. BFS (Breadth-First-Search) or level order
