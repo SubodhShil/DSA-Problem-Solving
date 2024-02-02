@@ -17,3 +17,30 @@
 
 ### **```Manhattan distance```**
 
+
+### **```Prime divisor```**
+
+Prime factor is finding which prime numbers multiply together to make the original number. In prime factorization, keep going finding factor until all the factors become prime number only.  
+For example, 100 = 10 x 10 = (5 x 2) x (5 x 2)
+2 prime divisors, 5 and 2
+
+১ এর বড় যেকোনো number কে prime factorization হিসেবে দেখানো যাবে । 
+
+### **GCD of more than 2 numbers**
+GCD is multiple of common factors 
+
+https://www.geeksforgeeks.org/gcd-two-array-numbers/
+
+
+## Bit Manipulation
+
+### XOR
+**XOR of similar bit is 0**  
+```
+0 ^ 0 = 0  
+1 ^ 1 = 0  
+0 ^ 1 = 1  
+1 ^ 0 = 1
+```
+
+
