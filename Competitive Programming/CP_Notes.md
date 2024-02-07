@@ -32,15 +32,6 @@ GCD is multiple of common factors
 https://www.geeksforgeeks.org/gcd-two-array-numbers/
 
 
-## Bit Manipulation
-
-### XOR
-**XOR of similar bit is 0**  
-```
-0 ^ 0 = 0  
-1 ^ 1 = 0  
-0 ^ 1 = 1  
-1 ^ 0 = 1
-```
-
+### n % x = rem < x 
+কোন সংখ্যা, n কে, x দ্বারা mod করলে remainder সবসময় 0 থেকে x - 1 এর মধ্যেই হবে । 
 

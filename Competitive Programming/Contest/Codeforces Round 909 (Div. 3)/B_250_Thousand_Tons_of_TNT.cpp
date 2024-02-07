@@ -1,10 +1,9 @@
 /*
                             ॐ ॐ
 
-    * 
+    * https://codeforces.com/contest/1899/problem/B
     * Author: Subodh Chandra Shil
-    * Tag: 
-    * ACCEPTED
+    * Tag: Prefix Sum
 
                             ॐ ॐ
 */
@@ -19,20 +18,58 @@ using namespace std;
 
 /// for loops
 #define fori(x) for( int i = 0; i < x; i++)
-#define forj(x) for( int j = 0; j < x; j++)
+#define forj(x) for( int j = 1; j < x; j++)
 
 void ans()
 {
-    int n;
+    ll n, res = 0;
     cin >> n;
-    vector<int> v;
 
-    for(int i = 0;i < n; ++i) {
-        int x;
-        cin >> x;
-        v.push_back(x);
+    vector<ll> v(n);
+    for(int i = 0; i < n; ++i)
+    {
+        cin >> v[i];
+        if(i >= 1) v[i] += v[i - 1]; 
     }
+
+    /* fori(n) cout << v[i] << ' ';
+    cout << endl << endl;
+ */
+for(int i = 1; i <= n; ++i)
+    {
+        if(n % i == 0)
+        {
+            ll mx = LLONG_MIN, mn = LLONG_MAX;
+            for(int j = i; j <= n; j += i) 
+            {
+                mn = min(mn, v[j] - v[j - i]);
+                mx = max(mx, v[j] - v[j - i]);
+            }
+
+            res = max(res, mx - mn);
+        }
+    }
+
+    cout << res << endl;
 }
+
+/* void solve(){
+    int n;
+	cin>>n;
+	vector<ll> a(n),pre(n+1);
+	for(int i=0;i<n;++i) cin>>a[i],pre[i+1]=pre[i]+a[i];
+	ll ans = 0;
+	for(int i=n;i>=1;--i){
+		if(n%i==0){
+			ll mn=LLONG_MAX,mx=LLONG_MIN;
+			for(int j=i;j<=n;j+=i){
+				mn=min(mn,pre[j]-pre[j-i]);
+				mx=max(mx,pre[j]-pre[j-i]);
+			}
+			ans=max(ans,mx-mn);
+		}
+	}cout<<ans<<'\n';
+} */
 
 int main()
 {
@@ -42,7 +79,9 @@ int main()
     while (t--)
     {
         ans();
+        // solve();
     }
 
     return 0;
 }
+
