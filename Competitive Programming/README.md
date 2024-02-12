@@ -17,6 +17,8 @@
 8. **Dry run**: Use pen and paper to draw stuff to better understand the problem.
 9. If you are still confused, try to read the problem statement again.
 
+&nbsp;
+
 ## **```How to get index of maximum and minimum element in an array```** 
 
 Using vector container: 
@@ -24,3 +26,7 @@ Using vector container:
 int maxElementIdx = max_element(a.begin(), a.end()) - a.begin();
 int minElementIdx = min_element(a.begin(), a.end()) - a.begin();
 ```
+
+## **```Subarray, Subsequence```** 
+**Subsequence**: Total number of subsequence in a string or array = $2^n$
+**Subset**: Distinct elements, doesn't matter the actual sequence.

@@ -129,3 +129,4 @@ Formula 2: ```x >> k = x / (2^k)```
 long long ans = 1LL << 40;
 ```
 
+# **```Bitmask```**
