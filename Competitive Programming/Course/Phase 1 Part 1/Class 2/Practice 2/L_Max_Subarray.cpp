@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define int long long
+
 #define superfast                 \
     ios_base::sync_with_stdio(0); \
     cin.tie(0);                   \
@@ -27,23 +29,24 @@ void ans()
     for (auto &i : v)
         cin >> i;
 
-    for (int i = 0; i < n; ++i)
+    for (int j = 0; j < n; ++j)
     {
-        for (int j = i; j < n; ++j)
+        for (int a = 0, b = j; b < n; ++a, ++b)
         {
-            int mx = INT32_MIN;
-            for (int k = i; k <= j; ++k)
+            int maxEle = INT32_MIN;
+            for (int l = a; l <= b; ++l)
             {
-                mx = max(mx, v[k]);
+                maxEle = max(maxEle, v[l]);
             }
-            cout << mx << ' ';
+
+            cout << maxEle << " ";
         }
     }
 
     cout << endl;
 }
 
-int main()
+int32_t main()
 {
     superfast int t;
     cin >> t;

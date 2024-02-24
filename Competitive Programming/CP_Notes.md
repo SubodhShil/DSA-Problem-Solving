@@ -35,3 +35,13 @@ https://www.geeksforgeeks.org/gcd-two-array-numbers/
 ### n % x = rem < x 
 কোন সংখ্যা, n কে, x দ্বারা mod করলে remainder সবসময় 0 থেকে x - 1 এর মধ্যেই হবে । 
 
+### Reversing using swap 
+একটা string বা array কে swap করে reverse করতে total = n (n - 1) / 2 সংখ্যক swap করতে হবে । 
+
+```cpp
+int x; cin >> x;
+vector<int> v = {1, 2, 3, 4, 4, 4, 5, 6};
+
+int first_idx = n - distance(find(begin(v), end(v), x), end(v));
+int last_idx = distance(find(rbegin(v), rend(v), x), rend(v)) - 1;
+```

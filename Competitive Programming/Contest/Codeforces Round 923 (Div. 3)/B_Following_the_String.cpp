@@ -14,13 +14,22 @@ void ans()
 {
     int n; 
     cin >> n;
-    int arr[n];
-    char str[n];
-    for(int i = 0; i < n;++i)
+    vector<int> arr(n);
+
+    map<int, int> mp;
+    for(auto &i : arr)
     {
-        cin >> arr[i];
-        if(arr[i] == 0) str[i] = 'a';
+        cin >> i;
+        mp[i]++;
     }
+
+    string str;
+    for(int i = n - 1; i >= 0; --i)
+    {
+        str = char('a' + mp[arr[i]] - 1) + str;
+        mp[arr[i]]--;
+    }
+    cout << str << endl;
 }
 
 int main()
