@@ -4,7 +4,7 @@
     * 
     * Author: Subodh Chandra Shil
     * Tag: 
-    ! NOT DONE
+    * ACCEPTED
 
                             ॐ ॐ
 */
@@ -14,6 +14,12 @@ using namespace std;
 
 #define isOddEven(x) (x & 1)
 #define clrBit(x, i) (x & (~(1 << i)))
+#define kth_bit(x, k) (x >> k) & 1
+#define on_kth_bit(x, k) (x | (1 << k))
+#define off_kth_bit(x, k) (x & (~(1 << k)))
+#define countSetBit(n) __builtin_popcount(i);
+#define toggle_kth_bit(x, k) (x ^ (1 << k))
+#define is_power_of_two(x) 
 
 typedef long long ll;
 typedef pair<ll, ll> pll;
@@ -86,17 +92,37 @@ void print(vector<T> &v, bool withSize)
     cout << v[i] << " \n"[i == v.size() - 1];
 }
 
-vector<int> v(N);
-int n, x;
+int n, m;
+vector<string> vStr;
+
+bool isSafe(int n, int m, int i, int j, int k, int l) {
+    return (i >= 0 and i < n and l >= 0 and l < n and j >= 0 and j < m and k >= 0 and k < m);
+}
 
 void solve()
 {
-    cin >> n;
-    int res = INT32_MIN;
-    for(int i = 1; i <= n; ++i) 
+    n = 0, m = 0;
+    vStr.clear();
+    
+    cin >> n >> m;
+    for(int i = 0; i < n; ++i) 
     {
-        cin >> x;
-        res = max(res, x - i);
+        string str;
+        cin >> str;
+        vStr.push_back(str);
+    }
+
+    int res = 0;
+    for(int t = 2; t <= n; ++t) 
+    {
+        for(int i = 0, l = t - 1; l < n; ++i, ++l)
+        {
+            for(int j = 0, k = t - 1; k < m; ++j, ++k) 
+            {
+                if(isSafe(n, m, i, j, k, l) and vStr[i][j] == vStr[i][k] and vStr[i][j] == vStr[l][j] and vStr[i][j] == vStr[l][k]) 
+                    ++res;
+            }
+        }
     }
 
     cout << res << endl;

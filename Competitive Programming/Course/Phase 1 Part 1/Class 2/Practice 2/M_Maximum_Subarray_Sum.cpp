@@ -92,11 +92,12 @@ int n, x;
 void solve()
 {
     cin >> n;
-    int res = INT32_MIN;
-    for(int i = 1; i <= n; ++i) 
+    fori(n) cin >> v[i];
+    int res = -1e18, sum = -1e18;
+    for(int i = 0; i < n; ++i)
     {
-        cin >> x;
-        res = max(res, x - i);
+        sum = max(v[i], v[i] + sum);
+        res = max(res, sum);
     }
 
     cout << res << endl;
@@ -109,7 +110,7 @@ int32_t main()
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
     
-    int t = 1; cin >> t;
+    int t = 1;
     while (t--) solve();
 
     return 0;

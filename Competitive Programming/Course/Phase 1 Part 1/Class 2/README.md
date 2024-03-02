@@ -115,6 +115,31 @@ cout << nthBit << endl;
 </details>
 
 
+### Count bit 1 or 0
+<details>
+<summary>Result</summary>
+
+```cpp
+void solve()
+{
+    int n;
+    cin >> n;
+    int cnt = 0;
+    for (int i = 1; i <= n; ++i)
+    {
+        /* for (int j = 0; j < 10; ++j)
+        {
+            bool nthBit = ((i >> j) & 1);
+            if (nthBit) ++cnt;
+        } */
+        cnt += __builtin_popcount(i);
+    }
+    cout << cnt << endl;
+}
+```
+</details>
+
+
 ### <ins>How to turn on a bit in a number?</ins>
 
 <details>

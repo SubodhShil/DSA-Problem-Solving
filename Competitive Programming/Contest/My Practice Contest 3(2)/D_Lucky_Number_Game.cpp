@@ -1,10 +1,9 @@
 /*
                             ॐ ॐ
 
-    * 
+    *
     * Author: Subodh Chandra Shil
-    * Tag: 
-    ! NOT DONE
+    * ACCEPTED
 
                             ॐ ॐ
 */
@@ -55,9 +54,20 @@ bool chmin(T &a, T b)
 #define int long long
 #define endl "\n"
 
-#define superfast ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0); 
-#define yes { cout << "YES" << endl; return; } 
-#define no { cout << "NO" << endl; return; }
+#define superfast                 \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0);
+#define yes                    \
+    {                          \
+        cout << "YES" << endl; \
+        return;                \
+    }
+#define no                    \
+    {                         \
+        cout << "NO" << endl; \
+        return;               \
+    }
 
 /// iterators
 #define itAll(x) for (auto x = s.begin(); x != s.end(); ++x)
@@ -93,39 +103,33 @@ void solve()
 {
     int a, b;
     cin >> n >> a >> b;
-    int bobCnt = 0, aliceCnt = 0;
+    int bobCnt = 0, aliceCnt = 0, both = 0;
 
-    fori(n) {
+    for (int i = 0; i < n; ++i)
+    {
         cin >> x;
-        if(x % a == 0) ++bobCnt;
-        else if(x % b == 0) ++aliceCnt;
+        if (x % a == 0 and x % b == 0)
+            ++both;
+        else if (x % a == 0)
+            ++bobCnt;
+        else if (x % b == 0)
+            ++aliceCnt;
     }
 
-    if(bobCnt > aliceCnt) cout <<"BOB\n";
-    if(aliceCnt > bobCnt) cout << "ALICE\n";
+    if (both + bobCnt > aliceCnt)
+        cout << "BOB\n";
+    else
+        cout << "ALICE\n";
 }
 
 int32_t main()
 {
-    superfast
+    superfast;
 
-    // freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
-    
-    int t = 1; cin >> t;
-    while (t--) solve();
+    int t = 1;
+    cin >> t;
+    while (t--)
+        solve();
 
     return 0;
 }
-
-/*
-* Notes :
-    ^ If n ≤ 12, the time complexity can be O(n!).
-    ^ If n ≤ 25, the time complexity can be O(2n).
-    ^ If n ≤ 100, the time complexity can be O(n4).
-    ^ If n ≤ 500, the time complexity can be O(n3).
-    ^ If n ≤ 104, the time complexity can be O(n2).
-    ^ If n ≤ 106, the time complexity can be O(n log n).
-    ^ If n ≤ 108, the time complexity can be O(n).
-    ^ If n > 108, the time complexity can be O(log n) or O(1).
- */

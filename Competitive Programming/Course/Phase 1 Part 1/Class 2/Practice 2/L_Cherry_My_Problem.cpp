@@ -92,11 +92,12 @@ int n, x;
 void solve()
 {
     cin >> n;
-    int res = INT32_MIN;
-    for(int i = 1; i <= n; ++i) 
+    fori(n) cin >> v[i];
+
+    int res = 0;
+    for(int i = 0, j = 1; j < n; ++i, ++j)
     {
-        cin >> x;
-        res = max(res, x - i);
+        res = max(res, 1LL * v[i] * v[j]);
     }
 
     cout << res << endl;

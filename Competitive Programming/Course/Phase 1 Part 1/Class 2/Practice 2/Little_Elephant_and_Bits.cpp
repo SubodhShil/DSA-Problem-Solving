@@ -4,7 +4,7 @@
     * 
     * Author: Subodh Chandra Shil
     * Tag: 
-    ! NOT DONE
+    * ACCEPTED
 
                             ॐ ॐ
 */
@@ -14,6 +14,12 @@ using namespace std;
 
 #define isOddEven(x) (x & 1)
 #define clrBit(x, i) (x & (~(1 << i)))
+#define kth_bit(x, k) (x >> k) & 1
+#define on_kth_bit(x, k) (x | (1 << k))
+#define off_kth_bit(x, k) (x & (~(1 << k)))
+#define countSetBit(n) __builtin_popcount(i);
+#define toggle_kth_bit(x, k) (x ^ (1 << k))
+#define is_power_of_two(x) 
 
 typedef long long ll;
 typedef pair<ll, ll> pll;
@@ -91,15 +97,30 @@ int n, x;
 
 void solve()
 {
-    cin >> n;
-    int res = INT32_MIN;
-    for(int i = 1; i <= n; ++i) 
-    {
-        cin >> x;
-        res = max(res, x - i);
+    string str;
+    cin >> str;
+    int n = str.size();
+
+    int cntZero = 0, cntOne = 0;
+    int lastZeroPos = -1;
+    for(int i = n - 1; i >= 0; --i) {
+        if(str[i] == '0') ++cntZero, lastZeroPos = i;
+        else ++cntOne;
     }
 
-    cout << res << endl;
+    if(!cntZero or n == cntOne) {
+        str.pop_back();
+        cout << str << endl;
+        return;
+    }
+
+    // cout << lastZeroPos << endl;
+
+    for(int i = 0; i < n; ++i) {
+        if(i == lastZeroPos) continue;
+        else cout << str[i];
+    }
+    cout << endl;
 }
 
 int32_t main()
@@ -109,7 +130,7 @@ int32_t main()
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
     
-    int t = 1; cin >> t;
+    int t = 1;
     while (t--) solve();
 
     return 0;

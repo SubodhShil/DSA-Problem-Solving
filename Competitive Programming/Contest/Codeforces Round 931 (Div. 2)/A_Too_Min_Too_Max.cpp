@@ -4,7 +4,7 @@
     * 
     * Author: Subodh Chandra Shil
     * Tag: 
-    ! NOT DONE
+    * ACCEPTED
 
                             ॐ ॐ
 */
@@ -14,6 +14,12 @@ using namespace std;
 
 #define isOddEven(x) (x & 1)
 #define clrBit(x, i) (x & (~(1 << i)))
+#define kth_bit(x, k) (x >> k) & 1
+#define on_kth_bit(x, k) (x | (1 << k))
+#define off_kth_bit(x, k) (x & (~(1 << k)))
+#define countSetBit(n) __builtin_popcount(i);
+#define toggle_kth_bit(x, k) (x ^ (1 << k))
+#define is_power_of_two(x) 
 
 typedef long long ll;
 typedef pair<ll, ll> pll;
@@ -91,15 +97,13 @@ int n, x;
 
 void solve()
 {
-    cin >> n;
-    int res = INT32_MIN;
-    for(int i = 1; i <= n; ++i) 
-    {
-        cin >> x;
-        res = max(res, x - i);
-    }
+    int n; cin >> n;
+    vector<int> v(n);
+    for(auto &i : v) cin >> i;
+    sort(v.begin(), v.end());
 
-    cout << res << endl;
+    int i = 0, j = n - 1, k = 1, l = n - 2;
+    cout << abs(v[i] - v[j]) + abs(v[j] - v[k]) + abs(v[k] - v[l]) + abs(v[l] - v[i]) << endl;
 }
 
 int32_t main()
