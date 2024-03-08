@@ -45,3 +45,8 @@ vector<int> v = {1, 2, 3, 4, 4, 4, 5, 6};
 int first_idx = n - distance(find(begin(v), end(v), x), end(v));
 int last_idx = distance(find(rbegin(v), rend(v), x), rend(v)) - 1;
 ```
+
+### Bitwise AND (&) operation
+The observation indicates that if any AND operation with 1 always sustain the number as it (number & 1 = number) otherwise the number will decrease if AND operation with 0.
+
+
