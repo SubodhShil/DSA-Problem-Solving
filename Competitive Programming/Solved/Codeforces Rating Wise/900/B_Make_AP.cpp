@@ -14,6 +14,12 @@ using namespace std;
 
 #define isOddEven(x) (x & 1)
 #define clrBit(x, i) (x & (~(1 << i)))
+#define kth_bit(x, k) (x >> k) & 1
+#define on_kth_bit(x, k) (x | (1 << k))
+#define off_kth_bit(x, k) (x & (~(1 << k)))
+#define countSetBit(n) __builtin_popcount(i);
+#define toggle_kth_bit(x, k) (x ^ (1 << k))
+#define is_power_of_two(x) 
 
 typedef long long ll;
 typedef pair<ll, ll> pll;
@@ -52,23 +58,12 @@ bool chmin(T &a, T b)
 #define maxe max_element
 #define mine min_element
 #define N 1e7
+#define int long long
 #define endl "\n"
 
-#define superfast                 \
-    ios_base::sync_with_stdio(0); \
-    cin.tie(0);                   \
-    cout.tie(0);
-#define int long long
-#define yes                    \
-    {                          \
-        cout << "YES" << endl; \
-        return;                \
-    }
-#define no                    \
-    {                         \
-        cout << "NO" << endl; \
-        return;               \
-    }
+#define superfast ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0); 
+#define yes { cout << "YES" << endl; return; } 
+#define no { cout << "NO" << endl; return; }
 
 /// iterators
 #define itAll(x) for (auto x = s.begin(); x != s.end(); ++x)
@@ -78,7 +73,7 @@ bool chmin(T &a, T b)
 /// for loops
 #define fori(x) for (int i = 0; i < x; i++)
 #define forj(x) for (int j = 0; j < x; j++)
-#define FOR(i, s, e, t) for ((i) = (s); (i) < (e); (i) += (t))
+#define FOR(s, e, t) for (int i = (s); (i) < (e); (i) += (t))
 #define REP(i, e) for (int i = 0; i < (e); ++i)
 #define REP1(i, s, e) for (int i = (s); i < (e); ++i)
 #define RREP(i, e) for (int i = (e); i >= 0; --i)
@@ -98,11 +93,21 @@ void print(vector<T> &v, bool withSize)
 }
 
 vector<int> v(N);
+int n, x;
 
 void solve()
 {
-    int n; cin >> n;
-    for(auto &i : v) cin >> i;
+    int a, b, c;
+    cin >> a >> b >> c;
+    int exp_a = 2 * b - c, exp_c = 2 * b - a, exp_b = (a + c) / 2;
+
+    bool ok = 0;
+    if(exp_a % a == 0 and exp_a >= a) ok = 1;
+    else if(exp_c % c == 0 and exp_c >= c) ok = 1;
+    else if ((a + c) % 2 == 0 and exp_b % b == 0 and exp_b >= b) ok = 1;
+
+    if(ok) yes
+    else no
 }
 
 int32_t main()
@@ -112,8 +117,20 @@ int32_t main()
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
     
-    int t = 1;
+    int t = 1; cin >> t;
     while (t--) solve();
 
     return 0;
 }
+
+/*
+* Notes :
+    ^ If n ≤ 12, the time complexity can be O(n!).
+    ^ If n ≤ 25, the time complexity can be O(2n).
+    ^ If n ≤ 100, the time complexity can be O(n4).
+    ^ If n ≤ 500, the time complexity can be O(n3).
+    ^ If n ≤ 104, the time complexity can be O(n2).
+    ^ If n ≤ 106, the time complexity can be O(n log n).
+    ^ If n ≤ 108, the time complexity can be O(n).
+    ^ If n > 108, the time complexity can be O(log n) or O(1).
+ */

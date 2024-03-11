@@ -19,14 +19,6 @@
 
 &nbsp;
 
-## **```How to get index of maximum and minimum element in an array```** 
-
-Using vector container: 
-```cpp
-int maxElementIdx = max_element(a.begin(), a.end()) - a.begin();
-int minElementIdx = min_element(a.begin(), a.end()) - a.begin();
-```
-
 ## **```Subarray, Subsequence```** 
 **Subsequence**: Total number of subsequence in a string or array = $2^n$
 **Subset**: Distinct elements, doesn't matter the actual sequence.

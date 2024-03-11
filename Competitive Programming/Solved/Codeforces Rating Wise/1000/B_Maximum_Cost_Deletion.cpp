@@ -14,6 +14,12 @@ using namespace std;
 
 #define isOddEven(x) (x & 1)
 #define clrBit(x, i) (x & (~(1 << i)))
+#define kth_bit(x, k) (x >> k) & 1
+#define on_kth_bit(x, k) (x | (1 << k))
+#define off_kth_bit(x, k) (x & (~(1 << k)))
+#define countSetBit(n) __builtin_popcount(i);
+#define toggle_kth_bit(x, k) (x ^ (1 << k))
+#define is_power_of_two(x) 
 
 typedef long long ll;
 typedef pair<ll, ll> pll;
@@ -52,23 +58,12 @@ bool chmin(T &a, T b)
 #define maxe max_element
 #define mine min_element
 #define N 1e7
+#define int long long
 #define endl "\n"
 
-#define superfast                 \
-    ios_base::sync_with_stdio(0); \
-    cin.tie(0);                   \
-    cout.tie(0);
-#define int long long
-#define yes                    \
-    {                          \
-        cout << "YES" << endl; \
-        return;                \
-    }
-#define no                    \
-    {                         \
-        cout << "NO" << endl; \
-        return;               \
-    }
+#define superfast ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0); 
+#define yes { cout << "YES" << endl; return; } 
+#define no { cout << "NO" << endl; return; }
 
 /// iterators
 #define itAll(x) for (auto x = s.begin(); x != s.end(); ++x)
@@ -78,7 +73,7 @@ bool chmin(T &a, T b)
 /// for loops
 #define fori(x) for (int i = 0; i < x; i++)
 #define forj(x) for (int j = 0; j < x; j++)
-#define FOR(i, s, e, t) for ((i) = (s); (i) < (e); (i) += (t))
+#define FOR(s, e, t) for (int i = (s); (i) < (e); (i) += (t))
 #define REP(i, e) for (int i = 0; i < (e); ++i)
 #define REP1(i, s, e) for (int i = (s); i < (e); ++i)
 #define RREP(i, e) for (int i = (e); i >= 0; --i)
@@ -98,11 +93,30 @@ void print(vector<T> &v, bool withSize)
 }
 
 vector<int> v(N);
+int n, x;
 
 void solve()
 {
-    int n; cin >> n;
-    for(auto &i : v) cin >> i;
+    int n, a, b;
+    cin >> n >> a >> b;
+
+    string str;
+    cin >> str;
+
+    int op = 1;
+    for(int i = 1; i < n; ++i)
+    {
+        if(str[i] != str[i - 1]) ++op;
+    }
+
+    if(b >= 0) 
+    {
+        cout << n * (a + b) << endl;
+    }
+    else 
+    {
+        cout << n * a + (op / 2 + 1) * b << endl;
+    }
 }
 
 int32_t main()
@@ -112,7 +126,7 @@ int32_t main()
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
     
-    int t = 1;
+    int t = 1; cin >> t;
     while (t--) solve();
 
     return 0;
