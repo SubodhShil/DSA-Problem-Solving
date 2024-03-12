@@ -44,3 +44,13 @@ int last_idx = distance(find(rbegin(v), rend(v), x), rend(v)) - 1;
     cout << strNum << '\t' << num << endl;
 ```
 
+&nbsp;
+
+## **```std::count()```**
+
+Returns the number of occurrences of an element in a given range.
+
+```cpp 
+std::count(arr + startIdx, arr + endIdx, element_you_searching)
+```
+

@@ -16,7 +16,17 @@
 
 ## **Sliding Window Template**
 ```cpp
+        int l = 0, r = 0, n = nums.size(), something = 0;
 
+        for (; r < n; ++r)
+        {
+            for (; windowInvalid(); ++l)
+            {
+                // codes
+            }
+        }
+
+        return something;
 ```
 
 ## **Observation**: Sliding Window vs Kadane's Algorithm
