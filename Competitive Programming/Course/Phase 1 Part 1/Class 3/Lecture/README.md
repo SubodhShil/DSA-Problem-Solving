@@ -65,7 +65,6 @@ void optimized()
 ```
 
 - ## Sum of first N odd positive integers 
-
 ```cpp
 int n;
 cin >> n;
@@ -74,7 +73,6 @@ cout << oddSum << endl;
 ```
 
 - ## Sum of first N even positive integers 
-
 ```cpp
 long long evenSum = n * 1LL * (n + 1);
 cout << evenSum << endl;
@@ -96,7 +94,6 @@ cout << squareSum << endl;
 ```
 
 - ## Find the formula for the sum of the positive integers from 1 to n that are not multiple of K. 
-
 ```cpp
 int sum_of_k_multiple = 1LL* (n / k) * (2 * k + (n / k - 1) * k) / 2;
 int sum_till_n = 1LL * n / 2 * (n + 1);
@@ -104,3 +101,75 @@ int sum_till_n = 1LL * n / 2 * (n + 1);
 cout << sum_till_n - sum_of_k_multiple << endl;
 ```
 
+- ## Arithmetic Progression
+Given terms ```a, n, d```   
+- **Nth term of AP**: $a + (n - 1)d$  
+- **Sum of first n terms of AP**: $\frac{n}{2} (2a + (n - 1)d)$
+
+```cpp
+int nthTerm(int a, int n, int d) {
+    return a + (n - 1) * d;
+}
+int sumOfTerms(int a, int n, int d) {
+    return (n / 2) * (2 * a + (n - 1) * d);
+}
+```
+
+- ## Geometric Progression
+Given terms ```a, r, n```   
+- **Nth term**: $ar^{n-1}$  
+- **Sum of first n terms of AP**: $\frac{a(r^{n} - 1)}{(r - 1)}$
+
+```cpp
+int nthTerm(int a, int r, int n) {
+    return a * pow(r, n - 1);
+}
+
+int sumOfTerms(int a, int r, int n) {
+    return (a * (pow(r, n) - 1)) / (r - 1);
+}
+```
+
+- ## Logarithm
+
+```cpp
+    int n, targetBase;
+    cin >> n >> targetBase;
+
+    int a = log2(n);                    // base 2
+    int b = log10(n);                   // base 10
+    int c = log(n);                     // base 'e' or natural base
+    int d = log2(n) / log2(targetBase); // base 'target'
+```
+
+- Find number of digits using logarithm 
+```cpp
+#define number_cnt(n) floor(log10(n)) + 1
+```
+
+- Find number of digits in N! number using logarithm
+```cpp
+    int n;
+    cin >> n;
+    double digitCnt = 0;
+
+    for (int i = 1; i <= n; ++i)
+    {
+        digitCnt += log10(i);
+    }
+
+    cout << digitCnt + 1 << endl;
+```
+
+
+# ```Modular Arithmetic```
+
+- #### *Modulo of a negative number is ```(-n + mod) % mod)```*
+
+- #### *```num % n = [0 to n - 1]```*
+- ### Reason of using mod value as $10^9$ + 7? 
+  - > The number $(10^9 + 7)$ is a prime number. Modding a number with a prime number aims to ensure that no two congruent series have the same value. However, even with a prime modulo, specific calculations might produce the same remainder. On the other hand, the value is quite large, so it also ensures against overflow.
+
+    ```cpp
+                    #define MOD 1e9 + 7
+     ```
