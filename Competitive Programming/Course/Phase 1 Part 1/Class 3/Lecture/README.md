@@ -173,3 +173,43 @@ int sumOfTerms(int a, int r, int n) {
     ```cpp
                     #define MOD 1e9 + 7
      ```
+
+- ```(a - b) % mod == 0``` means value **a** and **b** reside in the same congruent series.
+
+## ```Modular formula```
+
+- ### ```If all numbers are positive```
+- ```(a + b) % m = ((a % m) + (b % m)) % m```
+- ```(a - b) % m = ((a % m) - (b % m)) % m```
+- ```(a * b) % m = ((a % m) * (b % m)) % m```
+- ```pow(a, b) % m = pow((a % m), b) % m```
+
+- ### ```If result produces any negative value```
+
+**Modular operation safety check**: There may be some issue regarding MOD value overflow or underflow in your code. So, it's always better to safety check using the following method:
+
+```cpp
+#define MOD 1000000007
+#define isModResultSafe(res) ((res) >= 0 && (res) <= MOD)
+
+int main()
+{
+    int a = 1e9, b = 1e9 + 1, m = 27;
+    int x = ((a % m) - (b % m)) % m;
+
+    cout << x << endl; /// -1
+    if (x < 0 or !isModResultSafe(x))
+        x = (x + m) % m;
+    cout << x << endl; /// 26
+
+    return 0;
+}
+```
+
+# ```Divisor and Multiple```
+
+### **Divisor**
+```cpp
+if(n % k == 0) cout << k << " is a divisor" << endl;
+```
+
