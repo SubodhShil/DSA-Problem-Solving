@@ -54,3 +54,32 @@ Returns the number of occurrences of an element in a given range.
 std::count(arr + startIdx, arr + endIdx, element_you_searching)
 ```
 
+## Little but useful built-in functions
+
+```cpp
+cout << sqrt(33) << endl;
+cout << cbrt(33) << endl;
+cout << pow(2, 3) << endl;
+
+// convert a string with all number digits into a real integer number
+string str = "123456";
+long long number1 = stoll(str);
+cout << number1 << endl;
+
+/// convert any other type to string 
+double p = 423.423423;
+string number2 = to_string(p);
+cout << number2 << endl;
+
+/// check if a character within range 'a - z' or 'A - Z'
+cout << (isalpha('3') ? "Alphabet\n" : "Not alphabet\n");
+cout << (isdigit('A') ? "Digit\n" : "No a digit\n");
+
+// generate random number
+srand(time(0));
+int start = 1, end = 1000;
+int randomNumber = start + (rand() % end);
+cout << "Random number: " << randomNumber << endl;
+```
+
+
