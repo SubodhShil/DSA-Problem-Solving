@@ -15,7 +15,7 @@ B: [3 3 5]
 
  */
 
-void intersect(vector<int> &A, vector<int> &B)
+vector<int> intersect(vector<int> &A, vector<int> &B)
 {
     vector<int> v;
 
@@ -41,10 +41,10 @@ void intersect(vector<int> &A, vector<int> &B)
         }
     }
 
-    return v;
-
     // for (int k : v)
     //     cout << k << " ";
+
+    return v;
 }
 
 int main()
@@ -52,7 +52,7 @@ int main()
     vector<int> A = {1, 2, 3, 3, 4, 5, 6};
     vector<int> B = {3, 3, 5};
 
-    intersect(A, B);
+    cout << intersect(A, B);
 
     return 0;
 }
