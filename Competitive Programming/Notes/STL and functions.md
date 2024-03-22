@@ -96,3 +96,12 @@ if (index <= n - 1)
 else
     cout << "Not available\n";
 ```
+## Power function
+Syntax: ```pow(number, exponent)```
+
+But, pow(10, 2) provides 99.  
+The function pow operates on two floating-point values and returns a floating-point value. When working on integers, the result of pow(10,2) might be stored as 99.9999999, or 100.0000000001. Due to integer truncation, 99.9999999 gets truncated down to 99, and 100.0000000001 gets truncated down to 100.
+
+So safer use is, **```llround(pow(num, exp))```**
+
+

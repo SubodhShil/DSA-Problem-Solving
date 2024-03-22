@@ -1,7 +1,7 @@
 /*
                             ॐ ॐ
 
-    * 
+    *
     * Author: Subodh Chandra Shil
     * Tag:
     *
@@ -19,7 +19,7 @@ using namespace std;
 #define off_kth_bit(x, k) (x & (~(1 << k)))
 #define countSetBit(n) __builtin_popcount(i);
 #define toggle_kth_bit(x, k) (x ^ (1 << k))
-#define is_power_of_two(x) 
+#define is_power_of_two(x)
 
 typedef long long ll;
 typedef pair<ll, ll> pll;
@@ -61,9 +61,20 @@ bool chmin(T &a, T b)
 #define int long long
 #define endl "\n"
 
-#define superfast ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0); 
-#define yes { cout << "YES" << endl; return; } 
-#define no { cout << "NO" << endl; return; }
+#define superfast                 \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0);
+#define yes                    \
+    {                          \
+        cout << "YES" << endl; \
+        return;                \
+    }
+#define no                    \
+    {                         \
+        cout << "NO" << endl; \
+        return;               \
+    }
 
 /// iterators
 #define itAll(x) for (auto x = s.begin(); x != s.end(); ++x)
@@ -81,18 +92,49 @@ bool chmin(T &a, T b)
 
 #define MOD 1000000007
 
-ll inv(ll i) {if (i == 1) return 1; return (MOD - ((MOD / i) * inv(MOD % i)) % MOD) % MOD;}
- 
-ll MOD_mul(ll a, ll b) {a = a % MOD; b = b % MOD; return (((a * b) % MOD) + MOD) % MOD;}
- 
-ll MOD_add(ll a, ll b) {a = a % MOD; b = b % MOD; return (((a + b) % MOD) + MOD) % MOD;}
- 
-ll gcd(ll a, ll b) { if (b == 0) return a; return gcd(b, a % b);}
- 
-ll ceil_div(ll a, ll b) {return a % b == 0 ? a / b : a / b + 1;}
- 
-ll pwr(ll a, ll b) {a %= MOD; ll res = 1; while (b > 0) {if (b & 1) res = res * a % MOD; a = a * a % MOD; b >>= 1;} return res;}
+ll inv(ll i)
+{
+    if (i == 1)
+        return 1;
+    return (MOD - ((MOD / i) * inv(MOD % i)) % MOD) % MOD;
+}
 
+ll MOD_mul(ll a, ll b)
+{
+    a = a % MOD;
+    b = b % MOD;
+    return (((a * b) % MOD) + MOD) % MOD;
+}
+
+ll MOD_add(ll a, ll b)
+{
+    a = a % MOD;
+    b = b % MOD;
+    return (((a + b) % MOD) + MOD) % MOD;
+}
+
+ll gcd(ll a, ll b)
+{
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
+}
+
+ll ceil_div(ll a, ll b) { return a % b == 0 ? a / b : a / b + 1; }
+
+ll pwr(ll a, ll b)
+{
+    a %= MOD;
+    ll res = 1;
+    while (b > 0)
+    {
+        if (b & 1)
+            res = res * a % MOD;
+        a = a * a % MOD;
+        b >>= 1;
+    }
+    return res;
+}
 
 ll inf = 1e18;
 // #define DEBUG                 \
@@ -108,41 +150,31 @@ void print(vector<T> &v, bool withSize)
 }
 
 vector<int> v(N);
-int n, x;
+int a, b, c;
 
 void solve()
 {
-    cin >> n >> x;
+    cin >> a >> b >> c;
+    double x = (b % 3) + (c * 1.0);
 
-    int oddRange = (n + 2 - 1) >> 1;
+    if (b % 3 and (int) x < 3)
+    {
+        cout << -1 << endl;
+        return;
+    }
 
-    if(x <= oddRange) 
-        cout << 2 * x - 1 << endl;
-    else 
-        cout << (x - oddRange) * 2 << endl;
+    int ans = a + (b / 3) + ceil(x / 3);
+    cout << ans << endl;
 }
 
 int32_t main()
 {
     superfast
 
-    // freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
-
-    int t = 1;
-    while (t--) solve();
+        int t = 1;
+    cin >> t;
+    while (t--)
+        solve();
 
     return 0;
 }
-
-/*
-* Notes :
-    ^ If n ≤ 12, the time complexity can be O(n!).
-    ^ If n ≤ 25, the time complexity can be O(2n).
-    ^ If n ≤ 100, the time complexity can be O(n4).
-    ^ If n ≤ 500, the time complexity can be O(n3).
-    ^ If n ≤ 104, the time complexity can be O(n2).
-    ^ If n ≤ 106, the time complexity can be O(n log n).
-    ^ If n ≤ 108, the time complexity can be O(n).
-    ^ If n > 108, the time complexity can be O(log n) or O(1).
- */

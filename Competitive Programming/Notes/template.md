@@ -6,6 +6,8 @@
 #endif
 ```
 
+## Modular operations
+
 ```cpp
 ll inv(ll i) {if (i == 1) return 1; return (mod - ((mod / i) * inv(mod % i)) % mod) % mod;}
  
@@ -28,4 +30,18 @@ long long modInv(long long i) {
 }
 
 //Function modInv() the modular inverse of i mod 10^9+7
+
+/// Here is the single line compressed function code
+long long modInv(long long i) { return (i <= 1) ? i : MOD - (MOD / i) * modInv(MOD % i) % MOD; }
 ```
+
+## Mathematical 
+
+```cpp
+#define lcm(x, y) (x / __gcd(x, y)) * (y)
+```
+
+```cpp
+#define factorial(n) ({long long result = 1; for (int i = 2; i <= (n); ++i) result *= i; result; })
+```
+

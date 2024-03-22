@@ -1,5 +1,5 @@
 /*
-                            ॐ ॐ
+                            ॐ JAY JAY SRI RAM ॐ 
 
     * 
     * Author: Subodh Chandra Shil
@@ -112,14 +112,11 @@ int n, x;
 
 void solve()
 {
-    cin >> n >> x;
-
-    int oddRange = (n + 2 - 1) >> 1;
-
-    if(x <= oddRange) 
-        cout << 2 * x - 1 << endl;
-    else 
-        cout << (x - oddRange) * 2 << endl;
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
+    int ans = ((a % 100) * (b % 100) * (c % 100) * (d % 100)) % 100;
+    if(ans <= 9) cout << 0 << ans << endl;
+    else cout << ans << endl;
 }
 
 int32_t main()
@@ -128,7 +125,7 @@ int32_t main()
 
     // freopen("input.txt", "r", stdin);
     // freopen("output.txt", "w", stdout);
-
+    
     int t = 1;
     while (t--) solve();
 

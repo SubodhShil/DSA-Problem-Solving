@@ -111,23 +111,18 @@ vector<int> v(N);
 int n, x;
 
 void solve()
-{
-    cin >> n >> x;
-
-    int oddRange = (n + 2 - 1) >> 1;
-
-    if(x <= oddRange) 
-        cout << 2 * x - 1 << endl;
-    else 
-        cout << (x - oddRange) * 2 << endl;
+{   
+    cin >> n;
+    if(n == 0) cout << 1 << endl;
+    else if(n % 4 == 1) cout << 8 << endl;
+    else if(n % 4 == 3) cout << 2 << endl;
+    else if(n % 4 == 2) cout << 4 << endl;
+    else if(n % 4 == 0) cout << 6 << endl;
 }
 
 int32_t main()
 {
     superfast
-
-    // freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
 
     int t = 1;
     while (t--) solve();

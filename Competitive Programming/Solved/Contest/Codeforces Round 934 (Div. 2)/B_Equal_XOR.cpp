@@ -1,84 +1,58 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
-#define mod1 1000000007
-#define mod2 998244353
+#define int long long
 
-void solve()
+void ans()
 {
-    ll n, k;
+    int n, k;
     cin >> n >> k;
-    vector<int> v(2 * n);
-    map<int, int> mp1;
-    map<int, int> mp2;
+    k = k << 1;
 
-    for (int i = 0; i < 2 * n; i++)
+    vector<int> ans1(k), ans2(k);
+    map<int, int> mp;   
+
+    for (int i = 1; i <= (n << 1); ++i)
     {
-        cin >> v[i];
-        if (i < n)
-        {
-            mp1[v[i]]++;
-        }
-        else
-        {
-            mp2[v[i]]++;
-        }
+        int x;
+        cin >> x;
+        if (i <= n)
+            mp[x]++;
     }
 
-    vector<int> l;
-    vector<int> r;
+    // for(auto i : mp) cout << i.first << ' ' << i.second << endl;
 
-    for (auto x : mp1)
+    int x = 0, y = 0;
+    for (int i = 1; i <= n; ++i)
     {
-        if (mp2.find(x.first) != mp2.end() and l.size() < 2 * k)
-        {
-            l.push_back(x.first);
-            r.push_back(x.first);
-        }
+        if (mp.count(i) and mp[i] == 2 and x < k)
+            ans1[x] = ans1[x + 1] = i, x += 2;
+        if (mp.count(i) == 0 and y < k)
+            ans2[y] = ans2[y + 1] = i, y += 2;
     }
 
-    for (auto x : mp1)
+    for (int i = 1; i <= n; ++i)
     {
-        if (l.size() < 2 * k and x.second == 2)
+        if (mp[i] == 1 and x < k and y < k)
         {
-            l.push_back(x.first);
-            l.push_back(x.first);
+            ans1[x] = ans2[y] = i;
+            ++x, ++y;
         }
     }
 
-    for (auto x : mp2)
-    {
-        if (r.size() < 2 * k and x.second == 2)
-        {
-            r.push_back(x.first);
-            r.push_back(x.first);
-        }
-    }
-
-    // display
-    for (int i = 0; i < l.size(); i++)
-    {
-        cout << l[i] << " ";
-    }
+    for (auto x : ans1)
+        cout << x << " ";
     cout << endl;
-    for (int i = 0; i < r.size(); i++)
-    {
-        cout << r[i] << " ";
-    }
+    for (auto x : ans2)
+        cout << x << " ";
     cout << endl;
 }
-int main()
+
+int32_t main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    int t;
+    cin >> t;
+    while (t--)
+        ans();
 
-    ll test;
-    cin >> test;
-
-    while (test--)
-    {
-        solve();
-    }
     return 0;
 }
