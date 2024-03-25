@@ -2,7 +2,6 @@
 using namespace std;
 #define int long long
 
-// not my solution
 void ans()
 {
     int a, b, m;

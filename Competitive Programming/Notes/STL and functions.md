@@ -104,4 +104,29 @@ The function pow operates on two floating-point values and returns a floating-po
 
 So safer use is, **```llround(pow(num, exp))```**
 
+## C++ Sorting functions 
 
+```cpp 
+sort(nums.begin(), nums.end(), greater<int>());
+```
+
+```C++ 20 ranges```
+```cpp
+ ranges::sort(nums);
+```
+
+## Floating point number manipulation
+### **```std::fixed```** and **```std::setprecision```**
+
+- Without std::fixed, numbers like 12345.6789 might be printed as 1.23457e+04.
+- With std::fixed, the same number would be printed as 12345.678900.
+- To display a floating-point number with exactly 3 decimal places in fixed-point notation, you would use std::fixed to specify the format and std::setprecision(3) to specify the number of decimal places.
+
+```cpp
+    double x = 5324.123;
+    /// with providing only setprecision(5) it will show total 5 digits all together
+    cout << setprecision(5) << x << endl; /// 5324.1
+    /// but with providing fixed, setprecision(5) works only for floating-point digits
+    /// here this also added two zeros at the end of the floating point since we asked for 5 places and the floating-point only contains three digits.
+    cout << fixed << setprecision(5) << x << endl; // 5324.12300
+```

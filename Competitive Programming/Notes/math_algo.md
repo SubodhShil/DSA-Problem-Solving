@@ -45,3 +45,20 @@ void ans()
 
 // Complexity: O(r)
 ```
+
+# **```Number of Divisors (precomputed)```** 
+```cpp
+const int N = 1e7 + 10;
+int arr[N];
+
+void precompute()
+{
+    for (int i = 1; i <= N; ++i)
+    {
+        for (int j = i; j <= N; j += i)
+        {
+            arr[j]++;
+        }
+    }
+}
+```
