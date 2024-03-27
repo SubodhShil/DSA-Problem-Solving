@@ -130,3 +130,10 @@ sort(nums.begin(), nums.end(), greater<int>());
     /// here this also added two zeros at the end of the floating point since we asked for 5 places and the floating-point only contains three digits.
     cout << fixed << setprecision(5) << x << endl; // 5324.12300
 ```
+
+## Decimal to binary conversion 
+
+```cpp
+int n = 5;
+string s = bitset<32>(n).to_string();  /// 101
+```
