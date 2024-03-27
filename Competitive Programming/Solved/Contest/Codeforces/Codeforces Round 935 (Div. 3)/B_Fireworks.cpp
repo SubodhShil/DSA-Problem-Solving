@@ -1,12 +1,21 @@
+/*
+                            ॐ JAY JAY SRI RAM ॐ
+
+    * Author: Subodh Chandra Shil
+
+                        ॐ Attachment to Detachment ॐ
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
+int n;
 
 void ans()
 {
     int a, b, m;
     cin >> a >> b >> m;
-    // cout << ((a + m) / a) + ((b + m) / b) << endl;
+    cout << (m / a + 1) + (m / b + 1) << endl;
 }
 
 int32_t main()

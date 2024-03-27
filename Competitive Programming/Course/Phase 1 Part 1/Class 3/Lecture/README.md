@@ -185,12 +185,26 @@ int sumOfTerms(int a, int r, int n) {
 - ```pow(a, b) % m = pow((a % m), b) % m```
 
 - ### ```If result produces any negative value```
+- Suppose, 'x' is a negative number. Here is the formula that is used for handle such negative number with modular arithmetic formula
+
+```cpp
+x % p = (x % p + p) % p;
+```
 
 **Modular operation safety check**: There may be some issue regarding MOD value overflow or underflow in your code. So, it's always better to safety check using the following method:
 
 ```cpp
 #define MOD 1000000007
 #define isModResultSafe(res) ((res) >= 0 && (res) <= MOD)
+// #define negMod(x) ((x) < 0 || !isModResultSafe(x) ? ((x) + MOD) % MOD : (x))
+
+int negMod(int x)
+{
+    if (x < 0 or !isModResultSafe(x))
+        x = (x + MOD) % MOD;
+
+    return x;
+}
 
 int main()
 {
@@ -198,11 +212,22 @@ int main()
     int x = ((a % m) - (b % m)) % m;
 
     cout << x << endl; /// -1
-    if (x < 0 or !isModResultSafe(x))
-        x = (x + m) % m;
+
+    x = negMod(x);
     cout << x << endl; /// 26
 
     return 0;
+}
+```
+
+In short, one should apply safety masurements as well. Hereby the following code snippet can be used for both positive and negative numbers: 
+```cpp
+int arithmeticMOD(int x = 0, int y = 0)
+{
+    x = (x % MOD + MOD) % MOD;
+    y = (y % MOD + MOD) % MOD;
+
+    return (x + y) % MOD;
 }
 ```
 

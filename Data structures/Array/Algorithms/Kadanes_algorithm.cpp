@@ -16,24 +16,21 @@ using namespace std;
 class Solution
 {
 public:
-    long long maxSubarraySum(int arr[], int n)
+    long long maxSubArray(vector<int> &nums)
     {
-        long long maximum_sum = -1;
-        long long current_sum = 0;
+        long long current_sum = 0, maxSum = -1e18;
+        int n = nums.size();
+
         for (int i = 0; i < n; ++i)
         {
-            current_sum += arr[i];
-
-            if (current_sum < 0)
-                current_sum = 0;
-            else
-                maximum_sum = max(maximum_sum, current_sum);
+            current_sum += nums[i];
+            maxSum = max(maxSum, current_sum);
+            current_sum = max(current_sum, 0LL);
         }
 
-        return maximum_sum;
+        return maxSum;
     }
 };
-
 int main()
 {
 
