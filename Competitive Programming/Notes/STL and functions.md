@@ -137,3 +137,63 @@ sort(nums.begin(), nums.end(), greater<int>());
 int n = 5;
 string s = bitset<32>(n).to_string();  /// 101
 ```
+
+## Premutation 
+
+```cpp
+void permutation()
+{
+    int n = 3;
+    int arr[3] = {1, 2, 3};
+    do
+    {
+        for (int i = 0; i < n; ++i)
+        {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+    } while (prev_permutation(arr, arr + n));
+    // } while (next_permutation(arr, arr + n));
+}
+```
+
+# **```Tips```**
+
+- Make sure to use round() function with pow() to avoid precision error. For more accuracy you can use the following code snippet to calculate power of integers.
+
+```cpp
+#define ull unsigned long long
+ull uint_pow(ull base, ull exp)
+{
+    ull result = 1;
+    while (exp)
+    {
+        if (exp % 2)
+           result *= base;
+        exp /= 2;
+        base *= base;
+    }
+
+    return result;
+}
+```
+
+- To accurately calculate the logarithm value for an integer number use the following code.
+```cpp
+int n = 32;
+int power = __lg(n);
+```
+
+- To accurately calculate the square root value for an integer number use the following code.
+```cpp
+void safer_SQRT_int_2()
+{
+    long double res = exp(log(n) / 2);
+    int floorRes = floor(res);
+
+    if (res * res == n)
+        cout << res << endl;
+    else
+        cout << floorRes << endl;
+}
+```

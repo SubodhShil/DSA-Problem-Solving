@@ -46,6 +46,27 @@ void ans()
 // Complexity: O(r)
 ```
 
+# **```Divisors of a number```** 
+```cpp
+vector<int> generateDivisors(int n)
+{
+    vector<int> divisors;
+    for (int i = 1; i * i <= n; ++i)
+    {
+        if (n % i == 0)
+        {
+            divisors.push_back(i);
+            if (n / i != i)
+                divisors.push_back(n / i);
+        }
+    }
+
+    sort(divisors.begin(), divisors.end());
+
+    return divisors;
+}
+```
+
 # **```Number of Divisors (precomputed)```** 
 ```cpp
 const int N = 1e7 + 10;
@@ -62,3 +83,6 @@ void precompute()
     }
 }
 ```
+
+## GCD and LCM
+Relation: GCD(a, b) * LCM(a, b) = a * b

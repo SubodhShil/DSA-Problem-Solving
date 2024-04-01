@@ -45,3 +45,17 @@ long long modInv(long long i) { return (i <= 1) ? i : MOD - (MOD / i) * modInv(M
 #define factorial(n) ({long long result = 1; for (int i = 2; i <= (n); ++i) result *= i; result; })
 ```
 
+## Function in a function like notation in C++ 
+
+```cpp
+void ans()
+{
+    cin >> n;
+    string str;
+    cin >> str;
+
+    auto identifier = [&]() {
+
+    };
+}
+```
