@@ -2,8 +2,17 @@
 
 ```cpp
 #ifndef ONLINE_JUDGE
-    cerr << "Time : " << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
+    cerr << "Time : " << 1.0 * ((double)clock()) / (double)CLOCKS_PER_SEC << " sec\n";
 #endif
+```
+
+```cpp
+    clock_t s = clock();
+    while (t--)
+        ans();
+    clock_t e = clock();
+
+    cout << 1.0 * (e - s) / CLOCKS_PER_SEC << endl;
 ```
 
 ## Modular operations

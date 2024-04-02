@@ -197,3 +197,81 @@ void safer_SQRT_int_2()
         cout << floorRes << endl;
 }
 ```
+
+- Avoid using float for fractional numbers.
+
+- Comparing double values 
+```cpp
+if(abs(a - b) < 1e-9) {
+    //
+}
+```
+
+# Filling or initialization with data values
+
+## Filling 1D arrays and containers
+
+### C-style array 
+```cpp
+int arr[10] {5}; // fills with 5
+```
+### Vector container
+```cpp
+vector<int>arr(10, 0); // fills with 0
+```
+
+### ```memset```
+
+- Fills block of bytes, preferably to use with character and booleans arrays.
+```cpp
+char chArr[n];
+memset(chArr, 'a', sizeof(chArr)); // fills with character 'a'
+
+bool boolArr[n];
+memset(boolArr, true, sizeof(boolArr)); // fills with 1 or true
+```
+
+- It is much useful to use with 2D arrays.
+```cpp
+char arr[n][n];
+memset(arr, 'R', sizeof(arr));
+
+bool bool2D[n][n];
+memset(bool2D, false, sizeof(bool2D)); // fills with false or 0
+```
+
+> ⚠️ memset doesn't work fine with other than character and boolean arrays. So, one should not use memset() for integer or float arrays. For more information, you can still use memset fill to integer array but this is limited to values **0 and -1** only.
+
+### ```fill```
+Unlike memset(), the fill() function can be used with any type of array.
+
+```cpp
+int arr[n];
+fill(arr, arr + n, 11); // fills with value 11
+
+vector<int> arr2(n);
+fill(arr2.begin(), arr2.begin() + n, 12); // fills with value 12 
+```
+
+### ```assign```
+
+
+### ```iota```
+
+To store or initialize values in increasing order. 
+
+```cpp
+int arr[5];
+iota(arr, arr + 5, 10);
+for (auto i : arr)
+    cout << i << " ";
+cout << endl;
+
+vector<int> arr2(6);
+iota(arr2.begin(), arr2.begin() + 6, 33);
+for (auto i : arr2)
+    cout << i << ' ';
+cout << endl;
+```
+
+
