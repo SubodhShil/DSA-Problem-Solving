@@ -1,8 +1,10 @@
 /*
                             ॐ JAY JAY SRI RAM ॐ
 
-    * https://codeforces.com/contest/1934/problem/B
+    *
     * Author: Subodh Chandra Shil
+    * Tag:
+    *
 
                         ॐ Attachment to Detachment ॐ
 */
@@ -16,18 +18,20 @@ int n;
 void ans()
 {
     cin >> n;
-    vector<int> coinsNeeded{0, 1, 2, 1, 2, 3, 1, 2, 3, 2, 1, 2, 2, 2, 3};
-    if (n <= 14)
-        cout << coinsNeeded[n] << endl;
-    else
+    int arr[n];
+    for (int i = 0; i < n; ++i)
     {
-        int fifteenCoinNeed = n / 15;
-        n %= 15;
-        int res = fifteenCoinNeed + coinsNeeded[n];
-        if (n >= 5)
-            res = min(res, fifteenCoinNeed + 1 + coinsNeeded[n - 5]);
-        cout << res << endl;
+        cin >> arr[i];
     }
+
+    sort(arr, arr + n);
+    int res = 0;
+    for (int i = 0; i < n; ++i)
+    {
+        res += abs(i - arr[i]);
+    }
+
+    cout << res << endl;
 }
 
 int32_t main()

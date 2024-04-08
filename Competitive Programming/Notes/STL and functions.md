@@ -207,7 +207,7 @@ if(abs(a - b) < 1e-9) {
 }
 ```
 
-# Filling or initialization with data values
+# **```Filling or initialization with data values```**
 
 ## Filling 1D arrays and containers
 
@@ -274,4 +274,13 @@ for (auto i : arr2)
 cout << endl;
 ```
 
+
+### **```Prefix sum library```**
+```cpp
+cin >> n;
+vector<int> a(n, 0);
+for (auto &i : a) cin >> i;
+vector<int> prefix1(n + 1, 0), prefix2(n + 1, 0);
+partial_sum(a.begin(), a.end(), prefix1.begin() + 1);
+```
 

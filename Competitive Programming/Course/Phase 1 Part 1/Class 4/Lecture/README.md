@@ -24,3 +24,4 @@ Similar to, 1 x 1 x 0 x 1 x 1 = 0
 ```cpp 
 n & x <= n
 ```
+

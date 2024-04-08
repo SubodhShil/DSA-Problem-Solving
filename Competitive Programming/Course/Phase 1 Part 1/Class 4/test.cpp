@@ -152,7 +152,7 @@ int32_t main()
         // init_memset();
         // init_fill();
         // loop_for_each();
-        init_iota();
+        // init_iota();
     }
 
     return 0;
