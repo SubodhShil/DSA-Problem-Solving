@@ -1,41 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-#define superfast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-#define ll long long
-#define yes {cout<<"YES"<<endl;}
-#define no {cout<<"NO"<<endl;}
-
-/// for loops
-#define fori(x) for( int i = 1; i <= x; i++)
-#define forj(x) for( int j = 0; j < x; j++)
+#define int long long
 
 void ans()
 {
-    int n, k;
-    cin >> n >> k;
-    if(k == 0) 
+    int a, b;
+    cin >> a >> b;
+    vector<int> v(a);
+    for (int i = 0; i < a; ++i)
+        v[i] = a - i;
+
+    for (int i = a - 1 - b, j = a - 1; i < j; ++i, --j)
     {
-        for(int i = n; i >= 1; --i) cout << i << " ";
+        swap(v[i], v[j]);
     }
-    else 
-    {
-        int till = n - k;
-        for(int i = till; i >= 1; --i) cout << i << ' ';
-        for(int i = till + 1; i <= n; ++i) cout << i << ' ';
-    }
+
+    for (auto i : v)
+        cout << i << ' ';
     cout << endl;
 }
 
-int main()
+int32_t main()
 {
-    superfast
     int t;
     cin >> t;
     while (t--)
-    {
         ans();
-    }
-
     return 0;
 }
