@@ -13,10 +13,26 @@ using namespace std;
 #define endl "\n"
 int n;
 
+int find_xor(int x)
+{
+    int ans = 0;
+    while (x >= 0 and x % 4 != 3)
+    {
+        ans ^= x;
+        --x;
+    }
+
+    return ans;
+
+    int ans = 0;
+}
+
 void ans()
 {
     int a, b;
     cin >> a >> b;
+
+    cout << (find_xor(b) ^ (a > 0 ? find_xor(a - 1) : 0)) << endl;
 }
 
 int32_t main()

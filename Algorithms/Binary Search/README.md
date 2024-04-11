@@ -75,5 +75,6 @@ Given an array is not sorted but binary search algorithm is still be applicable 
 
 &nbsp;
 
-> # **```Complexity Analysis```**
+## **```Complexity Analysis```**
 
+![Binary search](./BS_complexity.jpg)
