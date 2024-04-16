@@ -1,7 +1,7 @@
 /*
                             ॐ JAY JAY SRI RAM ॐ
 
-    * https://vjudge.net/problem/codeforces-1208a
+    * https://vjudge.net/problem/codechef-oddpairs
     * Author: Subodh Chandra Shil
 
                         ॐ Attachment to Detachment ॐ
@@ -13,22 +13,11 @@ using namespace std;
 #define endl "\n"
 int n;
 
-const int N = 1e7 + 10;
-int arr[N];
-const int mod = 1e8;
-
 void ans()
 {
-    int a, b, n;
-    cin >> a >> b >> n;
-
-    int x = (a ^ b);
-    if (n % 3 == 0)
-        cout << a << endl;
-    else if (n % 3 == 1)
-        cout << b << endl;
-    else
-        cout << x << endl;
+    cin >> n;
+    int evenCnt = (n / 2), oddCnt = (n & 1) ? (n / 2) + 1 : (n / 2);
+    cout << (evenCnt * 2) * oddCnt << endl;
 }
 
 int32_t main()

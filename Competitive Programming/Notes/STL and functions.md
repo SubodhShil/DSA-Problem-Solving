@@ -284,3 +284,19 @@ vector<int> prefix1(n + 1, 0), prefix2(n + 1, 0);
 partial_sum(a.begin(), a.end(), prefix1.begin() + 1);
 ```
 
+### **```Suffix sum library```**
+```cpp
+vector<int> nums = {1, 2, 3, 4, 5};
+vector<int> suffixSum(nums.size());
+partial_sum(nums.rbegin(), nums.rend(), suffixSum.rbegin());
+```
+
+
+### **```Even and odd count within a given range```**
+
+```cpp
+#define EVEN_ODD_COUNT(n, evenCnt, oddCnt) \
+    evenCnt = (n / 2),                       \
+    oddCnt = (n & 1) ? (n / 2) + 1 : (n / 2)
+```
+
