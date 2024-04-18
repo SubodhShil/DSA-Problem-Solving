@@ -9,13 +9,21 @@ Median of even number of sequences: ((n / 2) th element + (n / 2 + 1) th element
 
 ## **```Lower bound```**
 
-- Lower bound of **x** is the first index that contains at least x, value >= x.
+- Lower bound of *x* is the first index that contains value at least x, value >= x.
 
 - কোন একটি sorted array তে সর্বনিম্ন কোন index -এ কোন element 'x' রাখলে element টি sorted থাকবে, সেই index টিকে element 'x' এর lower bound বলে । 
 
 - Lower bound এর index টি বুঝায় ঐ array তে element 'x' এর আগে তার থেকে কতগুলো ছোট element আছে । 
 
+```cpp
+    auto it = lower_bound(v.begin(), v.end(), target);
+    int value = *it;
+    int idx = it - v.begin();
+```
+
 ## **```Upper bound```**
+
+- Upper bound of *x* is the first index of that contains value > x.
 
 - কোন একটি sorted array তে সর্বোচ্চ কোন index -এ কোন element 'x' রাখলে element টি sorted থাকবে, সেই index টিকে element 'x' এর upper bound বলে । 
 
@@ -23,11 +31,15 @@ Median of even number of sequences: ((n / 2) th element + (n / 2 + 1) th element
 
 - Upper bound এর index টি দ্বারা বুঝায় যে ঐ array তে element 'x' এর আগে সেই element সহ আর কতগুলো ছোট element আছে । 
 
+```cpp
+    auto it = upper_bound(v.begin(), v.end(), target);
+    int value = *it;
+    int idx = it - v.begin();
+```
+
 ### Upper bound and lower bound to calculate frequency 
 
 ```Total frequency of x = Upperbound(x) - Lowerbound(x)```
 
 > - Element x যদি array তে না থাকে সেক্ষেত্রে element 'x' এর upper bound এবং lower bound একই হবে । 
-
-
 
