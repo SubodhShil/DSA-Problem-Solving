@@ -1,10 +1,10 @@
-**Monotonic function**: If a function maintain the condition of continuously generating lower to higher values (increasing values) or higher to lower values (decreasing values).
+**Monotonic function**: A function that maintain the condition of continuously generating lower to higher values (increasing values) or higher to lower values (decreasing values).
 
 Binary search can be applicable to a search space that satisfies the condition of being monotonous.
 
 ### **Median**  
-Median of odd number of sequences: (n / 2) th element 
-Median of even number of sequences: ((n / 2) th element + (n / 2 + 1) th element) / 2
+1. Median of odd number of sequences: (n / 2) th element   
+2. Median of even number of sequences: ((n / 2) th element + (n / 2 + 1) th element) / 2
 
 
 ## **```Lower bound```**
@@ -18,7 +18,8 @@ Median of even number of sequences: ((n / 2) th element + (n / 2 + 1) th element
 ```cpp
     auto it = lower_bound(v.begin(), v.end(), target);
     int value = *it;
-    int idx = it - v.begin();
+    int idx = it - v.begin(); // 0 based index
+    int idx2 = lower_bound(v.begin() + 1, v.end(), target) - v.begin(); // 1 based index
 ```
 
 ## **```Upper bound```**
