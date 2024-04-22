@@ -86,3 +86,12 @@ void precompute()
 
 ## GCD and LCM
 Relation: GCD(a, b) * LCM(a, b) = a * b
+
+
+## Some important facts
+
+1. Find the number of elements that are not divisible by **'x'** withing a range **1 to N**
+   1. ```x - floor(x / N)```
+2. Find the number of elements that are divisible by **'x'** withing a range **1 to N**
+   1. ```floor(x / N)```
+

@@ -44,3 +44,29 @@ Binary search can be applicable to a search space that satisfies the condition o
 
 > - Element x যদি array তে না থাকে সেক্ষেত্রে element 'x' এর upper bound এবং lower bound একই হবে । 
 
+&nbsp;
+
+## Binary search on answer 
+
+### The **k-th** type of questions
+1. Find the range of search space **'x'**.
+2. As per question suggest find out whether the result is >= k or <= k
+
+```cpp
+int l = 0, r = 2e9;
+while(l <= r)
+{
+    int mid = l + (r - l) / 2;
+    if(f(mid)) 
+    {
+        
+        /// if question says to find minimum the go left otherwise right    
+        // l = mid - 1;
+        l = mid + 1;
+    }
+    else {
+        // r = mid + 1;
+        r = mid - 1;
+    }
+}
+```
