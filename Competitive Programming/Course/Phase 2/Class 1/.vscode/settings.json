@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
         "Bruteforce"
-    ]
+    ],
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }

@@ -12,59 +12,52 @@ using namespace std;
 #define int long long
 #define endl "\n"
 int n, k, m, a, b, c;
-const int N = 100;
+
+const int N = 1e8 + 10;
 bool primes[N];
+vector<int> onlyPrimes;
 
-void sieveBruteforce()
+void sieveOptimized()
 {
-    memset(primes, 1, sizeof(primes));
-    primes[0] = primes[1] = 0;
-    vector<int> onlyPrimes;
+    for (int i = 3; i * i <= N; i += 2)
+        primes[i] = 1;
 
-    for (int i = 2; i <= N; ++i)
+    for (int i = 3; i <= N; i += 2)
     {
-        for (int j = i + i; j <= N; j += i)
+        if (primes[i])
         {
-            primes[j] = 0;
+            for (int j = i * i; j <= n; j += (i + i))
+            {
+                primes[j] = 0;
+            }
         }
     }
 
-    for (int i = 2; i <= N; ++i)
+    primes[2] = 1;
+    onlyPrimes.push_back(2);
+    for (int i = 3; i <= N; i += 2)
     {
         if (primes[i])
             onlyPrimes.push_back(i);
     }
-
-    for (auto i : onlyPrimes)
-        cout << i << " ";
 }
 
-void sieve()
-{
-    memset(primes, 1, sizeof(primes));
-    primes[2] = true;
-
-    for (int i = 2; i <= N; ++i)
-    {
-        if (primes[i])
-        {
-            for (int j = i * i; j <= n; j += i)
-            {
-            }
-        }
-    }
-}
 void ans()
 {
+    for (int i = 1; i < 1000; i += 1)
+    {
+        cout << i << " : " << onlyPrimes[i - 1] << endl;
+    }
 }
 
 int32_t main()
 {
     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    sieveOptimized();
     int t = 1;
     while (t--)
-        // ans();
-        sieveBruteforce();
+        ans();
 
     return 0;
 }

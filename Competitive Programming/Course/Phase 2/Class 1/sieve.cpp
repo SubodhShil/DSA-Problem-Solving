@@ -1,22 +1,26 @@
-## Generate number of divisors 
+/*
+                            ॐ JAY JAY SRI RAM ॐ
 
-```cpp
+    * Sieve algorithm
+    * Author: Subodh Chandra Shil
 
-```
+                        ॐ Attachment to Detachment ॐ
+*/
 
-## Sieve of eratosthenes
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+#define endl "\n"
 
-### Bruteforce
-
-```cpp
+int n, k, m, a, b, c;
 const int N = 100;
 bool primes[N];
+vector<int> onlyPrimes;
 
 void sieveBruteforce()
 {
     memset(primes, 1, sizeof(primes));
     primes[0] = primes[1] = 0;
-    vector<int> onlyPrimes;
 
     for (int i = 2; i <= N; ++i)
     {
@@ -32,11 +36,7 @@ void sieveBruteforce()
             onlyPrimes.push_back(i);
     }
 }
-```
 
-### Optimized
-
-```cpp
 void sieveOptimized()
 {
     for (int i = 3; i * i <= N; i += 2)
@@ -61,20 +61,14 @@ void sieveOptimized()
             onlyPrimes.push_back(i);
     }
 }
-```
 
-### All prime numbers are odd except for 2. So, two (2) is the only number that is prime and even at the same time. And all even numbers are composite.
+int32_t main()
+{
+    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    int t = 1;
+    cin >> t;
+    while (t--)
+        sieveOptimized();
 
-### Count prime numbers in a range
-
-```cpp
-
-```
-
-<details>
-<summary>Questions</summary>
-
-1. [UVA-543](https://vjudge.net/problem/UVA-543)
-2. 
-</details>
-
+    return 0;
+}
