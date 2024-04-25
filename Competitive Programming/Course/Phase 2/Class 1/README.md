@@ -69,10 +69,28 @@ void sieveOptimized()
 
 > Prime counting function: There is a formula to find out count of prime numbers in between a range.
 
-```1.25506 * (n / ln(n))```
+```1.25506 * (n / ln(n))```. This formula provides approximate value. 
+
+### logarithm function 
 
 ```cpp
+// 1 for any base
+double log_a_to_base_b(double a, double b) {
+    return log(a) / log(b);
+}
 
+// 2. for base 2 only
+double log_a_to_base_b(double a, double b){
+    return log2(a) / log2(b);
+}
+```
+
+### n-th root 
+
+```cpp
+double nth_root(double a, int n) {
+    return pow(a, 1.0 / n);
+}
 ```
 
 <details>
