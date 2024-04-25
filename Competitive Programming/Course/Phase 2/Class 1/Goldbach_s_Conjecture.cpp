@@ -16,22 +16,27 @@ int n, k, m, a, b, c, t;
 const int N = 1000000 + 10;
 bool primes[N];
 vector<int> onlyPrimes;
-map<int, int> m_primes;
+map<int, bool> m_primes;
 
-void sieveBruteforce()
+void sieveOptimized()
 {
-    memset(primes, 1, sizeof(primes));
-    primes[0] = primes[1] = 0;
+    for (int i = 3; i <= N; i += 2)
+        primes[i] = 1;
 
-    for (int i = 2; i <= N; ++i)
+    for (int i = 3; i * i <= N; i += 2)
     {
-        for (int j = i + i; j <= N; j += i)
+        if (primes[i])
         {
-            primes[j] = 0;
+            for (int j = i * i; j <= N; j += (i + i))
+            {
+                primes[j] = 0;
+            }
         }
     }
 
-    for (int i = 3; i <= N; ++i)
+    primes[2] = 1, m_primes[2] = 1;
+    onlyPrimes.push_back(2);
+    for (int i = 3; i <= N; i += 2)
     {
         if (primes[i])
             onlyPrimes.push_back(i), m_primes[i] = 1;
@@ -62,12 +67,12 @@ void ans()
             result.push_back(max(current_num, next_num));
             result.push_back(min(current_num, next_num));
             mx = abs(current_num - next_num);
-            // break;
+            break;
         }
     }
 
     if (result.empty())
-        cout << "Goldbach's conjecture is wrong.";
+        cout << "Goldbach's conjecture is wrong.\n";
     else
         cout << n << " = " << result[1] << " + " << result[0] << endl;
 }
@@ -75,14 +80,7 @@ void ans()
 int32_t main()
 {
     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-    sieveBruteforce();
-
-    // for (int i = 0; i < 100; ++i)
-    //     cout << onlyPrimes[i] << " ";
-    // cout << endl;
-
-    // for (auto i : m_primes)
-    //     cout << i.first << ' ' << i.second << endl;
+    sieveOptimized();
 
     while (cin >> n and n)
     {

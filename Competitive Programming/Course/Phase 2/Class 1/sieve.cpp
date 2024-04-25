@@ -39,14 +39,14 @@ void sieveBruteforce()
 
 void sieveOptimized()
 {
-    for (int i = 3; i * i <= N; i += 2)
+    for (int i = 3; i <= N; i += 2)
         primes[i] = 1;
 
-    for (int i = 3; i <= N; i += 2)
+    for (int i = 3; i * i <= N; i += 2)
     {
         if (primes[i])
         {
-            for (int j = i * i; j <= n; j += (i + i))
+            for (int j = i * i; j <= N; j += (i + i))
             {
                 primes[j] = 0;
             }

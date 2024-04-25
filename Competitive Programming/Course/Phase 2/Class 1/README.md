@@ -39,14 +39,14 @@ void sieveBruteforce()
 ```cpp
 void sieveOptimized()
 {
-    for (int i = 3; i * i <= N; i += 2)
+    for (int i = 3; i <= N; i += 2)
         primes[i] = 1;
 
-    for (int i = 3; i <= N; i += 2)
+    for (int i = 3; i * i <= N; i += 2)
     {
         if (primes[i])
         {
-            for (int j = i * i; j <= n; j += (i + i))
+            for (int j = i * i; j <= N; j += (i + i))
             {
                 primes[j] = 0;
             }
@@ -65,7 +65,11 @@ void sieveOptimized()
 
 ### All prime numbers are odd except for 2. So, two (2) is the only number that is prime and even at the same time. And all even numbers are composite.
 
-### Count prime numbers in a range
+### Count prime numbers in a range 
+
+> Prime counting function: There is a formula to find out count of prime numbers in between a range.
+
+```1.25506 * (n / ln(n))```
 
 ```cpp
 
