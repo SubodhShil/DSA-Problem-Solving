@@ -14,5 +14,5 @@ int32_t main()
 {
     cin >> w >> h >> n;
 
-    return 0;   
+    return 0;
 }
