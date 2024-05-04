@@ -1,8 +1,9 @@
 /*
                             ॐ JAY JAY SRI RAM ॐ
 
-    * https://codeforces.com/contest/1969/problem/A
+    * https://codeforces.com/problemset/problem/1061/A
     * Author: Subodh Chandra Shil
+    * Tag: Greedy
 
                         ॐ Attachment to Detachment ॐ
 */
@@ -10,20 +11,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
-#define endl "\n"
-int n, k, m, a, b, c;
+int n;
 
 void ans()
 {
-    cin >> n;
-    
+    int a, b;
+    cin >> a >> b;
+
+    int res = 0;
+    if (b > a)
+    {
+        res += (b / a);
+        if (b % a >= 1)
+            ++res;
+        cout << res << endl;
+    }
+    else
+        cout << 1 << endl;
 }
 
 int32_t main()
 {
-    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     int t = 1;
-    cin >> t;
     while (t--)
         ans();
 

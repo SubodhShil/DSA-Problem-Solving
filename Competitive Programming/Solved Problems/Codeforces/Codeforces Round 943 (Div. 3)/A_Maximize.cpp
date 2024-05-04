@@ -1,7 +1,7 @@
 /*
                             ॐ JAY JAY SRI RAM ॐ
 
-    * https://codeforces.com/contest/1969/problem/A
+    * https://codeforces.com/contest/1968/problem/A
     * Author: Subodh Chandra Shil
 
                         ॐ Attachment to Detachment ॐ
@@ -11,12 +11,22 @@
 using namespace std;
 #define int long long
 #define endl "\n"
-int n, k, m, a, b, c;
+int x, k, m, a, b, c;
 
 void ans()
 {
-    cin >> n;
-    
+    cin >> x;
+
+    int prev = INT32_MIN, res = 0;
+
+    for (int y = 1; y <= x - 1; ++y)
+    {
+        int m = (__gcd(x, y) + y);
+        if (m > prev)
+            prev = m, res = y;
+    }
+
+    cout << res << endl;
 }
 
 int32_t main()

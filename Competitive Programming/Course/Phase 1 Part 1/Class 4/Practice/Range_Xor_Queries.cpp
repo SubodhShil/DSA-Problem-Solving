@@ -1,7 +1,7 @@
 /*
                             ॐ JAY JAY SRI RAM ॐ
 
-    * https://vjudge.net/problem/cses-1650
+    * https://cses.fi/problemset/task/1650
     * Author: Subodh Chandra Shil
 
                         ॐ Attachment to Detachment ॐ
@@ -10,43 +10,38 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
-#define endl "\n"
-const int N = 1e6 + 10;
-int n;
-int prefix[N];
-int arr[N];
 
-void precompute()
+vector<int> prefix_xor(vector<int> arr, int n)
 {
+    vector<int> xorArr(n + 1, 0);
     for (int i = 0; i < n; ++i)
     {
-        prefix[i + 1] = prefix[i] ^ arr[i];
+        xorArr[i + 1] = xorArr[i] ^ arr[i];
     }
-}
 
-void ans()
-{
-    int x;
-    cin >> n >> x;
-    for (int i = 0; i < n; ++i)
-        cin >> arr[i];
-
-    precompute();
-
-    while (x--)
-    {
-        int a, b;
-        cin >> a >> b;
-        cout << (prefix[b] ^ prefix[a - 1]) << endl;
-    }
+    return xorArr;
 }
 
 int32_t main()
 {
-    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-    int t = 1;
-    while (t--)
-        ans();
+    int n, q;
+    cin >> n >> q;
+    vector<int> arr(n, 0);
+    for (int i = 0; i < n; ++i)
+        cin >> arr[i];
+
+    vector<int> xorArr = prefix_xor(arr, n);
+
+    /* for (int i = 1; i <= n; ++i)
+        cout << xorArr[i] << " ";
+    cout << endl; */
+
+    while (q--)
+    {
+        int a, b;
+        cin >> a >> b;
+        cout << (xorArr[b] ^ xorArr[a - 1]) << endl;
+    }
 
     return 0;
 }

@@ -1,7 +1,7 @@
 /*
                             ॐ JAY JAY SRI RAM ॐ
 
-    * https://codeforces.com/contest/1969/problem/A
+    * https://codeforces.com/contest/1972/problem/B
     * Author: Subodh Chandra Shil
 
                         ॐ Attachment to Detachment ॐ
@@ -16,7 +16,13 @@ int n, k, m, a, b, c;
 void ans()
 {
     cin >> n;
-    
+    string str;
+    cin >> str;
+    int cnt = 0;
+    for (auto ch : str)
+        if (ch == 'U')
+            ++cnt;
+    cout << ((cnt & 1) ? "YES\n" : "NO\n");
 }
 
 int32_t main()
