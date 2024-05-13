@@ -1,0 +1,2 @@
+- The smallest prime factor is the smallest divisor of the number. 
+- 

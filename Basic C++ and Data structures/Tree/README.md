@@ -99,6 +99,7 @@ Depth-->In-Order;
     Number of nodes in a full binary tree
     Formula: 2^h - 1
 ```
+> ``` হয় সবগুলো child node থাকবে, আর না হয় কিছুই থাকবে না । ```
 
 2. **Complete Binary Tree (CBT)**: All levels are filled properly except for the last level filled from left to right sequentially. Complete binary tree isn't perfect binary tree but it tends to be perfect binary tree. 
 
