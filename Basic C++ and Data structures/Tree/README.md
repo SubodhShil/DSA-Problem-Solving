@@ -13,6 +13,11 @@
 
 > Linked list is a single directional and sequential data structure where one item or element or node references only one neighbor. Unlike linked list, each node of a tree can have link to multiple nodes connected to it.
 
+### Linear vs Non-linear 
+1. **Linear**: One to one connection.
+2. **Non-linear**: One to many connection.
+
+
 ## **Benefits**
 
 1. Insertion and deletion operation are O(long N) complexity.
@@ -48,6 +53,9 @@
 12. <ins>**Tree Node Level**</ins>: **Height of the root node - Height of a target node**. Level of root is 0.
 
 13. <ins>**Degree of a Node**</ins>: How many child node a node has defines it degree. If a node has 2 child then it has degree 2 (maximum is degree 2), is node contains 1 child then it has degree 1 and if it doesn't contain any child nodes then it has degree of 0. Leaf nodes degree is 0. 
+
+14. **Subtree** 
+
 
 &nbsp;
 
@@ -101,13 +109,15 @@ Depth-->In-Order;
 ```
 > ``` হয় সবগুলো child node থাকবে, আর না হয় কিছুই থাকবে না । ```
 
-2. **Complete Binary Tree (CBT)**: All levels are filled properly except for the last level filled from left to right sequentially. Complete binary tree isn't perfect binary tree but it tends to be perfect binary tree. 
+> In case of full binary tree, we only have two choices, it should eihter contain all the two nodes or none of the nodes. Choices = {0, 2}.
 
-3. **Perfect Binary Tree (PBT)**: All the internal nodes strictly has 2 child nodes and the leaf nodes has to be in the same level.
+1. **Complete Binary Tree (CBT)**: All levels are filled properly except for the last level filled from left to right sequentially. Complete binary tree isn't perfect binary tree but it tends to be perfect binary tree. Last level nodes or leaf nodes should align as left as possible. 
 
-4. **Height Balanced Binary Tree (HBBT)**: Height of tree must meet **log(number of tree nodes)**.
+2. **Perfect Binary Tree (PBT)**: All the internal nodes strictly has 2 child nodes and the leaf nodes has to be in the same level.
 
-5. **Degenerate or Skewed Binary Tree (SBT)**: Every node has strictly one child node. Skewed binary looks like a linked list.
+3. **Height Balanced Binary Tree (HBBT)**: Height of tree must meet **log(number of tree nodes)**.
+
+4. **Degenerate or Skewed Binary Tree (SBT)**: Every node has strictly one child node. Skewed binary looks like a linked list.
 
 ### Height of a tree is the maximum depth
 
@@ -133,8 +143,8 @@ If, N = number of leaves
 
 ## **```Implementation```**
 
-1. Linked representation (Uses custom type and pointer/references)
-2. Sequential (Uses array): Usecases like heap and segment tree (FBT).
+1. Linked representation (Uses custom type and pointer/references): More effecient, in terms of searching, space size, adding nodes and deleting nodes. 
+2. Sequential (Uses array): Usecases like heap and segment tree (FBT). Uses array. This is not likely a popular usecase in terms of general representation of binary tree and operations on it.
 
 &nbsp;
 ## **```Tree input and traversal```**
