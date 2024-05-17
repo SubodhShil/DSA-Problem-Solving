@@ -21,6 +21,12 @@ auto depthWiseInput(Node *root)
 
 int main()
 {
+    int root_val = 0;
+    cout << "Enter the root: ";
+    cin >> root_val;
+    Node *root = nullptr;
+
+    
 
     return 0;
 }
