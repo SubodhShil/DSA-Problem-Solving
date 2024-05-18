@@ -97,14 +97,14 @@ Node *depth_wise_input(Node *root)
     return root;
 }
 
-void pre_order_traverse(Node *root)
+void display(Node *root)
 {
     if (!root)
         return;
 
     cout << root->data << ' ';
-    pre_order_traverse(root->leftChild);
-    pre_order_traverse(root->rightChild);
+    display(root->leftChild);
+    display(root->rightChild);
 }
 
 void in_order_traverse(Node *root)
@@ -112,9 +112,9 @@ void in_order_traverse(Node *root)
     if (!root)
         return;
 
-    pre_order_traverse(root->leftChild);
+    display(root->leftChild);
     cout << root->data << ' ';
-    pre_order_traverse(root->rightChild);
+    display(root->rightChild);
 }
 
 void post_order_traverse(Node *root)
@@ -122,8 +122,8 @@ void post_order_traverse(Node *root)
     if (!root)
         return;
 
-    pre_order_traverse(root->leftChild);
-    pre_order_traverse(root->rightChild);
+    display(root->leftChild);
+    display(root->rightChild);
     cout << root->data << ' ';
 }
 
