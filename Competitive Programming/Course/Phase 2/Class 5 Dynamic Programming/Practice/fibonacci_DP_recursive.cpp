@@ -2,6 +2,7 @@
                             ॐ JAY JAY SRI RAM ॐ
 
     * Fibonacci with DP
+    * https://leetcode.com/problems/fibonacci-number/
     * Author: Subodh Chandra Shil
 
                         ॐ Attachment to Detachment ॐ
@@ -13,24 +14,32 @@ using namespace std;
 #define endl "\n"
 int n, k, m, a, b, c;
 
-const long long N = 105;
-int f[N];
-bool visited[N];
-
-int fibo(int n)
+class Solution
 {
-    if (n == 0 || n == 1)
-        return n;
+public:
+    int f[100];
+    bool visited[100];
 
-    /// check if already visited
-    if (visited[n])
+    int fibo(int n)
+    {
+        if (n <= 1)
+            return n;
+
+        /// check if already visited
+        if (visited[n])
+            return f[n];
+
+        /// if not visited then just do computation in the array
+        f[n] = fibo(n - 1) + fibo(n - 2);
+        visited[n] = true;
         return f[n];
+    }
 
-    /// if not visited then just do computation in the array
-    f[n] = f[n - 1] + f[n - 2];
-    visited[n] = true;
-    return f[n];
-}
+    int fib(int n)
+    {
+        return fibo(n);
+    }
+};
 
 int32_t main()
 {

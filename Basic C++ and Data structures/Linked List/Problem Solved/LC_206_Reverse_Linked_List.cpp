@@ -1,5 +1,5 @@
 /**
- * @file        LC_206_Reverse_Linked_List_TODO.cpp
+ * @file        LC_206_Reverse_Linked_List.cpp
  * @author      Subodh Chandra Shil
  * @date        2023-06-19
  * @resources:  https://leetcode.com/problems/reverse-linked-list/
@@ -26,17 +26,17 @@ public:
     /// slow and fast pointer approach
     ListNode *reverseList(ListNode *head)
     {
-        ListNode *prev = nullptr, *curr = head;
+        ListNode *result = nullptr, *temp = head;
 
-        while (curr)
+        while (temp)
         {
-            ListNode *remain = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = remain;
+            ListNode *remain = temp->next;
+            temp->next = result;
+            result = temp;
+            temp = remain;
         }
 
-        return prev;
+        return result;
     }
 };
 
