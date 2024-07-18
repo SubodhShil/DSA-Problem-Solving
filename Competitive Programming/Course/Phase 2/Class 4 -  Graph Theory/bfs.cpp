@@ -49,6 +49,7 @@ int32_t main()
         int u, v;
         cin >> u >> v;
         g[u].push_back(v);
+
         // if undirected then add this line and vice versa
         g[v].push_back(u);
     }
