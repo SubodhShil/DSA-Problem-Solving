@@ -14,6 +14,7 @@ public:
     }
 };
 
+/*
 Node *level_order_input(Node *root)
 {
     int data;
@@ -51,12 +52,14 @@ Node *level_order_input(Node *root)
     return root;
 }
 
-Node *level_order_traverse(Node *root)
+ */
+
+/* Node *level_order_traverse(Node *root)
 {
     if (!root)
     {
         cout << "Tree is empty\n";
-        return;
+        return nullptr;
     }
 
     queue<Node *> treeNodes;
@@ -77,6 +80,8 @@ Node *level_order_traverse(Node *root)
     }
 }
 
+ */
+
 Node *depth_wise_input(Node *root)
 {
     int data;
@@ -87,7 +92,7 @@ Node *depth_wise_input(Node *root)
         return nullptr;
 
     Node *newNode = new Node(data);
-
+    root = newNode;
     cout << "Left node data: ";
     root->leftChild = depth_wise_input(root->leftChild);
 
@@ -131,6 +136,7 @@ int main()
 {
     Node *root = nullptr;
     root = depth_wise_input(root);
+    display(root);
 
     return 0;
 }
