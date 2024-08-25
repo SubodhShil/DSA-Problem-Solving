@@ -14,20 +14,20 @@ public:
     }
 };
 
-/*
 Node *level_order_input(Node *root)
 {
     int data;
-    cout << "Enter data for node: ";
+    cout << "Enter data\n";
     cin >> data;
 
     if (data <= 0)
         return nullptr;
 
-    Node *root = new Node(data);
+    Node *temp = new Node(data);
+    root = temp;
 
     queue<Node *> treeNodes;
-    treeNodes.push(root);
+    treeNodes.push(temp);
 
     while (!treeNodes.empty())
     {
@@ -52,14 +52,12 @@ Node *level_order_input(Node *root)
     return root;
 }
 
- */
-
-/* Node *level_order_traverse(Node *root)
+void level_order_traverse(Node *root)
 {
     if (!root)
     {
         cout << "Tree is empty\n";
-        return nullptr;
+        return;
     }
 
     queue<Node *> treeNodes;
@@ -79,8 +77,6 @@ Node *level_order_input(Node *root)
             treeNodes.push(currentNode->rightChild);
     }
 }
-
- */
 
 Node *depth_wise_input(Node *root)
 {
@@ -102,14 +98,14 @@ Node *depth_wise_input(Node *root)
     return root;
 }
 
-void display(Node *root)
+void pre_order_traverse(Node *root)
 {
     if (!root)
         return;
 
     cout << root->data << ' ';
-    display(root->leftChild);
-    display(root->rightChild);
+    pre_order_traverse(root->leftChild);
+    pre_order_traverse(root->rightChild);
 }
 
 void in_order_traverse(Node *root)
@@ -117,9 +113,9 @@ void in_order_traverse(Node *root)
     if (!root)
         return;
 
-    display(root->leftChild);
+    pre_order_traverse(root->leftChild);
     cout << root->data << ' ';
-    display(root->rightChild);
+    pre_order_traverse(root->rightChild);
 }
 
 void post_order_traverse(Node *root)
@@ -127,16 +123,20 @@ void post_order_traverse(Node *root)
     if (!root)
         return;
 
-    display(root->leftChild);
-    display(root->rightChild);
+    pre_order_traverse(root->leftChild);
+    pre_order_traverse(root->rightChild);
     cout << root->data << ' ';
 }
 
 int main()
 {
     Node *root = nullptr;
-    root = depth_wise_input(root);
-    display(root);
+
+    // root = depth_wise_input(root);
+    // pre_order_traverse(root);
+
+    root = level_order_input(root);
+    level_order_traverse(root);
 
     return 0;
 }

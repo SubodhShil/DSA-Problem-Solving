@@ -39,14 +39,14 @@ void populate(Node *root, int prevVal)
     }
 }
 
-void display(Node *root)
+void pre_order_traverse(Node *root)
 {
     if (!root)
         return;
 
     cout << root->data << ' ';
-    display(root->leftChild);
-    display(root->rightChild);
+    pre_order_traverse(root->leftChild);
+    pre_order_traverse(root->rightChild);
 }
 
 int main()
@@ -57,7 +57,7 @@ int main()
 
     Node *root = new Node(root_val);
     populate(root, root_val);
-    display(root);
+    pre_order_traverse(root);
 
     return 0;
 }
