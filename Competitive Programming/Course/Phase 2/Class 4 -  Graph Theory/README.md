@@ -21,5 +21,5 @@
 
 # Tips
 
-1. Shortest path related কোন requirement না থাকলে DFS ব্যাবহার করা উচিত ।
+1. Shortest path related কোন requirement না থাকলে DFS ব্যবহার করা উচিত ।
 2. 

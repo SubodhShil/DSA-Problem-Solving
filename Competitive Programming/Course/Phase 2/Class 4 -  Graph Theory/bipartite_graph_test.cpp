@@ -37,6 +37,7 @@ void dfs(int u)
             if (col[u] == col[v])
             {
                 ok = false;
+                return;
             }
         }
     }
