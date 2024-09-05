@@ -26,28 +26,31 @@ struct TreeNode
 class Solution
 {
 public:
-    int check(TreeNode *root)
+    int BBT(TreeNode *root)
     {
         if (!root)
             return 0;
 
-        int leftCnt = check(root->left);
-        if (leftCnt == -1)
+        int leftSide = BBT(root->left);
+        int rightSide = BBT(root->right);
+
+        // check if BBT
+
+        // if any side already calculated as -1 then return -1
+        if (leftSide == -1 or rightSide == -1)
+            return -1;
+        // if difference is -1 then return -1
+        if (abs(leftSide - rightSide) > 1)
             return -1;
 
-        int rightCnt = check(root->right);
-        if (rightCnt == -1)
-            return -1;
-
-        if (abs(leftCnt - rightCnt) > 1)
-            return -1;
-
-        return max(leftCnt, rightCnt) + 1;
+        return max(leftSide, rightSide) + 1;
     }
 
-    bool isBalanced(TreeNode *root) { return check(root) != -1; }
+    bool isBalanced(TreeNode *root)
+    {
+        return BBT(root) != -1;
+    }
 };
-
 int32_t main()
 {
     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
