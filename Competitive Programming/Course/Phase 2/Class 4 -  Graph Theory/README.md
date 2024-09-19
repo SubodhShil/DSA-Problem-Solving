@@ -22,4 +22,5 @@
 # Tips
 
 1. Shortest path related কোন requirement না থাকলে DFS ব্যবহার করা উচিত ।
-2. 
+2. parallelly node visit এবং shortest path mention করা থাকে তাহলে BFS ব্যবহার করতে হবে ।
+3. 
