@@ -18,13 +18,7 @@ public:
     int countWays(int i, vector<int> &nums, int target, int currentSum)
     {
         if (i >= nums.size())
-        {
-            // returning the ways count
-            if (currentSum == target)
-                return 1;
-            else
-                return 0;
-        }
+            return target == currentSum ? 1 : 0;
 
         int way1 = countWays(i + 1, nums, target, currentSum + nums[i]);
         int way2 = countWays(i + 1, nums, target, currentSum - nums[i]);
