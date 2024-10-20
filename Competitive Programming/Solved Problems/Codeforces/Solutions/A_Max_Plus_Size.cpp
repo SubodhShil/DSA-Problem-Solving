@@ -15,7 +15,6 @@ int n, k, m, a, b, c;
 
 void ans()
 {
-    cin >> n;
 }
 
 int32_t main()
