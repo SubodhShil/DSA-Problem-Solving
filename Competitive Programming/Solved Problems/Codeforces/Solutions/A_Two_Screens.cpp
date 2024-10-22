@@ -18,26 +18,12 @@ void ans()
     cin >> str1 >> str2;
 
     int n1 = str1.size(), n2 = str2.size();
-    int res = 0;
 
-    for (int i = 0; i < min(n1, n2); ++i)
-    {
-        if (str1[i] == str2[i])
-            ++res;
-        else
-        {
-            res += 2;
-            if (i != 0 and str1[i - 1] == str2[i - 1])
-                ++res;
-        }
-    }
+    int i = 0;
+    while (i < str1.size() and i < str2.size() and str1[i] == str2[i])
+        ++i;
 
-    if (n1 != n2)
-    {
-        res += abs(n1 - n2) + 1;
-    }
-
-    cout << res << endl;
+    cout << min(n1 + n2, n1 + n2 - i + 1) << endl;
 }
 
 int32_t main()
