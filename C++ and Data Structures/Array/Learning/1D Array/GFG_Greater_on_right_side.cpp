@@ -20,6 +20,28 @@ public:
     }
 };
 
+class Solution2
+{
+public:
+    vector<int> nextGreatest(vector<int> arr)
+    {
+        vector<int> result;
+        result.push_back(-1);
+        int n = arr.size();
+        int prev_max = arr[n - 1];
+
+        for (int i = n - 2; i >= 0; --i)
+        {
+            result.push_back(prev_max);
+            prev_max = max(prev_max, arr[i]);
+        }
+
+        reverse(result.begin(), result.end());
+
+        return result;
+    }
+};
+
 int main()
 {
     // int arr[] = {16, 17, 4, 3, 5, 2};
