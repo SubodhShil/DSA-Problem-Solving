@@ -130,6 +130,7 @@ public:
     }
 };
 
+/* Optimized and best solution */
 class Solution
 {
 public:
@@ -141,17 +142,14 @@ public:
 
         for (int i = 0; i < nums.size(); i++)
         {
-            if (nums[i] > 0)
-                break;
-
             int j = i + 1;
             int k = nums.size() - 1;
             while (j < k)
             {
                 int sum = nums[i] + nums[j] + nums[k];
-                if (sum < 0)
+                if (sum < target)
                     j++;
-                else if (sum > 0)
+                else if (sum > target)
                     k--;
                 else
                 {
@@ -160,6 +158,7 @@ public:
                 }
             }
         }
+
         vector<vector<int>> output(st.begin(), st.end());
         return output;
     }
