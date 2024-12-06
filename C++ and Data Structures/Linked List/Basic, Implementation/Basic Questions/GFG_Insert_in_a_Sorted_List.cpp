@@ -13,7 +13,7 @@ struct Node
     }
 };
 
-class Solution
+class Solution1
 {
 public:
     Node *sortedInsert(struct Node *head, int data)
@@ -52,8 +52,69 @@ public:
     }
 };
 
+class Solution2
+{
+public:
+    Node *sortedInsert(struct Node *head, int x)
+    {
+        Node *newNode = new Node(x);
+        Node *itr = head;
+
+        // insert at head
+        if (head->data >= x)
+        {
+            newNode->next = head;
+            return newNode;
+        }
+
+        while (itr->next)
+        {
+
+            // insert at middle
+            if (itr->next->data >= x)
+            {
+                Node *remain = itr->next;
+                itr->next = newNode;
+                itr->next->next = remain;
+                return head;
+            }
+
+            itr = itr->next;
+        }
+
+        // insert at end
+        itr->next = newNode;
+        return head;
+    }
+};
+
+class Solution3
+{
+public:
+    Node *sortedInsert(struct Node *head, int x)
+    {
+        Node *newNode = new Node(x);
+        Node *itr = head;
+
+        if (head->data >= x)
+        {
+            newNode->next = head;
+            return newNode;
+        }
+
+        while (itr->next && itr->next->data < x)
+        {
+            itr = itr->next;
+        }
+
+        newNode->next = itr->next;
+        itr->next = newNode;
+
+        return head;
+    }
+};
+
 int main()
 {
-
     return 0;
 }
