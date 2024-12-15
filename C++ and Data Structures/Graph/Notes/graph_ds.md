@@ -41,7 +41,10 @@ In general, trees are used to represent hierarchical data, while graphs are used
 
 > ## <p align="center">**```Terminologies```**</p>
 
-**Nodes or vertex**:
+1. **Nodes or vertex**: 
+
+2. **Adjacent nodes**: Two nodes are connected via an edge is neighbor or adjacent node.
+
 
 &nbsp;
 
