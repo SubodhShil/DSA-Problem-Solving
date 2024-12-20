@@ -32,8 +32,12 @@ There are many caveat using statically allocated nodes as for LL.
 
 2. To creating nodes from anywhere in the codebase. Suppose we're creating a node from a function, after the function finishes it work the node will no more in the linked list.
 
+
+## Even and Odd length of a linked list 
+
+> By using the tortoise and hare algorithm, when the fast pointer get as null, this indicates the linked list is even in length and odd otherwise. 
+
+
 ## **Caution**
 
 To iterate a linked list we should never move head node. Head node is the key component that make sure linked list exists, when traverse with head node it end up NULL pointer or points to nothing, thus the links between nodes are destroyed. So, to traverse or any other task to do we should always use secondary pointer of type Node as iterator.
-
-

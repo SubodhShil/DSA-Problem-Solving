@@ -2,6 +2,7 @@
  * @file        LC_876_Middle_of_the_Linked_List.cpp
  * @author      Subodh Chandra Shil
  * @resources:  https://leetcode.com/problems/middle-of-the-linked-list/description/
+ *              https://www.geeksforgeeks.org/problems/finding-middle-element-in-a-linked-list/1?
  */
 
 #include <bits/stdc++.h>
@@ -61,5 +62,36 @@ public:
         }
 
         return slow;
+    }
+};
+
+/* GFG */
+struct Node
+{
+    int data;
+    Node *next;
+
+    Node(int x)
+    {
+        data = x;
+        next = NULL;
+    }
+};
+
+class SolutionGFG
+{
+public:
+
+    int getMiddle(Node *head)
+    {
+        Node *fast = head, *slow = head;
+
+        while (head && head->next)
+        {
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+
+        return slow->data;
     }
 };
