@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "*.tcc": "cpp"
+        "*.ndjson": "jsonl",
+        "*.dbclient-js": "javascript",
+        "*.tcc": "cpp",
+        "iostream": "cpp"
     }
 }
