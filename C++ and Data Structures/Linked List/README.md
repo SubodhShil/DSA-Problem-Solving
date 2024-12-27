@@ -41,3 +41,15 @@ There are many caveat using statically allocated nodes as for LL.
 ## **Caution**
 
 To iterate a linked list we should never move head node. Head node is the key component that make sure linked list exists, when traverse with head node it end up NULL pointer or points to nothing, thus the links between nodes are destroyed. So, to traverse or any other task to do we should always use secondary pointer of type Node as iterator.
+
+## Tricks and insights 
+
+1. Tortoise and hare algorithm for find loop in a linked list 
+
+
+## Traverse linked list 
+
+- Traverse to a position 'n' 
+  - If 0 based index run a loop from 0 to < n
+  - If 1 based index run a loop from 0 to <= n - 1  
+
