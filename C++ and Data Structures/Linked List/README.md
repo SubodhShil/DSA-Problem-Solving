@@ -51,5 +51,3 @@ To iterate a linked list we should never move head node. Head node is the key co
 
 - Traverse to a position 'n' 
   - If 0 based index run a loop from 0 to < n
-  - If 1 based index run a loop from 0 to <= n - 1  
-
