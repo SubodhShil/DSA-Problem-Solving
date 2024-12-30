@@ -38,7 +38,6 @@ public:
 
             if (fast == slow)
             {
-
                 int cnt = 1;
                 fast = fast->next;
                 while (fast != slow)
