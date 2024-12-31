@@ -1,6 +1,8 @@
 
 ---
-## Question Statement
+# **`Question Statement`**
+
+> ## [**LeetCode 1021. Remove Outermost Parentheses**](https://leetcode.com/problems/remove-outermost-parentheses/)
 
 > A valid parentheses string is either empty ```""```,``` "(" + A + ")"``` or A + B, where A and B are valid parentheses strings, and + represents string concatenation.
 > 
@@ -24,16 +26,22 @@ After removing outer parentheses of each part, this is "()()" + "()" = "()()()".
 
 </details>
 
-## Intuition 
-Observation:
+&nbsp;
+
+# **`Intuition`**
+
+> ## Observation 1 (String only solution):
+
+<details>
+<summary>Explanation</summary>
+
 1. Keep in mind that, the given parentheses string is already a valid parentheses string.
 2. The only thing we have to do is keeping track or maintain a calculation of open and closing bracket and not include them in the result string.
 
+</details>
 
-## Solution
 
-
-### Think yourself, dry run and give the question 20 minutes.
+### Solution
 
 <details>
 <summary>C++</summary>
@@ -71,6 +79,46 @@ public:
 ```
 </details>
 
+
+> ## Observation 2 (Stack solution):
+
 <details>
-  <summary>Python</summary>
+<summary>Explanation</summary>
+
+1. When the stack is empty this indicates that any upcoming parenthesis is the outermost parenthesis. So, when the stack is not empty only then add the parenthesis to the result string. 
+2. For closing tag, we will delete from stack if it is not the outermost parenthesis. The stack size is 1 indicates stack only contains outermost "(". So, delete from the stack and add to result when the stack has size more than 1. 
+
 </details>
+
+
+### Solution
+
+<details>
+<summary>C++</summary>
+
+```cpp
+class Solution {
+public:
+    string removeOuterParentheses(string s) {
+        string res = "";
+        stack<char> st;
+
+        for (char ch : s) {
+            if (ch == '(') {
+                if (!st.empty())
+                    res += '(';
+                st.push('(');
+            } else {
+                if (st.size() > 1)
+                    res += ')';
+                st.pop();
+            }
+        }
+
+        return res;
+    }
+};
+```
+</details>
+
+
