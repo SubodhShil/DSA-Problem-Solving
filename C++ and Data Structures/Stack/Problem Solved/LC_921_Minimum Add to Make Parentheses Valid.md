@@ -41,7 +41,7 @@ Output: 3
 <details>
 <summary>C++</summary>
 
-```cpp
+```cpp []
 // Time Complexity: O(N)
 // Space Complexity: O(N)
 class Solution {
