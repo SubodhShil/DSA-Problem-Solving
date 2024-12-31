@@ -50,13 +50,30 @@ Output: 3
 
 # **`Intuition`**
 
-> ## Observation 1 (String only solution):
+> ## Observation 1 (Stack solution):
 
 <details>
 <summary>Explanation</summary>
 
-1. Keep in mind that, the given parentheses string is already a valid parentheses string.
-2. The only thing we have to do is keeping track or maintain a calculation of open and closing bracket and not include them in the result string.
+1. The depth is actually current count of opening parenthesis "(". Whenever we're getting "(" just push it to the stack.
+2. Now, two case can be occurred that expression can contain number or only the parenthesis. When we encounter a closing parenthesis ')', we calculate the size of the stack (current depth) and update the maximum depth if this is greater than the previous maximum. Then, we pop the stack to indicate that one level of nesting is complete.
+3. If there is no number contains then when ")" occurs we calculate the maximum depth. 
+
+
+**Example Walkthrough**
+
+Let's walk through an example: "((())())"
+
+- Start: depth = 0, stack is empty  
+- '(' -> push to stack, depth = 1  
+- '(' -> push to stack, depth = 2  
+- '(' -> push to stack, depth = 3
+- ')' -> pop from stack, depth = 2
+- ')' -> pop from stack, depth = 1
+- '(' -> push to stack, depth = 2
+- ')' -> pop from stack, depth = 1
+- ')' -> pop from stack, depth = 0
+The maximum depth was 3, which is our final answer.
 
 </details>
 
@@ -67,78 +84,27 @@ Output: 3
 <summary>C++</summary>
 
 ```cpp
-// Time Complexity:
-// Space Complexity: 
-class Solution
-{
-public:
-    string removeOuterParentheses(string s)
-    {
-        int cnt = 0;
-        string result = "";
-
-        for (auto i : s)
-        {
-            if (i == '(')
-            {
-                if (cnt > 0)
-                    result += i;
-                ++cnt;
-            }
-            else
-            {
-                if (cnt > 1)
-                    result += i;
-                --cnt;
-            }
-        }
-
-        return result;
-    }
-};
-```
-</details>
-
-
-> ## Observation 2 (Stack solution):
-
-<details>
-<summary>Explanation</summary>
-
-1. When the stack is empty this indicates that any upcoming parenthesis is the outermost parenthesis. So, when the stack is not empty only then add the parenthesis to the result string. 
-2. For closing tag, we will delete from stack if it is not the outermost parenthesis. The stack size is 1 indicates stack only contains outermost "(". So, delete from the stack and add to result when the stack has size more than 1. 
-
-</details>
-
-
-### Solution
-
-<details>
-<summary>C++</summary>
-
-```cpp
+// Time Complexity: O(N)
+// Space Complexity: O(N)
 class Solution {
 public:
-    string removeOuterParentheses(string s) {
-        string res = "";
+    int maxDepth(string s) {
+        int depth = 0;
         stack<char> st;
 
-        for (char ch : s) {
-            if (ch == '(') {
-                if (!st.empty())
-                    res += '(';
-                st.push('(');
-            } else {
-                if (st.size() > 1)
-                    res += ')';
-                st.pop();
+        for (auto ch : s) {
+            if (ch == '(')
+                st.push(ch);
+            else {
+                int sz = st.size();
+                depth = max(depth, sz);
+                if (ch == ')')
+                    st.pop();
             }
         }
 
-        return res;
+        return depth;
     }
 };
 ```
 </details>
-
-
