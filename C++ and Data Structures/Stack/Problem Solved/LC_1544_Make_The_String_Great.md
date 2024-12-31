@@ -27,7 +27,7 @@ Explanation: We have many possible scenarios, and all lead to the same answer. F
 </details>
 
 <details>
-<summary>Example 1</summary>
+<summary>Example 3</summary>
 
 ```cpp
 Input: s = "s"
