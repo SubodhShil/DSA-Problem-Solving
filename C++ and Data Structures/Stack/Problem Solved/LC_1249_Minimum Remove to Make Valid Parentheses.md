@@ -93,8 +93,9 @@ public:
 
 <details>
 <summary>Explanation</summary>
-1. We're taking a stack which stores the index of invalid pairs of the character ")".
-2. The stack might have opening parenthesis left, which needs to be count separately. 
+
+1. We're taking a stack which stores the index of invalid pairs of the character ")".  
+2. The stack might have opening parenthesis left, which needs to be count separately.   
 3. At the end, we will compare with the invalid indexes present in the **set**, and ignore them. Rest of the characters should be added to the result string.  
 </details>
 
