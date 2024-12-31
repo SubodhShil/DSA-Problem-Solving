@@ -1,6 +1,6 @@
 
 ---
-> ## [**LeetCode 1544. Make The String Great**](https://leetcode.com/problems/make-the-string-great/)
+> # [**LeetCode 1544. Make The String Great**](https://leetcode.com/problems/make-the-string-great/)
 
 ![](../Media/20241231083017.png)
 
