@@ -3,24 +3,45 @@
 
 > # [**LeetCode 1614. Maximum Nesting Depth of the Parentheses**](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/)
 
-> A valid parentheses string is either empty ```""```,``` "(" + A + ")"``` or A + B, where A and B are valid parentheses strings, and + represents string concatenation.
-> 
-> For example, ```""```, ```"()"```, ```"(())()"```, and ```"(()(()))"``` are all valid parentheses strings.
->
-> A valid parentheses string s is primitive if it is nonempty, and there does not exist a way to split it into s = A + B, with A and B nonempty valid parentheses strings.
->
-> Given a valid parentheses string s, consider its primitive decomposition: ```s = P1 + P2 + ... + Pk```, where Pi are primitive valid parentheses strings.
-Return ```s``` after removing the outermost parentheses of every primitive string in the primitive decomposition of ```s```.
+![](20241231072923.png)
 
 <details>
 <summary>Example 1</summary>
 
 ```cpp
-Input: s = "(()())(())"
-Output: "()()()"
-Explanation: 
-The input string is "(()())(())", with primitive decomposition "(()())" + "(())".
-After removing outer parentheses of each part, this is "()()" + "()" = "()()()".
+Input: s = "(1+(2*3)+((8)/4))+1"
+
+Output: 3
+
+Explanation:
+
+Digit 8 is inside of 3 nested parentheses in the string.
+```
+
+</details>
+
+<details>
+<summary>Example 2</summary>
+
+```cpp
+Input: s = "(1)+((2))+(((3)))"
+
+Output: 3
+
+Explanation:
+
+Digit 3 is inside of 3 nested parentheses in the string.
+```
+
+</details>
+
+<details>
+<summary>Example 3</summary>
+
+```cpp
+Input: s = "()(())((()()))"
+
+Output: 3
 ```
 
 </details>
