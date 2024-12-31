@@ -3,9 +3,7 @@
 
 > # [**LeetCode 1614. Maximum Nesting Depth of the Parentheses**](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/)
 
-![](20241231072923.png)
-
-![](20241231073234.png)
+![](../Media/20241231072923.png)
 
 <details>
 <summary>Example 1</summary>
