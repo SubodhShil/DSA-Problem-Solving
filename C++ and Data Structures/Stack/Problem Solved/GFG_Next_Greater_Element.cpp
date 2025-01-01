@@ -11,10 +11,11 @@ using namespace std;
 class Solution
 {
 public:
-    vector<long long> nextLargerElement(vector<long long> arr, int n)
+    vector<int> nextLargerElement(vector<int> &arr)
     {
-        vector<long long> result(n, -1);
-        stack<long long> st;
+        int n = arr.size();
+        vector<int> result(n, -1);
+        stack<int> st;
 
         st.push(arr[n - 1]);
         /// last element has not greater element hence -1
@@ -24,7 +25,7 @@ public:
         {
             if (st.top() > arr[i])
             {
-                long long save = arr[i];
+                int save = arr[i];
                 result[i] = st.top();
                 st.push(save);
             }

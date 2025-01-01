@@ -38,7 +38,7 @@ minStack.getMin(); // return -2
 
 1. The description didn't ask to implement the stack by yourself, rather it focuses on how you implement the additional feature called **getMin()** method. 
 2. We can use a stack of pair for push, pop and top operations within O(1) complexity.
-3. To getting the minimum value, we are using pair inside the stack. The second element of the pair indicates the minimum. So, everytime we push new element it will compare to the previous top element and update to current pair's second value. And when the method **getMin()** invoked we've to show the top element's second pair value. 
+3. To getting the minimum value, we are using pair inside the stack. The second element of the pair indicates the minimum value. So, everytime we push new element it will compare to the previous top element and update to current pair's second value. And when the method **getMin()** get invoked it'll simply show the top element's second pair value. 
 
 </details>
 
