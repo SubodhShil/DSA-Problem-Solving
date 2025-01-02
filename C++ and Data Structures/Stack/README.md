@@ -11,3 +11,9 @@ A stack is a linear data structure that follows LIFO (Last in First Out) or **FI
 1. Stack can be implemented by array. In this case, an index poniter **top** will be initialized with value -1.
 2. Size of the stack is top + 1.
 3. If, top iterator value is -1 then the stack is empty.
+
+
+## Monotonic stack 
+
+When we're storing values in specific (increasing or decreasing) order to the stack is said to be a monotonic stack. 
+
