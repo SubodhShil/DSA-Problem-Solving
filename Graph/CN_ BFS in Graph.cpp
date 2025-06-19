@@ -42,6 +42,7 @@ class Solution1
   }
 };
 
+
 class Solution2
 {
   vector<int> bfsTraversal(int n, vector<vector<int>> &adj)
